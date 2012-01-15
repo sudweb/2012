@@ -16,5 +16,5 @@ if (false === class_exists('WPLessPlugin'))
 add_action('wp', 'theme_main_action');
 
 function theme_main_action(){
-    wp_enqueue_style('main', get_stylesheet_directory_uri('/style.less'), array(), 'THEME_VERSION', 'media,screen');
+    wp_enqueue_style('main', get_stylesheet_directory_uri().'/style.less', array(), 'THEME_VERSION', 'media,screen');
 }
