@@ -6,3 +6,202 @@ Version: 2.0.0-dev
 Author: Sud Web
 Author URI: http://sudweb.fr
 */
+html {
+	font-family: Tahoma, sans-serif;
+	font-size: 62.5%;
+}
+body, button, input, select, textarea {
+	font-size: 14px;
+	font-size: 1.4rem;
+	color: #402F33;
+	margin: 0;
+}
+a img {
+	border: none;
+}
+a { color: #00e; text-decoration: none; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; text-decoration: underline; }
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+p, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; }
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; }
+
+/* If these tags aren't used, just remove the following */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+/* End rare tags styling */
+
+/* Start of custom theme */
+.container {
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.header {
+	background: #9C1529 url(assets/img/header.png) no-repeat center bottom;
+	color: #fff;
+	overflow: hidden;
+}
+.header .logo {
+	float: left;
+	width: 190px;
+	background: #fff;
+}
+.header .baseline {
+	margin: 1em;
+	padding: .5em;
+	margin-left: 50%;
+	font-weight: bold;
+}
+.header .cta {
+	clear: right;
+	float: right;
+	display: block;
+	background: #fff;
+	font-size: larger;
+	font-weight: bold;
+	margin: 1em;
+	padding: .5em;
+	color: #9c1529;
+	position: relative;
+}
+.header .cta::before {
+	font-size: smaller;
+	content: ">>";
+	padding: 0 5px .2em 0;
+}
+.header .cta::after {
+	content: "";
+	background: #fff;
+	display: block;
+	position: absolute;
+	left: 1em;
+	bottom: -3px;
+	height: 6px;
+	width: 10px;
+	-webkit-transform: rotate(-45deg) skew(-45deg);
+	-moz-transform: rotate(-45deg) skew(-45deg);
+	-ms-transform: rotate(-45deg) skew(-45deg);
+	-o-transform: rotate(-45deg) skew(-45deg);
+	transform: rotate(-45deg) skew(-45deg);
+}
+.header .pitch {
+	clear: both;
+	background: #402F33;
+	margin: 1em 4% 1em 2%;
+	padding: .5em;
+}
+.header h2 {
+	font-weight: normal;
+	margin-bottom: .2em;
+}
+.header .nav li {
+	margin: 0;
+	padding: 0;
+	list-style: none none;
+}
+.header .nav a {
+	padding: .5em 0;
+	display: block;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.block {
+	background-color: #eff0ed;
+	padding: 0 5px 1em;
+	overflow: hidden;
+}
+.block h2 {
+	padding: 1em 5px .2em;
+	margin: 0 -5px 1em;
+	position: relative;
+	background: #fff;
+	border-bottom: 1px solid;
+}
+.block h2::after {
+	content: "";
+	display: block;
+	background: inherit;
+	position: absolute;
+	left: 1em;
+	bottom: -4px;
+	height: 5px;
+	width: 10px;
+	border: 0 solid;
+	border-width: 0 1px 1px 0;
+	-webkit-transform: rotate(45deg) skew(45deg);
+	-moz-transform: rotate(45deg) skew(45deg);
+	-ms-transform: rotate(45deg) skew(45deg);
+	-o-transform: rotate(45deg) skew(45deg);
+	transform: rotate(45deg) skew(45deg);
+}
+.block div {
+	clear: both;
+}
+/* Overloading for special blocks */
+.actualites h2::before,
+.actualites h3::before,
+.programme h2::before,
+.programme h3::before,
+.social a::before {
+	font-size: smaller;
+	content: ">";
+	padding: 0 5px .2em 0;
+}
+
+.actualites h3,
+.actualites .meta {
+	float: left;
+	clear: left;
+}
+.actualites .illustration {
+	float: right;
+	padding: 0 0 1em 1em;
+}
+.actualites p {
+	clear: left;
+}
+
+.programme {
+	background: #fdf4f5;
+}
+.programme h2 {
+	color: #c40423;
+}
+
+.social {
+	background: #fffaea;
+}
+.social h2 {
+	border-color: #f9b410;
+}
+.social h2::after {
+	border-color: inherit;
+}
+
+.footer {
+	background: #402f33;
+}
+.footer .apropos {
+	padding-top: 1em;
+}
+.footer .links {
+	padding-bottom: 1em;
+}
+.footer,
+.footer a {
+	color: #fff;
+}
