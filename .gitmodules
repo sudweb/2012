@@ -1,3 +1,6 @@
 [submodule "vendor/semantic.gs"]
 	path = vendor/semantic.gs
 	url = https://github.com/twigkit/semantic.gs.git
+[submodule "vendor/bootstrap"]
+	path = vendor/bootstrap
+	url = https://github.com/twitter/bootstrap.git
