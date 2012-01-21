@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: dev, theme, themes, toolkit, plugin-toolkit, less, lesscss, lessc, lessphp, productivity, style, stylesheet, api
 Requires at least: 2.8
 Tested up to: 3.3
-Stable tag: 1.4
+Stable tag: 1.4.2
 
 Implementation of LESS (Leaner CSS) in order to make themes development easier.
 
@@ -30,7 +30,7 @@ Seriously.
 The sole requirement is to use WordPress API and LESS convention: the `.less` extension.
 
 **Minimal Requirements**: PHP 5.1.2 and WordPress 2.8.  
-**Relies on**: [LESSPHP 0.3.0](http://leafo.net/lessphp/), [plugin-toolkit](http://wordpress.org/extend/plugins/plugin-toolkit/).
+**Relies on**: [LESSPHP 0.3.1](http://leafo.net/lessphp/), [plugin-toolkit](http://wordpress.org/extend/plugins/plugin-toolkit/).
 
 *Notice*: in case you'd like to drop the usage of this plugin, it's safe to do it. You will just need to convert back your stylesheets to CSS.
 
@@ -47,6 +47,21 @@ The sole requirement is to use WordPress API and LESS convention: the `.less` ex
  1. Activate it through your WordPress plugins administration page
 
 == Changelog ==
+
+= Version 1.4.3 =
+
+ * bug: fixed the `property of non-object in Plugin.class.php` bug
+
+= Version 1.4.2 =
+
+ * feature: if `WP_DEBUG` is set to true, compilation is done on every page
+ * feature: rebuild now takes care of LESS PHP variable
+ * feature: added support of [custom LESS functions](http://leafo.net/lessphp/docs/index.html#custom_functions)
+ * lessphp: updated to version 0.3.1
+
+= Version 1.4.1 =
+
+ * bug: CSS `url()` are now properly resolved relative to the theme URL
 
 = Version 1.4 =
 
@@ -142,6 +157,22 @@ And if you want to do that from a theme, with less code:
 
 1. include the `wp-less/lib/helper/ThemeHelper.php` file;
 1. call `less_add_variable('@default_color', '#fff')`
+
+= I want to create a new custom LESS function =
+LESS PHP 0.3.1. introducted a new way to register functions without subclassing the compiler.
+
+If you initialized the class by yourself, do it this way:
+`$WPLessPlugin->registerFunction('double', 'lessphp_double');`
+
+If you don't manage the plugin by yourself:
+`WPPluginToolkitPlugin::getInstance('WPLess')->registerFunction('double', 'lessphp_double');`
+
+And if you want to do that from a theme, with less code:
+
+1. include the `wp-less/lib/helper/ThemeHelper.php` file;
+1. call `less_register_function('double', 'lessphp_double')`
+
+**Notice**: in this example, we assume `lessphp_double` is a valid [PHP callback](http://php.net/manual/en/language.pseudo-types.php#language.types.callback), as stated in `lessphp` documentation.
 
 == Upgrade Notice ==
 

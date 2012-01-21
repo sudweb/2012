@@ -23,17 +23,6 @@ class WPLessPlugin extends WPPluginToolkitPlugin
   public static $match_pattern = '/\.less$/U';
 
   /**
-   * Proxy method
-   * 
-   * @see WPLessConfiguration::setVariables()
-   * @since 1.4
-   */
-  public function addVariable($name, $value)
-  {
-    $this->getConfiguration()->addVariable($name, $value);
-  }
-
-  /**
    * Dispatches all events of the plugin
    *
    * @author  oncletom
@@ -51,7 +40,7 @@ class WPLessPlugin extends WPPluginToolkitPlugin
    *
    * @author oncletom
    * @since 1.2
-   * @version 1.0
+   * @version 1.1
    * @param string $css parsed CSS
    * @param WPLessStylesheet Stylesheet currently processed
    * @return string parsed and fixed CSS
@@ -59,8 +48,17 @@ class WPLessPlugin extends WPPluginToolkitPlugin
   public function filterStylesheetUri($css, WPLessStylesheet $stylesheet)
   {
     $token = '@'.uniqid('wpless', true).'@';
-    $css = preg_replace('#(url\s*\([\'"])([^/]+)#siU', '\1'.$token.'\2', $css);
-    $css = str_replace($token, dirname($stylesheet->getSourceUri()).'/', $css);
+    $css = preg_replace('#url\s*\(([\'"]{0,1})([^\'"\)]+)\1\)#siU', 'url(\1'.$token.'\2\1)', $css);
+
+    /*
+     * Token replacement:
+     * - preserve data URI
+     * - prefix file URI with absolute path to the theme
+     */
+    $css = str_replace(
+      array($token.'data:', $token),
+      array('data:', dirname($stylesheet->getSourceUri()).'/'),
+    $css);
 
     return $css;
   }
@@ -95,13 +93,16 @@ class WPLessPlugin extends WPPluginToolkitPlugin
    * @author oncletom
    * @uses WP_Styles
    * @since 1.0
-   * @version 1.0
+   * @version 1.1
    * @return WP_Styles styles instance
    */
   public function getStyles()
   {
     global $wp_styles;
-    return $wp_styles;
+
+    //because if someone never registers through `wp_(enqueue|register)_stylesheet`,
+    //$wp_styles is never initialized, and thus, equals NULL
+    return null === $wp_styles || !$wp_styles instanceof WP_Styles ? new WP_Styles() : $wp_styles;
   }
 
   /**
@@ -109,7 +110,7 @@ class WPLessPlugin extends WPPluginToolkitPlugin
    *
    * @author oncletom
    * @since 1.1
-   * @version 1.2
+   * @version 1.3
    * @param string $handle
    * @param $force boolean If set to true, rebuild all stylesheets, without considering they are updated or not
    * @return WPLessStylesheet
@@ -117,11 +118,13 @@ class WPLessPlugin extends WPPluginToolkitPlugin
   public function processStylesheet($handle, $force = false)
   {
     $wp_styles = $this->getStyles();
-    $stylesheet = new WPLessStylesheet($wp_styles->registered[$handle]);
+    $stylesheet = new WPLessStylesheet($wp_styles->registered[$handle], $this->getConfiguration()->getVariables());
 
     if ((is_bool($force) && $force) || $stylesheet->hasToCompile())
     {
-      $stylesheet->save($this->getConfiguration()->getVariables());
+      $compiler = new WPLessCompiler($stylesheet->getSourcePath());
+      $compiler->registerFunctions($this->getConfiguration()->getFunctions());
+      $compiler->saveStylesheet($stylesheet);
     }
 
     $wp_styles->registered[$handle]->src = $stylesheet->getTargetUri();
@@ -199,8 +202,41 @@ class WPLessPlugin extends WPPluginToolkitPlugin
    * @see WPLessConfiguration::setVariables()
    * @since 1.4
    */
+  public function addVariable($name, $value)
+  {
+    $this->getConfiguration()->addVariable($name, $value);
+  }
+
+  /**
+   * Proxy method
+   * 
+   * @see WPLessConfiguration::setVariables()
+   * @since 1.4
+   */
   public function setVariables(array $variables)
   {
     $this->getConfiguration()->setVariables($variables);
+  }
+
+  /**
+   * Proxy method
+   * 
+   * @see WPLessConfiguration::registerFunction()
+   * @since 1.4.2
+   */
+  public function registerFunction($name, $callback, $scope = array())
+  {
+    $this->getConfiguration()->registerFunction($name, $callback, $scope);
+  }
+
+  /**
+   * Proxy method
+   * 
+   * @see WPLessConfiguration::unregisterFunction()
+   * @since 1.4.2
+   */
+  public function unregisterFunction($name)
+  {
+    $this->getConfiguration()->unregisterFunction($name);
   }
 }
