@@ -11,6 +11,15 @@ if (false === class_exists('WPLessPlugin'))
 }
 
 /*
+ * Declaring Sidebars
+ */
+register_sidebar(array(
+	'name' => 'Header',
+	'before_widget' => '<div id="%1$s" class="widget %2$s">',
+	'after_widget' => '</div>',
+));
+
+/*
  * Register actions
  */
 add_action('wp', 'theme_main_action');
