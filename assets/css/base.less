@@ -1,12 +1,39 @@
+.container {
+	max-width: @siteWidth;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 header{
     background: @active_link_color url('assets/img/header.png') no-repeat bottom center;
     color: #fff;
+
+    .container{
+        padding-left: @gridGutterWidth;
+        padding-right: @gridGutterWidth;
+        position: relative;
+    }
 
     h1{
         background: @background_color;
         .border-radius(e("0 5em 2.5em 12em / 0 10em 1em 9em"));
         display: inline-block;
-        padding: .8em;
+        margin-left: -@gridGutterWidth * 2;
+        padding: @gridGutterWidth;
+        padding-left: @gridGutterWidth * 2;
+    }
+
+    .baseline{
+        position: absolute;
+        right: @gridGutterWidth;
+        top: @gridGutterWidth * 3;
+        text-align: right;
+        width: percentage(.40);
+
+        strong{
+            display: block;
+            font-size: 1.1em;
+        }
     }
 }
 
