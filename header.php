@@ -7,7 +7,7 @@
 <body <?php body_class() ?>>
 
 <header>
-	<h1><?php bloginfo('title') ?></h1>
+	<h1><a href="<?php bloginfo('url') ?>" title="<?php bloginfo('title') ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/logo.png" alt="<?php bloginfo('title') ?>" /></a></h1>
 	<p>Les 25 et 26 Mai à Toulouse, France</p>
 	<h2>Faire savoir et savoir-faire</h2>
 	<p>Sud web, c'est avant tout 2 jours d'échanges autour des technologies du web d'aujourd'hui et de demain. Notre ambition est de transmettre au plus grand nombre cette passion qui nous anime pour préserver un web ouvert de qualité.</p>
