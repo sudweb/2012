@@ -6,6 +6,12 @@ Version: 2.0.0-dev
 Author: Sud Web
 Author URI: http://sudweb.fr
 */
+
+/*
+	NOTICE: This file is used only by WordPress, to detect the Theme.
+	Presentation is process through style.less and its dependencies.
+ */
+
 html {
 	font-family: Tahoma, sans-serif;
 	font-size: 62.5%;
