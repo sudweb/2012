@@ -13,8 +13,7 @@
 
 		<div class="baseline"><strong><time class="dtstart" datetime="2012-05-25">25</time> et <time class="dtstart" datetime="2012-05-25">26 mai 2012</time></strong> à <span class="location">Toulouse, France</span></div>
 
-		<h2>Faire savoir et savoir-faire</h2>
-		<p>Sud web, c'est avant tout 2 jours d'échanges autour des technologies du web d'aujourd'hui et de demain. Notre ambition est de transmettre au plus grand nombre cette passion qui nous anime pour préserver un web ouvert de qualité.</p>
+		<?php dynamic_sidebar('header') ?>
 
 		<p class="btn"><a>Proposez un sujet</a></p>
 
