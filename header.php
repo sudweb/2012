@@ -25,4 +25,4 @@
 	</div>
 </header>
 
-<div role="main">
+<div class="container" role="main" id="content">
