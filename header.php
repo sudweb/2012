@@ -17,13 +17,11 @@
 
 		<p class="btn"><a>Proposez un sujet</a></p>
 
-		<?php //@todo handle this with a wp_menu ?>
-		<nav class="unstyled">
-			<li><a href="/programme">Programme</a></li>
-			<li><a href="/partiper">Participer</a></li>
-			<li><a href="/actualites">Actualités</a></li>
-			<li><a href="/partenaires">Partenaires</a></li>
-		</nav>
+		<?php wp_nav_menu(array(
+			'theme_location' => 'header',
+			'container' => 'nav',
+			'menu_class' => 'unstyled',
+		)) ?>
 	</div>
 </header>
 

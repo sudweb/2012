@@ -20,6 +20,11 @@ register_sidebar(array(
 ));
 
 /*
+ * Declaring Menus
+ */
+register_nav_menu('header', 'Primary Navigation');
+
+/*
  * Register actions
  */
 add_action('wp', 'theme_main_action');
