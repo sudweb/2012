@@ -18,6 +18,14 @@ html{
  * Content Mixins
  * @todo move it in another stylesheet for readability sake, if it's becoming too long
  */
+.transform(@tranform){
+    -webkit-transform: @arguments;
+    -moz-transform: @arguments;
+    -ms-transform: @arguments;
+    -o-transform: @arguments;
+    transform: @arguments;
+}
+
 #content{
     .block(){
         @color: #fff;
@@ -92,7 +100,10 @@ html{
     #content .cta();
 }
 
-
+/**
+ * Header Display
+ * =header
+ */
 header{
     @color: #fff;
     background: @active_link_color url('assets/img/header.png') no-repeat bottom center;
@@ -158,3 +169,35 @@ header{
     }
 }
 
+/**
+ * Main Content Display
+ * =main
+ */
+#content{
+    h2{
+        background: #fff;
+        border-bottom: 1px solid;
+        margin: 0 -5px 1em;
+        padding: 1em 5px .2em;
+        position: relative;
+
+        &::after{
+            background: inherit;
+            border: 0 solid;
+            border-width: 0 1px 1px 0;
+            bottom: -4px;
+            content: "";
+            display: block;
+            height: 5px;
+            left: 1em;
+            position: absolute;
+            width: 10px;
+            .transform(rotate(45deg) skew(45deg));
+         }
+    }
+
+    .rich-list-container{
+        background-color: @grayLight;
+        padding: 0 5px 1em;
+    }
+}
