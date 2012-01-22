@@ -1,5 +1,6 @@
 <?php
 define('THEME_VERSION', '2.0.0-dev');
+add_theme_support('post-thumbnails');
 
 /*
  * Requires bundled WP-LESS for LESS stylesheet parsing features
