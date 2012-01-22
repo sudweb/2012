@@ -4,6 +4,24 @@
 	margin-right: auto;
 }
 
+/*
+ * Content Mixins
+ * @todo move it in another stylesheet for readability sake, if it's becoming too long
+ */
+#content{
+    .block(){
+        @color: #fff;
+
+        background: @content_background_border;
+        color: @color;
+        padding: @gridGutterWidth / 2;
+
+        p, a, h2, h3{
+            color: @color;
+        }
+    }
+}
+
 header{
     background: @active_link_color url('assets/img/header.png') no-repeat bottom center;
     color: #fff;
@@ -34,6 +52,11 @@ header{
             display: block;
             font-size: 1.1em;
         }
+    }
+
+    .widget{
+        #content .block;
+        margin-bottom: @gridGutterWidth;
     }
 }
 
