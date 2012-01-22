@@ -23,8 +23,9 @@
 }
 
 header{
+    @color: #fff;
     background: @active_link_color url('assets/img/header.png') no-repeat bottom center;
-    color: #fff;
+    color: @color;
 
     .container{
         padding-left: @gridGutterWidth;
@@ -57,6 +58,23 @@ header{
     .widget{
         #content .block;
         margin-bottom: @gridGutterWidth;
+    }
+
+    .menu-item{
+        display: inline-block;
+        margin-bottom: @gridGutterWidth / 2;
+        padding: 0 2%;
+        text-align: center;
+		width: 45%;
+
+        a{
+            background: @color;
+            color: @content_background_border;
+            display: block;
+            font-weight: bold;
+            padding: @gridGutterWidth / 2;
+            text-decoration: none;
+        }
     }
 }
 
