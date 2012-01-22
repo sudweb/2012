@@ -15,7 +15,7 @@
 
 		<?php dynamic_sidebar('header') ?>
 
-		<p class="btn"><a>Proposez un sujet</a></p>
+		<p class="aligncenter"><a class="cta top-right" href="#">Proposer un sujet !</a></p>
 
 		<?php wp_nav_menu(array(
 			'theme_location' => 'header',

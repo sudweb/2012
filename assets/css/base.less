@@ -4,6 +4,12 @@
 	margin-right: auto;
 }
 
+.aligncenter{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 /*
  * Content Mixins
  * @todo move it in another stylesheet for readability sake, if it's becoming too long
@@ -20,12 +26,75 @@
             color: @color;
         }
     }
+
+    .cta(@color: #fff, @background_color: @active_link_color){
+        @offsetX: 2em;
+        @offsetY: -.9em;
+
+        background: @background_color;
+        color: @color;
+        display: inline-block;
+        padding: .5em;
+        position: relative;
+
+        &, h2, a{
+            color: @color;
+            text-decoration: none;
+        }
+
+        /*
+         * Baloon positionning
+         */
+        &:after, &:before{
+            color: @background_color;
+            position: absolute;
+        }
+        &.bottom-right:after{
+            content: "\25E4";
+            right: @offsetX;
+            bottom: @offsetY;
+        }
+        &.bottom-left:after{
+            content: "\25E5";
+            left: @offsetX;
+            bottom: @offsetY;
+        }
+        &.top-right:before{
+            content: "\25E2";
+            right: @offsetX;
+            top: @offsetY;
+        }
+    }
+
+    .cta-large(@background_color: #402f33){
+        background: @background_color;
+        display: block;
+        margin: 1.5em;
+
+        &.baloon:after, &.baloon:before{
+            color: @background_color;
+        }
+        &.baloon-bottom-right:after{
+            font-size: 1.2em;
+            right: 33%;
+        }
+    }
 }
+
+/*
+ * Call To Action + Baloon
+ */
+.cta{
+    #content .cta();
+}
+
 
 header{
     @color: #fff;
     background: @active_link_color url('assets/img/header.png') no-repeat bottom center;
     color: @color;
+    margin-bottom: 6em;
+    max-height: 459px;  /* image height dimension */
 
     .container{
         padding-left: @gridGutterWidth;
@@ -75,6 +144,13 @@ header{
             padding: @gridGutterWidth / 2;
             text-decoration: none;
         }
+    }
+
+    .cta{
+        .box-shadow(2px 2px 5px rgba(0,0,0,.40));
+        font-size: 2em;
+        position: absolute;
+        top: 105%;
     }
 }
 
