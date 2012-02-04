@@ -1,6 +1,7 @@
 <?php get_header() ?>
 
-<div class="rich-list-container" id="news">
+<div class="row">
+<div class="rich-list-container span6" id="news">
 	<h2><?php _e('Latest News', 'sudweb') ?></h2>
 
 	<?php while(have_posts()): the_post() ?>
@@ -13,4 +14,5 @@
 	<?php endwhile ?>
 </div>
 
+</div>
 <?php get_footer() ?>
