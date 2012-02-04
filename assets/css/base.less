@@ -7,6 +7,9 @@ html{
     margin-right: auto;
     text-align: center;
 }
+img.alignright{
+    .pull-right;
+}
 
 /*
  * Content Mixins
@@ -171,11 +174,13 @@ header{
  * =main
  */
 #content{
+    @horizontalSpacing: @gridGutterWidth / 2;
+
     h2{
         background: #fff;
         border-bottom: 1px solid;
-        margin: 0 -5px @baseLineHeight / 2; /* like p[margin-bottom] */
-        padding: 0 5px .2em;
+        margin: 0 -@horizontalSpacing @baseLineHeight / 2; /* like p[margin-bottom] */
+        padding: 0 @horizontalSpacing .2em;
         position: relative;
 
         &::after{
@@ -195,6 +200,10 @@ header{
 
     .rich-list-container{
         background-color: @grayLight;
-        padding: 0 5px 1em;
+        padding: 0 @horizontalSpacing 1em;
+    }
+
+    .rich-list-item{
+        position: relative;
     }
 }
