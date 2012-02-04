@@ -31,6 +31,7 @@ register_nav_menu('header', 'Primary Navigation');
 add_action('wp', 'theme_main_action');
 add_filter('nav_menu_css_class', 'filter_navmenu_classes', 10, 3);
 add_filter('post_thumbnail_html', 'theme_filter_empty_thumbnail_html', 10, 5);
+require __DIR__.'/lib/plugin/talk.php';
 
 function theme_main_action(){
     wp_enqueue_style('main', get_stylesheet_directory_uri().'/style.less', array(), 'THEME_VERSION', 'media,screen');
