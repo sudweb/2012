@@ -6,7 +6,7 @@
 
 		<?php while(have_posts()): the_post() ?>
 		<div class="rich-list-item">
-			<?php the_post_thumbnail('thumbnail', array('class' => 'llustration alignright')) ?>
+			<?php the_post_thumbnail('thumbnail', array('class' => 'illustration alignright')) ?>
 			<h3><a href="<?php the_permalink() ?> rel="bookmark"><?php the_title() ?></a></h3>
 			<div class="meta"><?php echo get_the_date() ?></div>
 			<p><?php the_excerpt() ?></p>
