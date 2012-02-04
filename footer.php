@@ -8,7 +8,7 @@
 			</div>
 
 			<div class="span3">
-				<a href="#">Espace Presse</a>
+				<a href="#" class="cta bottom-left-alt" id="press-link">Espace Presse</a>
 
 				<?php //@todo handle this with a wp_menu ?>
 				<ul>
@@ -19,9 +19,9 @@
 			</div>
 
 			<div class="row3">
-				<p>Avec le soutien du W3C</p>
+				<p><a href="http://www.w3.org/participate/otherevents/archive">Avec le soutien du W3C</a></p>
 
-				<p>Sympathiquement hébergé par AlwaysData</p>
+				<p><a href="http://alwaysdata.com/">Sympathiquement hébergé par AlwaysData</a></p>
 			</div>
 		</div>
 	</div>

@@ -68,10 +68,14 @@ img.alignright{
             right: @offsetX;
             bottom: @offsetY;
         }
-        &.bottom-left:after{
+        &.bottom-left:after,
+        &.bottom-left-alt:after{
             content: "\25E5";
             left: @offsetX;
             bottom: @offsetY;
+        }
+        &.bottom-left-alt:after{
+            content: "\25E4";
         }
         &.top-right:before{
             content: "\25E2";
@@ -229,22 +233,36 @@ header{
 
 footer{
     background: @content_background_border;
+    position: relative;
 
     &, a{
         color: #fff;
     }
 
+    a{
+        font-weight: bold;
+    }
+
     .alternate{
         background: #fff;
         color: @content_background_border;
+        margin-bottom: @baseLineHeight !important;
         margin-left: -@gridGutterWidth !important;
         margin-right: -@gridGutterWidth !important;
         padding: @gridGutterWidth;
+
+        h3{
+            width: 66%;
+        }
 
         a{
             color: @linkColor;
         }
     }
 
-
+    #press-link{
+        position: absolute;
+        right: @gridGutterWidth;
+        top: @gridGutterWidth;
+    }
 }
