@@ -51,7 +51,7 @@ function sudweb_register_talk()
 			'not_found' =>  __('No talks found', 'sudweb'),
 			'not_found_in_trash' => __('No talks found in Trash', 'sudweb'),
 			'parent_item_colon' => '',
-			'menu_name' => 'Talks'
+			'menu_name' => __('Talk', 'sudweb'),
 		),
 		'public' => true,
 		'publicly_queryable' => true,
