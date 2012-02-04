@@ -37,21 +37,14 @@ img.alignright{
     }
 
     .cta(@color: #fff, @background_color: @linkColorHover){
-        @offsetX: 2em;
-        @offsetY: -10px;
-
         background: @background_color;
         color: @color;
         display: inline-block;
         padding: .5em;
         position: relative;
+        text-decoration: none;
 
-        &, h2, a{
-            color: @color;
-            text-decoration: none;
-        }
-
-        &:hover, h2:hover, a:hover{
+        &:hover{
             color: @color;
             text-decoration: none;
         }
@@ -63,38 +56,30 @@ img.alignright{
             color: @background_color;
             position: absolute;
         }
-        &.bottom-right:after{
-            content: "\25E4";
-            right: @offsetX;
-            bottom: @offsetY;
-        }
-        &.bottom-left:after,
-        &.bottom-left-alt:after{
-            content: "\25E5";
-            left: @offsetX;
-            bottom: @offsetY;
-        }
-        &.bottom-left-alt:after{
-            content: "\25E4";
-        }
-        &.top-right:before{
-            content: "\25E2";
-            right: @offsetX;
-            top: @offsetY;
-        }
     }
 
-    .cta-large(@background_color: #402f33){
-        background: @background_color;
-        display: block;
-        margin: 1.5em;
-
-        &.baloon:after, &.baloon:before{
-            color: @background_color;
+    /**
+     * Baloons
+     */
+    .baloon-bottom-right(@content: "\25E4"){
+        &:after{
+            content: @content;
+            right: @baloonOffsetX;
+            bottom: @baloonOffsetY;
         }
-        &.baloon-bottom-right:after{
-            font-size: 1.2em;
-            right: 33%;
+    }
+    .baloon-bottom-left(@content: "\25E5"){
+        &:after{
+            content: @content;
+            left: @baloonOffsetX;
+            bottom: @baloonOffsetY;
+        }
+    }
+    .baloon-top-right(@content: "\25E2"){
+        &:before{
+            content: @content;
+            right: @baloonOffsetX;
+            top: @baloonOffsetY;
         }
     }
 }
@@ -104,6 +89,16 @@ img.alignright{
  */
 .cta{
     #content .cta();
+
+    &.bottom-left{
+        #content .baloon-bottom-left();
+    }
+    &.bottom-right{
+        #content .baloon-bottom-right();
+    }
+    &.top-right{
+        #content .baloon-top-right();
+    }
 }
 
 /**
@@ -249,36 +244,45 @@ footer{
         }
     }
 
-    li{
-        display: inline;
-        margin-right: 1.3em;
-    }
-
-    .alternate{
-        background: #fff;
-        color: @content_background_border;
-        margin-bottom: @baseLineHeight !important;
-        margin-left: -@gridGutterWidth !important;
-        margin-right: -@gridGutterWidth !important;
-        padding: @gridGutterWidth;
-
-        h3{
-            width: 66%;
-        }
-
-        a{
-            color: @linkColor;
-        }
-    }
-
-    #press-link{
-        position: absolute;
-        right: @gridGutterWidth;
-        top: @gridGutterWidth;
-    }
-
-    .alternate a::before,
-    #press-link::before{
+    .alternate a::before{
         content: "";
+    }
+}
+
+@media (max-width: 768px) {
+    footer{
+        li{
+            display: inline;
+            margin-right: 1.3em;
+        }
+
+        .alternate{
+            background: #fff;
+            color: @content_background_border;
+            margin-bottom: @baseLineHeight !important;
+            margin-left: -@gridGutterWidth !important;
+            margin-right: -@gridGutterWidth !important;
+            padding: @gridGutterWidth;
+
+            h3{
+                width: 66%;
+            }
+
+            a{
+                color: @linkColor;
+            }
+        }
+
+        #press-link{
+            #content .cta();
+            #content .baloon-bottom-left('\25E4');
+            position: absolute;
+            right: @gridGutterWidth;
+            top: @gridGutterWidth;
+        }
+
+        #press-link::before{
+            content: "";
+        }
     }
 }

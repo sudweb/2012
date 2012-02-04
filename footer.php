@@ -8,7 +8,7 @@
 			</div>
 
 			<div class="span3">
-				<a href="#" class="cta bottom-left-alt" id="press-link">Espace Presse</a>
+				<a href="#" id="press-link">Espace Presse</a>
 
 				<?php //@todo handle this with a wp_menu ?>
 				<ul class="unstyled">
