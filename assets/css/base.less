@@ -226,3 +226,25 @@ header{
         }
     }
 }
+
+footer{
+    background: @content_background_border;
+
+    &, a{
+        color: #fff;
+    }
+
+    .alternate{
+        background: #fff;
+        color: @content_background_border;
+        margin-left: -@gridGutterWidth !important;
+        margin-right: -@gridGutterWidth !important;
+        padding: @gridGutterWidth;
+
+        a{
+            color: @linkColor;
+        }
+    }
+
+
+}
