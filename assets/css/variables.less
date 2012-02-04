@@ -24,14 +24,3 @@ Jaune : #F9B410
 @grayDark:          lighten(@black, 25%);
 @gray:              @grayDark;
 @grayLight:         #eff0ed;
-
-// Baseline grid
-@basefont:          13px;
-@baseline:          18px;
-
-// Modify the grid styles in mixins.less
-@gridColumns:       16;
-@gridColumnWidth:   40px;
-@gridGutterWidth:   20px;
-@extraSpace:        (@gridGutterWidth * 2); // For our grid calculations
-@siteWidth:         (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));

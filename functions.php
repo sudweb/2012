@@ -29,7 +29,28 @@ register_nav_menu('header', 'Primary Navigation');
  * Register actions
  */
 add_action('wp', 'theme_main_action');
+add_filter('nav_menu_css_class', 'filter_navmenu_classes', 10, 3);
 
 function theme_main_action(){
     wp_enqueue_style('main', get_stylesheet_directory_uri().'/style.less', array(), 'THEME_VERSION', 'media,screen');
+}
+
+/**
+ * Adds some CSS classes to given menu elements
+ *
+ * @uses bootsrap responsive
+ * @see http://codex.wordpress.org/Function_Reference/wp_nav_menu
+ * @param array $classes
+ * @param $item
+ * @param $args Menu arguments
+ * @return array CSS classes
+ */
+function filter_navmenu_classes(array $classes, $item, $args)
+{
+	if ($args->theme_location === 'header')
+	{
+		$classes[] = 'span6';
+	}
+
+	return $classes;
 }

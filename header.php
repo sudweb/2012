@@ -20,7 +20,7 @@
 		<?php wp_nav_menu(array(
 			'theme_location' => 'header',
 			'container' => 'nav',
-			'menu_class' => 'unstyled',
+			'menu_class' => 'row',
 		)) ?>
 	</div>
 </header>
