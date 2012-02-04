@@ -15,17 +15,17 @@ function sudweb_register_talk()
 {
 	register_post_type('talk', array(
 		'labels' => array(
-			'name' => _x('Talks', 'post type general name'),
-			'singular_name' => _x('Talk', 'post type singular name'),
-			'add_new' => _x('Add New', 'book'),
-			'add_new_item' => __('Add New Talk'),
-			'edit_item' => __('Edit Talk'),
-			'new_item' => __('New Talk'),
-			'all_items' => __('All Talks'),
-			'view_item' => __('View Talk'),
-			'search_items' => __('Search Talks'),
-			'not_found' =>  __('No talks found'),
-			'not_found_in_trash' => __('No talks found in Trash'),
+			'name' => _x('Talks', 'post type general name', 'sudweb'),
+			'singular_name' => _x('Talk', 'post type singular name', 'sudweb'),
+			'add_new' => _x('Add New', 'book', 'sudweb'),
+			'add_new_item' => __('Add New Talk', 'sudweb'),
+			'edit_item' => __('Edit Talk', 'sudweb'),
+			'new_item' => __('New Talk', 'sudweb'),
+			'all_items' => __('All Talks', 'sudweb'),
+			'view_item' => __('View Talk', 'sudweb'),
+			'search_items' => __('Search Talks', 'sudweb'),
+			'not_found' =>  __('No talks found', 'sudweb'),
+			'not_found_in_trash' => __('No talks found in Trash', 'sudweb'),
 			'parent_item_colon' => '',
 			'menu_name' => 'Talks'
 		),
