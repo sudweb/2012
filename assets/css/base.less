@@ -33,7 +33,7 @@ html{
         }
     }
 
-    .cta(@color: #fff, @background_color: @active_link_color){
+    .cta(@color: #fff, @background_color: @linkColorHover){
         @offsetX: 2em;
         @offsetY: -.6em;
 
@@ -105,7 +105,7 @@ html{
  */
 header{
     @color: #fff;
-    background: @active_link_color url('assets/img/header.png') no-repeat bottom center;
+    background: @linkColorHover url('assets/img/header.png') no-repeat bottom center;
     color: @color;
     margin-bottom: 6em;
 
