@@ -11,7 +11,7 @@
 				<a href="#" class="cta bottom-left-alt" id="press-link">Espace Presse</a>
 
 				<?php //@todo handle this with a wp_menu ?>
-				<ul>
+				<ul class="unstyled">
 					<li><a href="#">Plan du site</a></li>
 					<li><a href="#">Crédits</a></li>
 					<li><a href="#">Mentions légales</a></li>

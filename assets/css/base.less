@@ -214,6 +214,7 @@ header{
 
     .rich-list-item{
         clear: both;
+        margin: @horizontalSpacing;
         min-height: @thumbnailHeight;
 
         &::after{
@@ -241,6 +242,16 @@ footer{
 
     a{
         font-weight: bold;
+
+        &::before{
+            content: "›\00A0";
+            font-size: 1.4em;
+        }
+    }
+
+    li{
+        display: inline;
+        margin-right: 1.3em;
     }
 
     .alternate{
@@ -264,5 +275,10 @@ footer{
         position: absolute;
         right: @gridGutterWidth;
         top: @gridGutterWidth;
+    }
+
+    .alternate a::before,
+    #press-link::before{
+        content: "";
     }
 }
