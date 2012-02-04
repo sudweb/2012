@@ -103,7 +103,6 @@ header{
     background: @active_link_color url('assets/img/header.png') no-repeat bottom center;
     color: @color;
     margin-bottom: 6em;
-    max-height: 459px;  /* image height dimension */
 
     .container{
         padding-left: @gridGutterWidth;
@@ -135,12 +134,13 @@ header{
 
     .widget{
         #content .block;
-        margin-bottom: @gridGutterWidth;
+        margin-bottom: @baseLineHeight;
+        margin-top: @baseLineHeight;
     }
 
     .menu-item{
         list-style: none;
-        margin-bottom: @gridGutterWidth / 2;
+        margin-bottom: @baseLineHeight / 2 !important;
         text-align: center;
 
         a{
