@@ -1,6 +1,7 @@
 <?php
 define('THEME_VERSION', '2.0.0-dev');
 add_theme_support('post-thumbnails');
+load_theme_textdomain('sudweb', get_template_directory().'/i18n');
 
 /*
  * Requires bundled WP-LESS for LESS stylesheet parsing features
