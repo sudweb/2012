@@ -176,10 +176,14 @@ header{
 #content{
     @horizontalSpacing: @gridGutterWidth / 2;
 
+    &.container{
+        padding: 0;
+    }
+
     h2{
         background: #fff;
         border-bottom: 1px solid;
-        margin: 0 -@horizontalSpacing @baseLineHeight / 2; /* like p[margin-bottom] */
+        margin: 0 0 @baseLineHeight / 2; /* like p[margin-bottom] */
         padding: 0 @horizontalSpacing .2em;
         position: relative;
 
@@ -200,11 +204,13 @@ header{
 
     .rich-list-container{
         background-color: @grayLight;
-        padding: 0 @horizontalSpacing 1em;
+        padding: 0 0 1em;
     }
 
     .rich-list-item{
         clear: both;
+        padding-left: @horizontalSpacing;
+        padding-right: @horizontalSpacing;
 
         &::after{
             background: #fff;
