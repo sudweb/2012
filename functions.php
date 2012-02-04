@@ -30,6 +30,7 @@ register_nav_menu('header', 'Primary Navigation');
  */
 add_action('wp', 'theme_main_action');
 add_filter('nav_menu_css_class', 'filter_navmenu_classes', 10, 3);
+add_filter('post_thumbnail_html', 'theme_filter_empty_thumbnail_html', 10, 5);
 
 function theme_main_action(){
     wp_enqueue_style('main', get_stylesheet_directory_uri().'/style.less', array(), 'THEME_VERSION', 'media,screen');
@@ -53,4 +54,31 @@ function filter_navmenu_classes(array $classes, $item, $args)
 	}
 
 	return $classes;
+}
+
+/**
+ * Filters empty thumbnails, to always provide some default picture
+ * Lolcats could be fun but you know, we are serious.
+ *
+ * @param $html
+ * @param $post_id
+ * @param $post_thumbnail_id
+ * @param $size
+ * @param $attr
+ * @return string HTML code related to the thumbnail
+ */
+function theme_filter_empty_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, $attr)
+{
+	if ($html)
+	{
+		return $html;
+	}
+
+	return strtr('<img src="http://placehold.it/%width%x%height%" alt="" class="%class%" width="%width%" height="%height%" />',
+		array(
+			'%width%' => intval(get_option($size.'_size_w')),
+			'%height%' => intval(get_option($size.'_size_h')),
+			'%class%' => $attr['class'],
+		)
+	);
 }
