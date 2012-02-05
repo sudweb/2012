@@ -6,7 +6,7 @@
 </head>
 <body <?php body_class() ?>>
 
-<header>
+<header id="header">
 	<div class="container">
 
 	<h1><a href="<?php bloginfo('url') ?>" title="<?php bloginfo('title') ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/logo.png" alt="<?php bloginfo('title') ?>" /></a></h1>
