@@ -35,6 +35,7 @@ register_sidebar(array(
 register_nav_menu('header', 'Primary Navigation');
 register_nav_menu('footer-column2', 'Footer: Column 2');
 register_nav_menu('footer-column3', 'Footer: Column 3');
+register_nav_menu('sidebar-conferences', 'Conferences Sidebar');
 
 /*
  * Register actions
@@ -42,6 +43,7 @@ register_nav_menu('footer-column3', 'Footer: Column 3');
 add_action('wp', 'theme_main_action');
 add_filter('nav_menu_css_class', 'filter_navmenu_classes', 10, 3);
 add_filter('post_thumbnail_html', 'theme_filter_empty_thumbnail_html', 10, 5);
+add_filter('wp_nav_menu_container_allowedtags', 'theme_filter_enable_aside_nav');
 require __DIR__.'/lib/plugin/talk.php';
 
 function theme_main_action(){
@@ -98,4 +100,18 @@ function theme_filter_empty_thumbnail_html($html, $post_id, $post_thumbnail_id, 
 			'%class%' => $attr['class'],
 		)
 	);
+}
+
+/**
+ * Enables the `aside` HTML in `wp_nav_menu`
+ * Without that, it restricts to `div` and `nav`
+ *
+ * @param array $tags Allowed tags
+ * @return array Newly allowed tags
+ */
+function theme_filter_enable_aside_nav(array $tags)
+{
+	$tags[] = 'aside';
+
+	return $tags;
 }
