@@ -21,10 +21,20 @@ register_sidebar(array(
 	'after_widget' => '</div>',
 ));
 
+register_sidebar(array(
+	'name' => 'Footer',
+	'before_widget' => '<div id="%1$s" class="span5 alternate %2$s">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3>',
+	'after_title' => '</h3>',
+));
+
 /*
  * Declaring Menus
  */
 register_nav_menu('header', 'Primary Navigation');
+register_nav_menu('footer-column2', 'Footer: Column 2');
+register_nav_menu('footer-column3', 'Footer: Column 3');
 
 /*
  * Register actions
@@ -53,6 +63,11 @@ function filter_navmenu_classes(array $classes, $item, $args)
 	if ($args->theme_location === 'header')
 	{
 		$classes[] = 'span6';
+	}
+
+	if (strpos($args->theme_location, 'footer') !== false && stripos($item->title, 'press') !== false)
+	{
+		$classes[] = 'menu-item-press';
 	}
 
 	return $classes;
