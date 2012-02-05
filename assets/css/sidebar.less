@@ -2,5 +2,36 @@
     aside{
         background: @grayLight;
         .border-radius();
+        font-size: 2em;
+    }
+
+    .menu-item{
+        margin: @baseLineHeight 0;
+
+        a{
+            background: #fff;
+            display: block;
+            padding: @baseLineHeight;
+            width: 75%;
+        }
+    }
+
+    .sub-menu{
+        font-size: .7em;
+        list-style: none;
+        margin-left: @gridGutterWidth;
+
+        .menu-item{
+            &::before{
+                content: "››";
+                margin-right: .4em;
+            }
+
+            a{
+                background: transparent;
+                display: inline;
+                padding: 0;
+            }
+        }
     }
 }
