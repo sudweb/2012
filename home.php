@@ -7,7 +7,7 @@
 		<?php while(have_posts()): the_post() ?>
 		<div class="rich-list-item">
 			<?php the_post_thumbnail('thumbnail', array('class' => 'illustration alignright')) ?>
-			<h3><a href="<?php the_permalink() ?> rel="bookmark"><?php the_title() ?></a></h3>
+			<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
 			<div class="meta"><?php echo get_the_date() ?></div>
 			<p><?php the_excerpt() ?></p>
 		</div>
@@ -26,7 +26,7 @@
 		<?php foreach($talks as $post): setup_postdata($post) ?>
 		<div class="rich-list-item">
 			<?php the_post_thumbnail('thumbnail', array('class' => 'illustration alignright')) ?>
-			<h3><a href="<?php the_permalink() ?> rel="bookmark"><?php the_title() ?></a></h3>
+			<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
 			<div class="meta"><?php _e('By', 'sudweb') ?>&nbsp;<?php the_author_posts_link() ?></div>
 			<p><?php the_excerpt() ?></p>
 		</div>
