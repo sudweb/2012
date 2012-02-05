@@ -211,3 +211,31 @@ td { vertical-align: top; }
 .footer a {
 	color: #fff;
 }
+
+/* Styles for smartphones */
+@media (min-width : 320px) and (max-width:479px) {
+}
+
+/* Above 480 but under 960px (tablets mostly) */
+@media (min-width : 480px) and (max-width:959px) {
+}
+
+/* Over 480 */
+@media (min-width : 480px) {
+}
+
+/* Over 600 */
+@media (min-width : 600px) {
+}
+
+/* 600-980 */
+@media (min-width : 600px) and (max-width : 959px) {
+}
+
+/* Over 960 */
+@media only screen and (min-width : 960px) {
+}
+
+/* Over 1280 */
+@media (min-width : 1280px) {
+}
