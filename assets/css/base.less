@@ -2,6 +2,10 @@ html{
     font-family: @default_font_stack;
 }
 
+h1, h2, h3{
+    .alternate-font-stack();
+}
+
 .aligncenter{
     margin-left: auto;
     margin-right: auto;
@@ -40,6 +44,7 @@ img.alignright{
         background: @background_color;
         color: @color;
         display: inline-block;
+        .alternate-font-stack();
         padding: .5em;
         position: relative;
         text-decoration: none;
@@ -109,6 +114,7 @@ header{
     @color: #fff;
     background: @linkColorHover url('assets/img/header.png') no-repeat bottom center;
     color: @color;
+    .alternate-font-stack();
     margin-bottom: 6em;
 
     .container{
@@ -231,13 +237,12 @@ footer{
     background: @content_background_border;
     position: relative;
 
-    &, a{
+    &, a, p{
         color: #fff;
+        .alternate-font-stack();
     }
 
     a{
-        font-weight: bold;
-
         &::before{
             content: "›\00A0";
             font-size: 1.4em;
@@ -258,11 +263,14 @@ footer{
 
         .alternate{
             background: #fff;
-            color: @content_background_border;
             margin-bottom: @baseLineHeight !important;
             margin-left: -@gridGutterWidth !important;
             margin-right: -@gridGutterWidth !important;
             padding: @gridGutterWidth;
+
+            &, p{
+                color: @content_background_border;
+            }
 
             h3{
                 width: 66%;
