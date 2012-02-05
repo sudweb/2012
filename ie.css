@@ -1,0 +1,223 @@
+/* Styles for IE up to 8 */
+body {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+.wrapper {
+	border-bottom: none;
+}
+.header {
+	border-bottom: none;
+	background-position: center top;
+}
+.logo {
+	margin: 42px 0 40px 100px;
+}
+.baseline {
+	background: #f9b410;
+	color: #402F33;
+	font-weight: bold;
+	margin-top: 62px;
+	margin-right: 3em;
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+.pitch {
+	float: left;
+	width: 45%;
+	margin: 1em 5% 1em 0;
+}
+.header .illustration {
+	display: block;
+	float: right;
+	width: 45%;
+	margin-bottom: 1em;
+	text-align: center;
+}
+.header .illustration img {
+	max-width: 100%;
+}
+.header .nav {
+	background: #8f4a00;
+	width: 100%;
+	float: left;
+}
+.header .nav ul {
+	padding: 0 10px;
+}
+.header .nav li {
+	float: left;
+	width: 20%;
+}
+.home .header .nav li {
+	width: 25%;
+}
+.header .nav a {
+	background: none;
+	color: #fff;
+	margin: 0;
+}
+.header .nav a:visited {
+	color: #d9dadb;
+	background: none;
+}
+.header .nav a.current,
+.header .nav a:hover,
+.header .nav a:focus {
+	color: #9c1529;
+	background: #e9dcce;
+}
+.header .nav a:active {
+	color: #402f33;
+	background: #e9dcce;
+}
+.afterpitch:link,
+.afterpitch:visited {
+	display: none;
+}
+.beforepitch:link,
+.beforepitch:visited {
+	display: block;
+	font-size: 24px;
+	font-size: 2.4rem;
+}
+
+.actualites,
+.programme {
+	float: left;
+	width: 450px;
+	margin-bottom: 1em;
+}
+.actualites {
+	margin-right: 40px;
+}
+.actualites h2,
+.programme h2 {
+	margin-top: 0;
+}
+
+.social {
+	clear: both;
+	padding: .1em 0 .1em 10px;
+	background: #9C1529 url(assets/img/header.jpg) no-repeat center 60%;
+}
+.social h2 {
+	color: #fff;
+}
+.social h2 {
+	background: none;
+	border: none;
+	float: left;
+	padding: 0 1em 0 0;
+	margin: .5em 0;
+}
+.social h2::after {
+	display: none;
+}
+.social ul {
+	margin: .8em 0;
+}
+.social li {
+	margin-right: 1%;
+}
+.social li,
+.social a {
+	display: block;
+	float: left;
+	font-weight: bold;
+}
+.social a:link { color: #fff; }
+.social a:visited { color: #edebeb; }
+.social a:hover,
+.social a:focus { color: #f9b410; }
+.social a:active { color: #8cd0e4; }
+.newsletter:link { background-position: 0 0; }
+.newsletter:hover,
+.newsletter:focus { background-position: 0 -100px; }
+.newsletter:active { background-position: 0 -200px; }
+.newsletter:visited { background-position: 0 -300px; }
+
+.twitter:link { background-position: -200px 0; }
+.twitter:hover,
+.twitter:focus { background-position: -200px -100px; }
+.twitter:active { background-position: -200px -200px; }
+.twitter:visited { background-position: -200px -300px; }
+
+.facebook:link { background-position: -400px 0; }
+.facebook:hover,
+.facebook:focus { background-position: -400px -100px; }
+.facebook:active { background-position: -400px -200px; }
+.facebook:visited { background-position: -400px -300px; }
+
+.lanyrd:link { background-position: -600px 0; }
+.lanyrd:hover,
+.lanyrd:focus { background-position: -600px -100px; }
+.lanyrd:active { background-position: -600px -200px; }
+.lanyrd:visited { background-position: -600px -300px; }
+
+.googleplus:link { background-position: -800px 0; }
+.googleplus:hover,
+.googleplus:focus { background-position: -800px -100px; }
+.googleplus:active { background-position: -800px -200px; }
+.googleplus:visited { background-position: -800px -300px; }
+
+.partenaires .or,
+.partenaires .argent,
+.partenaires .bronze {
+	border: none;
+}
+.partenaires .or {
+	float: left;
+	width: 60%;
+}
+.partenaires .argent {
+	padding-top: 0;
+	float: right;
+	width: 39%;
+}
+.partenaires .argent li {
+	width: 49%;
+}
+.partenaires .bronze {
+	clear: both;
+}
+.partenaires .or li,
+.partenaires .argent li {
+	display: inline;
+	zoom: 1;
+}
+.partenaires .or li {
+	width: 32%;
+}
+.partenaires .argent li {
+	width: 24%;
+}
+
+.footer {
+	padding: 0 10px 1em;
+}
+.apropos {
+	color: #fff;
+	background: none;
+	float: left;
+	width: 60%;
+}
+.apropos h2 {
+	margin-right: 0;
+	color: #f9b410;
+}
+.footer .nav {
+	margin-left: 65%;
+	padding-top: 1.5em;
+}
+li.espacepresse,
+li.soutien-officiel {
+	background: none;
+}
+.espacepresse a {
+	font-weight: bold;
+	color: #f9b410;
+}
+.soutien-officiel a {
+	color: #fff;
+}
