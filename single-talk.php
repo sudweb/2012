@@ -1,4 +1,4 @@
-<?php get_header() ?>
+<?php get_header(); the_post(); ?>
 
 <div class="row">
 	<?php get_sidebar('conferences') ?>
