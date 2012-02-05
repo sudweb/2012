@@ -88,16 +88,20 @@ function filter_navmenu_classes(array $classes, $item, $args)
  */
 function theme_filter_empty_thumbnail_html($html, $post_id, $post_thumbnail_id, $size, $attr)
 {
-	if ($html)
+	global $_wp_additional_image_sizes;
+
+	if ($html || !isset($_wp_additional_image_sizes[$size]))
 	{
 		return $html;
 	}
 
+	$size_profile = $_wp_additional_image_sizes[$size];
+
 	return strtr('<img src="http://placehold.it/%width%x%height%" alt="" class="%class%" width="%width%" height="%height%" />',
 		array(
-			'%width%' => intval(get_option($size.'_size_w')),
-			'%height%' => intval(get_option($size.'_size_h')),
-			'%class%' => $attr['class'],
+			'%width%' => intval($size_profile['width']),
+			'%height%' => intval($size_profile['height']),
+			'%class%' => isset($attr['class']) ? $attr['class'] : '',
 		)
 	);
 }
