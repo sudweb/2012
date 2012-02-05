@@ -1,0 +1,49 @@
+.single #content{
+    /**
+     * Common to all content types
+     */
+    .hentry{
+        h3{
+            color: @linkColor;
+        }
+    }
+
+    /**
+     * Specific to a Talk Post Type
+     */
+    .type-talk{
+        header{
+            height: 220px;
+            margin-bottom: @baseLineHeight * 2;
+            position: relative;
+
+            img{
+                position: absolute;
+                z-index: 0;
+            }
+
+            h2, span{
+                background: #fff;
+                border: none;
+                display: inline;
+                position: absolute;
+                bottom: 0;
+                margin-bottom: 2em;
+                padding: .2em 10px;
+                z-index: 10;
+
+                &:after{
+                    display: none;
+                }
+            }
+
+            .conference-author{
+                bottom: 0;
+                color: @linkColor;
+                .alternate-font-stack();
+                font-size: 1.2em;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
