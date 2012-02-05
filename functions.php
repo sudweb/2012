@@ -9,7 +9,7 @@ set_post_thumbnail_size(870, 220, true);
  */
 if (false === class_exists('WPLessPlugin'))
 {
-	require __DIR__.'/vendor/wp-less/bootstrap-for-theme.php';
+	require dirname(__FILE__).'/vendor/wp-less/bootstrap-for-theme.php';
 	$WPLessPlugin->dispatch();
 }
 
@@ -45,7 +45,7 @@ add_action('wp', 'theme_main_action');
 add_filter('nav_menu_css_class', 'filter_navmenu_classes', 10, 3);
 add_filter('post_thumbnail_html', 'theme_filter_empty_thumbnail_html', 10, 5);
 add_filter('wp_nav_menu_container_allowedtags', 'theme_filter_enable_aside_nav');
-require __DIR__.'/lib/plugin/talk.php';
+require dirname(__FILE__).'/lib/plugin/talk.php';
 
 function theme_main_action(){
     wp_enqueue_style('main', get_stylesheet_directory_uri().'/style.less', array(), 'THEME_VERSION', 'media,screen');
