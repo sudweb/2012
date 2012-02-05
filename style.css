@@ -55,11 +55,6 @@ td { vertical-align: top; }
 	margin-left: auto;
 	margin-right: auto;
 }
-.header {
-	background: #9C1529 url(assets/img/header.png) no-repeat center bottom;
-	color: #fff;
-	overflow: hidden;
-}
 .header .logo {
 	float: left;
 	width: 190px;
@@ -102,6 +97,16 @@ td { vertical-align: top; }
 	-ms-transform: rotate(-45deg) skew(-45deg);
 	-o-transform: rotate(-45deg) skew(-45deg);
 	transform: rotate(-45deg) skew(-45deg);
+.wrapper {
+	background: #9f051a url(assets/img/header.jpg) no-repeat center bottom;
+	color: #fff;
+	border-bottom: 10px solid rgba(0,0,0,.33);
+}
+.header {
+	overflow: hidden;
+	position: relative;
+	background: url(assets/img/logo_bg.png) no-repeat -240px -60px;
+}
 }
 .header .pitch {
 	clear: both;
