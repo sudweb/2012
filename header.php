@@ -39,3 +39,6 @@
 
 <div class="container" role="main" id="content">
 	<a href="#" class="cta afterpitch">Proposez un sujet !</a>
+	<?php if (!is_front_page()): ?>
+		<?php get_sidebar(); ?>
+	<?php endif; ?>
