@@ -368,41 +368,41 @@ td { vertical-align: top; }
 .googleplus:hover,
 .googleplus:active { background-position: -800px -200px; }
 
-.partenaires ul {
+.sponsors ul {
 	margin: 0;
 	padding: 0 0 1em 0;
 }
-.partenaires li {
+.sponsors li {
 	list-style: none;
 	text-align: center;
 }
-.partenaires a {
+.sponsors a {
 	color: #402f33;
 }
-.partenaires img {
+.sponsors img {
 	max-width: 100%;
 	display: block;
 	text-align: center;
 	margin: 0 auto;
 }
-.partenaires .bronze a::before,
+.sponsors .bronze a::before,
 .devenirpartenaire ::before {
 	content: ">";
 	padding: 0 5px;
 }
-.partenaires .argent,
-.partenaires .bronze {
+.sponsors .silver,
+.sponsors .bronze {
 	padding-top: 1em;
 }
-.partenaires .or,
-.partenaires .argent {
+.sponsors .gold,
+.sponsors .silver {
 	border-bottom: 2px dashed #938b8f;
 }
-.partenaires .bronze {
+.sponsors .bronze {
 	margin-bottom: 1em;
 	border-bottom: 2px solid #ddba6d;
 }
-.partenaires .bronze li {
+.sponsors .bronze li {
 	display: inline;
 	margin-right: 2em;
 }
@@ -534,7 +534,7 @@ li.soutien-officiel {
 		margin-left: 50px;
 		clear: right;
 	}
-	.partenaires .argent li {
+	.sponsors .silver li {
 		display: inline-block;
 		width: 49%;
 	}
@@ -676,15 +676,15 @@ li.soutien-officiel {
 	.beforepitch:visited {
 		display: block;
 	}
-	.partenaires .or li,
-	.partenaires .argent li {
+	.sponsors .gold li,
+	.sponsors .silver li {
 		display: inline-block;
 		zoom: 1;
 	}
-	.partenaires .or li {
+	.sponsors .gold li {
 		width: 32%;
 	}
-	.partenaires .argent li {
+	.sponsors .silver li {
 		width: 24%;
 	}
 	.apropos {
@@ -851,24 +851,24 @@ li.soutien-officiel {
 	.googleplus:active { background-position: -800px -200px; }
 	.googleplus:visited { background-position: -800px -300px; }
 	
-	.partenaires .or,
-	.partenaires .argent,
-	.partenaires .bronze {
+	.sponsors .gold,
+	.sponsors .silver,
+	.sponsors .bronze {
 		border: none;
 	}
-	.partenaires .or {
+	.sponsors .gold {
 		float: left;
 		width: 60%;
 	}
-	.partenaires .argent {
+	.sponsors .silver {
 		padding-top: 0;
 		float: right;
 		width: 39%;
 	}
-	.partenaires .argent li {
+	.sponsors .silver li {
 		width: 49%;
 	}
-	.partenaires .bronze {
+	.sponsors .bronze {
 		clear: both;
 	}
 }

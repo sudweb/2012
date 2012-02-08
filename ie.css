@@ -161,35 +161,35 @@ body {
 .googleplus:active { background-position: -800px -200px; }
 .googleplus:visited { background-position: -800px -300px; }
 
-.partenaires .or,
-.partenaires .argent,
-.partenaires .bronze {
+.sponsors .gold,
+.sponsors .silver,
+.sponsors .bronze {
 	border: none;
 }
-.partenaires .or {
+.sponsors .gold {
 	float: left;
 	width: 60%;
 }
-.partenaires .argent {
+.sponsors .silver {
 	padding-top: 0;
 	float: right;
 	width: 39%;
 }
-.partenaires .argent li {
+.sponsors .silver li {
 	width: 49%;
 }
-.partenaires .bronze {
+.sponsors .bronze {
 	clear: both;
 }
-.partenaires .or li,
-.partenaires .argent li {
+.sponsors .gold li,
+.sponsors .silver li {
 	display: inline;
 	zoom: 1;
 }
-.partenaires .or li {
+.sponsors .gold li {
 	width: 32%;
 }
-.partenaires .argent li {
+.sponsors .silver li {
 	width: 24%;
 }
 
