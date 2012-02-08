@@ -885,4 +885,7 @@ li.soutien-officiel {
 		padding: 0;
 		width: 350px;
 	}
+	.header .illustration {
+		width: 600px;
+	}
 }
