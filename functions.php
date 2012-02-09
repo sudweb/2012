@@ -26,8 +26,8 @@ register_sidebar(array(
 	'name' => 'Footer',
 	'before_widget' => '<div class="about">',
 	'after_widget' => '</div>',
-	'before_title' => '<h3>',
-	'after_title' => '</h3>',
+	'before_title' => '<h2>',
+	'after_title' => '</h2>',
 ));
 
 /*
