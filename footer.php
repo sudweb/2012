@@ -39,31 +39,11 @@
 </div>
 <div class="footer" role="footer">
 	<div class="container">
-		<div class="apropos">
-			<h2>À propos de l'Association Sud-Web</h2>
-			<p>Derrière Sud Web (l’événement), il y a Sud-Web (l’association). Derrière le rêve et les paillettes, il y a les travailleurs de l’ombre, qui s’activent en silence pour donner vie à leur passion....</p>
-			<?php dynamic_sidebar('footer') ?>
-		</div>
+		<?php dynamic_sidebar('footer') ?>
 		<?php wp_nav_menu(array(
 			'theme_location' => 'footer-column2',
 			'menu_class' => 'nav'
 		)) ?>
-		<?php wp_nav_menu(array(
-			'theme_location' => 'footer-column3',
-			'container_class' => 'span3 links',
-			'menu_class' => 'unstyled'
-		)) ?>
-		<?php /*
-		// TODO: Find a way to merge items from both menu locations into one UL 
-		<ul class="nav">
-			<li class="espacepresse"><a href="#">Espace Presse</a></li>
-			<li class="soutien-officiel"><a href="#">Avec le soutien du W3C</a></li>
-			<li><a href="#">Plan du site</a></li>
-			<li><a href="#">Crédits</a></li>
-			<li><a href="#">Mentions légales</a></li>
-			<li class="hebergement"><a href="http://www.alwaysdata.com/">Sympathiquement hébergé par AlwaysData</a></li>
-		</ul>
-		*/ ?>
 	</div>
 </div>
 <?php wp_footer() ?>

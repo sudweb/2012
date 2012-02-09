@@ -67,6 +67,14 @@ function filter_navmenu_classes(array $classes, $item, $args)
 	{
 		$classes[] = 'menu-item-press';
 	}
+	if (strpos($args->theme_location, 'footer') !== false && stripos($item->title, 'W3C') !== false)
+	{
+		$classes[] = 'menu-item-w3c';
+	}
+	if (strpos($args->theme_location, 'footer') !== false && stripos($item->title, 'alwaysdata') !== false)
+	{
+		$classes[] = 'menu-item-alwaysdata';
+	}
 
 	return $classes;
 }
