@@ -24,7 +24,7 @@ register_sidebar(array(
 
 register_sidebar(array(
 	'name' => 'Footer',
-	'before_widget' => '<div id="%1$s" class="span5 alternate %2$s">',
+	'before_widget' => '<div class="about">',
 	'after_widget' => '</div>',
 	'before_title' => '<h3>',
 	'after_title' => '</h3>',
@@ -63,11 +63,6 @@ function theme_main_action(){
  */
 function filter_navmenu_classes(array $classes, $item, $args)
 {
-	if ($args->theme_location === 'header')
-	{
-		$classes[] = 'span6';
-	}
-
 	if (strpos($args->theme_location, 'footer') !== false && stripos($item->title, 'press') !== false)
 	{
 		$classes[] = 'menu-item-press';
