@@ -207,13 +207,14 @@ td { vertical-align: top; }
 	font-weight: bold;
 	font-size: larger;
 }
-.header .nav a.current,
+.header .nav .current-menu-item a:link,
+.header .nav .current-menu-item a:visited,
 .header .nav a:hover,
 .header .nav a:focus {
 	color: #fff;
 	background: #402f33;
 }
-.home .nav .home {
+.home .nav .menu-item-home {
 	display: none;
 }
 
@@ -453,32 +454,32 @@ td { vertical-align: top; }
 	font-weight: normal;
 }
 
-.apropos {
+.about {
 	color: #402F33;
 	background: #fff;
 	padding: 1em 5px;
 }
-.apropos h2 {
+.about h2 {
 	color: #c40123;
 	font-weight: normal;
 	margin-bottom: 1em;
 }
-.espacepresse a {
+.menu-item-press a {
 	color: #c40123;
 }
-li.espacepresse {
+li.menu-item-press {
 	background: #fff;
 }
-li.soutien-officiel {
+li.menu-item-w3c {
 	margin: 0 0 .5em 0;
 	padding: 1em 0 .5em 5px;
 	background: #fff;
 }
-.soutien-officiel a {
+.menu-item-w3c a {
 	color: #402f33;
 	font-weight: bold;
 }
-.hebergement {
+.menu-item-alwaysdata {
 	margin-top: 1em;
 }
 
@@ -525,7 +526,7 @@ li.soutien-officiel {
 	.header .nav li:nth-child(odd) {
 		margin-left: 5%;
 	}
-	.nav .home {
+	.nav .menu-item-home {
 		display: none;
 	}
 	
@@ -546,28 +547,28 @@ li.soutien-officiel {
 		width: auto;
 		padding: 0 3% 0 5px;
 	}
-	.apropos h2 {
+	.about h2 {
 		margin-right: 8em;
 	}
-	.espacepresse {
+	.menu-item-press {
 		list-style: none;
 		position: absolute;
 		right: 5px;
 		top: 1em;
 		padding: 0;
 	}
-	.espacepresse a {
+	.menu-item-press a {
 		color: #fff;
 		background: #c40123;
 		padding: .5em;
 		position: relative;
 	}
-	.espacepresse a:focus,
-	.espacepresse a:hover {
+	.menu-item-press a:focus,
+	.menu-item-press a:hover {
 		color: #c40123;
 		background: #fff;
 	}
-	.espacepresse a::after {
+	.menu-item-press a::after {
 		content: "";
 		display: block;
 		background: inherit;
@@ -582,7 +583,7 @@ li.soutien-officiel {
 		-o-transform: rotate(-45deg) skew(-45deg);
 		transform: rotate(-45deg) skew(-45deg);
 	}
-	li.soutien-officiel {
+	li.menu-item-w3c {
 		float: none;
 		padding-bottom: 1em;
 	}
@@ -690,13 +691,13 @@ li.soutien-officiel {
 	.sponsors .silver li {
 		width: 24%;
 	}
-	.apropos {
+	.about {
 		color: #fff;
 		background: none;
 		float: left;
 		width: 60%;
 	}
-	.apropos h2 {
+	.about h2 {
 		margin-right: 0;
 		color: #f9b410;
 	}
@@ -704,15 +705,15 @@ li.soutien-officiel {
 		margin-left: 65%;
 		padding-top: 1.5em;
 	}
-	li.espacepresse,
-	li.soutien-officiel {
+	li.menu-item-press,
+	li.menu-item-w3c {
 		background: none;
 	}
-	.espacepresse a {
+	.menu-item-press a {
 		font-weight: bold;
 		color: #f9b410;
 	}
-	.soutien-officiel a {
+	.menu-item-w3c a {
 		color: #fff;
 	}
 }
