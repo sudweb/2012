@@ -1,5 +1,5 @@
 <?php
-define('THEME_VERSION', '2.0.0-dev');
+define('THEME_VERSION', '2.0.1-dev');
 add_theme_support('post-thumbnails');
 load_theme_textdomain('sudweb', get_template_directory().'/i18n');
 set_post_thumbnail_size(870, 220, true);
@@ -46,6 +46,7 @@ add_filter('nav_menu_css_class', 'filter_navmenu_classes', 10, 3);
 add_filter('post_thumbnail_html', 'theme_filter_empty_thumbnail_html', 10, 5);
 add_filter('wp_nav_menu_container_allowedtags', 'theme_filter_enable_aside_nav');
 require dirname(__FILE__).'/lib/plugin/talk.php';
+require dirname(__FILE__).'/lib/plugin/sponsor.php';
 
 function theme_main_action(){
     wp_enqueue_style('main', get_stylesheet_directory_uri().'/style.less', array(), 'THEME_VERSION', 'media,screen');
