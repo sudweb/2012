@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Canalblog Importer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-10 10:27+0100\n"
-"PO-Revision-Date: 2012-02-10 10:28+0100\n"
+"POT-Creation-Date: 2012-02-12 12:41+0100\n"
+"PO-Revision-Date: 2012-02-12 12:46+0100\n"
 "Last-Translator: Goulven Champenois <goulvench@gmail.com>\n"
 "Language-Team:  <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr "Restez informés !"
 
 #: ../footer.php:12
 msgid "Sponsors"
-msgstr "Nos sponsors"
+msgstr "Nos partenaires"
 
 #: ../home.php:4
 msgid "Latest News"
@@ -38,6 +38,70 @@ msgstr "Au programme"
 #: ../home.php:29
 msgid "By"
 msgstr "Par"
+
+#: ../lib/plugin/sponsor.php:27
+msgid "Search Sponsor Types"
+msgstr "Rechercher un type de partenaire"
+
+#: ../lib/plugin/sponsor.php:28
+msgid "All Sponsor Types"
+msgstr "Tous les types de partenaires"
+
+#: ../lib/plugin/sponsor.php:29
+msgid "Edit Sponsor Type"
+msgstr "Modifier le type de partenaire"
+
+#: ../lib/plugin/sponsor.php:30
+msgid "Update Sponsor Type"
+msgstr "Mettre à jour le type de partenaire"
+
+#: ../lib/plugin/sponsor.php:31
+msgid "Add New Sponsor Type"
+msgstr "Ajouter un type de partenaire"
+
+#: ../lib/plugin/sponsor.php:32
+msgid "New Sponsor Type Name"
+msgstr "Nouveau type de partenaire"
+
+#: ../lib/plugin/sponsor.php:33
+msgid "Sponsor Type"
+msgstr "Type de partenaire"
+
+#: ../lib/plugin/sponsor.php:45
+msgid "Add New Sponsor"
+msgstr "Ajouter un partenaire"
+
+#: ../lib/plugin/sponsor.php:46
+msgid "Edit Sponsor"
+msgstr "Editer le partenaire"
+
+#: ../lib/plugin/sponsor.php:47
+msgid "New Sponsor"
+msgstr "Nouveau partenaire"
+
+#: ../lib/plugin/sponsor.php:48
+msgid "All Sponsors"
+msgstr "Tous les partenaires"
+
+#: ../lib/plugin/sponsor.php:49
+msgid "View Sponsor"
+msgstr "Afficher le partenaire"
+
+#: ../lib/plugin/sponsor.php:50
+msgid "Search Sponsors"
+msgstr "Chercher parmi les partenaires"
+
+#: ../lib/plugin/sponsor.php:51
+msgid "No sponsors found"
+msgstr "Aucun partenaire trouvé"
+
+#: ../lib/plugin/sponsor.php:52
+msgid "No sponsors found in Trash"
+msgstr "Aucun partenaire trouvé dans la corbeille"
+
+#: ../lib/plugin/sponsor.php:54
+msgid "Sponsor"
+msgstr "Nos partenaires"
 
 #: ../lib/plugin/talk.php:27
 msgid "Search Talk Types"
