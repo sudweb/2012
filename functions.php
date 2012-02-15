@@ -34,6 +34,7 @@ register_sidebar(array(
  * Declaring Menus
  */
 register_nav_menu('header', 'Primary Navigation');
+register_nav_menu('footer-social', 'Social networks');
 register_nav_menu('footer-column2', 'Footer: Column 2');
 register_nav_menu('footer-column3', 'Footer: Column 3');
 register_nav_menu('sidebar-conferences', 'Conferences Sidebar');
@@ -68,15 +69,12 @@ function filter_navmenu_classes(array $classes, $item, $args)
 	{
 		$classes[] = 'menu-item-press';
 	}
-	if (strpos($args->theme_location, 'footer') !== false && stripos($item->title, 'W3C') !== false)
-	{
-		$classes[] = 'menu-item-w3c';
-	}
-	if (strpos($args->theme_location, 'footer') !== false && stripos($item->title, 'alwaysdata') !== false)
-	{
-		$classes[] = 'menu-item-alwaysdata';
-	}
 
+	// Add menu-item-{hostname} to items to easily style external links
+	preg_match ('"^(?:https?://)?(?:www\.)?([^\.\/]+)"i', $item->url, $matches);
+	if (count($matches) > 1){
+		$classes[] = 'menu-item-'.$matches[1];
+	}
 	return $classes;
 }
 

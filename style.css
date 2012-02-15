@@ -347,30 +347,30 @@ td { vertical-align: top; }
 	background: url(assets/img/pictos_social_sprite.png) no-repeat left top;
 }
 
-.newsletter:link,
-.newsletter:visited { background-position: 0 -100px; }
-.newsletter:hover,
-.newsletter:active { background-position: 0 -200px; }
+.social a:link,
+.social a:visited { background-position: 0 -100px; }
+.social a:hover,
+.social a:active { background-position: 0 -200px; }
 
-.twitter:link,
-.twitter:visited { background-position: -200px -100px; }
-.twitter:hover,
-.twitter:active { background-position: -200px -200px; }
+.menu-item-twitter a:link,
+.menu-item-twitter a:visited { background-position: -200px -100px; }
+.menu-item-twitter a:hover,
+.menu-item-twitter a:active { background-position: -200px -200px; }
 
-.facebook:link,
-.facebook:visited { background-position: -400px -100px; }
-.facebook:hover,
-.facebook:active { background-position: -400px -200px; }
+.menu-item-facebook a:link,
+.menu-item-facebook a:visited { background-position: -400px -100px; }
+.menu-item-facebook a:hover,
+.menu-item-facebook a:active { background-position: -400px -200px; }
 
-.lanyrd:link,
-.lanyrd:visited { background-position: -600px -100px; }
-.lanyrd:hover,
-.lanyrd:active { background-position: -600px -200px; }
+.menu-item-lanyrd a:link,
+.menu-item-lanyrd a:visited { background-position: -600px -100px; }
+.menu-item-lanyrd a:hover,
+.menu-item-lanyrd a:active { background-position: -600px -200px; }
 
-.googleplus:link,
-.googleplus:visited { background-position: -800px -100px; }
-.googleplus:hover,
-.googleplus:active { background-position: -800px -200px; }
+.menu-item-google a:link,
+.menu-item-google a:visited { background-position: -800px -100px; }
+.menu-item-google a:hover,
+.menu-item-google a:active { background-position: -800px -200px; }
 
 .sponsors ul {
 	margin: 0;
@@ -470,12 +470,12 @@ td { vertical-align: top; }
 li.menu-item-press {
 	background: #fff;
 }
-li.menu-item-w3c {
+li.menu-item-w3 {
 	margin: 0 0 .5em 0;
 	padding: 1em 0 .5em 5px;
 	background: #fff;
 }
-.menu-item-w3c a {
+.menu-item-w3 a {
 	color: #402f33;
 	font-weight: bold;
 }
@@ -598,30 +598,30 @@ li.menu-item-w3c {
 		text-align: center;
 	}
 	
-	.newsletter:link,
-	.newsletter:visited { background-position: 45px -100px; }
-	.newsletter:hover,
-	.newsletter:active { background-position: 45px -200px; }
+	.social a:link,
+	.social a:visited { background-position: 45px -100px; }
+	.social a:hover,
+	.social a:active { background-position: 45px -200px; }
 	
-	.twitter:link,
-	.twitter:visited { background-position: -150px -100px; }
-	.twitter:hover,
-	.twitter:active { background-position: -150px -200px; }
+	.menu-item-twitter a:link,
+	.menu-item-twitter a:visited { background-position: -150px -100px; }
+	.menu-item-twitter a:hover,
+	.menu-item-twitter a:active { background-position: -150px -200px; }
 	
-	.facebook:link,
-	.facebook:visited { background-position: -350px -100px; }
-	.facebook:hover,
-	.facebook:active { background-position: -350px -200px; }
+	.menu-item-facebook a:link,
+	.menu-item-facebook a:visited { background-position: -350px -100px; }
+	.menu-item-facebook a:hover,
+	.menu-item-facebook a:active { background-position: -350px -200px; }
 	
-	.lanyrd:link,
-	.lanyrd:visited { background-position: -550px -100px; }
-	.lanyrd:hover,
-	.lanyrd:active { background-position: -550px -200px; }
+	.menu-item-lanyrd a:link,
+	.menu-item-lanyrd a:visited { background-position: -550px -100px; }
+	.menu-item-lanyrd a:hover,
+	.menu-item-lanyrd a:active { background-position: -550px -200px; }
 	
-	.googleplus:link,
-	.googleplus:visited { background-position: -750px -100px; }
-	.googleplus:hover,
-	.googleplus:active { background-position: -750px -200px; }
+	.menu-item-google a:link,
+	.menu-item-google a:visited { background-position: -750px -100px; }
+	.menu-item-google a:hover,
+	.menu-item-google a:active { background-position: -750px -200px; }
 }
 
 /* Over 480 */
@@ -706,14 +706,14 @@ li.menu-item-w3c {
 		padding-top: 1.5em;
 	}
 	li.menu-item-press,
-	li.menu-item-w3c {
+	li.menu-item-w3 {
 		background: none;
 	}
 	.menu-item-press a {
 		font-weight: bold;
 		color: #f9b410;
 	}
-	.menu-item-w3c a {
+	.menu-item-w3 a {
 		color: #fff;
 	}
 }
@@ -825,35 +825,35 @@ li.menu-item-w3c {
 	.social a:hover,
 	.social a:focus { color: #f9b410; }
 	.social a:active { color: #8cd0e4; }
-	.newsletter:link { background-position: 0 0; }
-	.newsletter:hover,
-	.newsletter:focus { background-position: 0 -100px; }
-	.newsletter:active { background-position: 0 -200px; }
-	.newsletter:visited { background-position: 0 -300px; }
+	.social a:link { background-position: 0 0; }
+	.social a:hover,
+	.social a:focus { background-position: 0 -100px; }
+	.social a:active { background-position: 0 -200px; }
+	.social a:visited { background-position: 0 -300px; }
 	
-	.twitter:link { background-position: -200px 0; }
-	.twitter:hover,
-	.twitter:focus { background-position: -200px -100px; }
-	.twitter:active { background-position: -200px -200px; }
-	.twitter:visited { background-position: -200px -300px; }
+	.menu-item-twitter a:link { background-position: -200px 0; }
+	.menu-item-twitter a:hover,
+	.menu-item-twitter a:focus { background-position: -200px -100px; }
+	.menu-item-twitter a:active { background-position: -200px -200px; }
+	.menu-item-twitter a:visited { background-position: -200px -300px; }
 	
-	.facebook:link { background-position: -400px 0; }
-	.facebook:hover,
-	.facebook:focus { background-position: -400px -100px; }
-	.facebook:active { background-position: -400px -200px; }
-	.facebook:visited { background-position: -400px -300px; }
+	.menu-item-facebook a:link { background-position: -400px 0; }
+	.menu-item-facebook a:hover,
+	.menu-item-facebook a:focus { background-position: -400px -100px; }
+	.menu-item-facebook a:active { background-position: -400px -200px; }
+	.menu-item-facebook a:visited { background-position: -400px -300px; }
 	
-	.lanyrd:link { background-position: -600px 0; }
-	.lanyrd:hover,
-	.lanyrd:focus { background-position: -600px -100px; }
-	.lanyrd:active { background-position: -600px -200px; }
-	.lanyrd:visited { background-position: -600px -300px; }
+	.menu-item-lanyrd a:link { background-position: -600px 0; }
+	.menu-item-lanyrd a:hover,
+	.menu-item-lanyrd a:focus { background-position: -600px -100px; }
+	.menu-item-lanyrd a:active { background-position: -600px -200px; }
+	.menu-item-lanyrd a:visited { background-position: -600px -300px; }
 	
-	.googleplus:link { background-position: -800px 0; }
-	.googleplus:hover,
-	.googleplus:focus { background-position: -800px -100px; }
-	.googleplus:active { background-position: -800px -200px; }
-	.googleplus:visited { background-position: -800px -300px; }
+	.menu-item-google a:link { background-position: -800px 0; }
+	.menu-item-google a:hover,
+	.menu-item-google a:focus { background-position: -800px -100px; }
+	.menu-item-google a:active { background-position: -800px -200px; }
+	.menu-item-google a:visited { background-position: -800px -300px; }
 	
 	.sponsors .gold,
 	.sponsors .silver,

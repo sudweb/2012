@@ -1,12 +1,9 @@
 	<div class="block social">
 		<h2><?php _e('Keep in touch', 'sudweb'); ?></h2>
-		<ul>
-			<li><a href="#" class="newsletter">Newsletter</a></li>
-			<li><a href="https://twitter.com/sudweb" class="twitter">Twitter</a></li>
-			<li><a href="https://www.facebook.com/SudWeb" class="facebook">Facebook</a></li>
-			<li><a href="http://lanyrd.com/2012/sudweb/" class="lanyrd">Lanyrd</a></li>
-			<li><a href="https://plus.google.com/117285954629943503768/posts" class="googleplus">Google+</a></li>
-		</ul>
+		<?php wp_nav_menu(array(
+			'theme_location' => 'footer-social',
+			'container' => false
+		)) ?>
 	</div>
 	<div class="block sponsors">
 		<h2><?php _e('Sponsors', 'sudweb'); ?></h2>
