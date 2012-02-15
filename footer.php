@@ -33,11 +33,9 @@
 			?>
 			<ul class="<?php echo $type->slug; ?>">
 			<?php foreach ($items as $post): setup_postdata($post); ?>
-				<?php if ($type == 'bronze'): ?>
-				<li><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></li>
-				<?php else: ?>
-				<li><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('thumbnail', array('class' => 'illustration')) ?></a></li>
-				<?php endif ?>
+				<li><a href="<?php the_permalink() ?>" rel="bookmark">
+					<?php (has_post_thumbnail()) ? the_post_thumbnail('thumbnail', array('class' => 'illustration')) : the_title(); ?>
+				</a></li>
 			<?php endforeach ?>
 			</ul>
 		<?php endforeach ?>
