@@ -36,7 +36,6 @@ register_sidebar(array(
 register_nav_menu('header', 'Primary Navigation');
 register_nav_menu('footer-social', 'Social networks');
 register_nav_menu('footer-column2', 'Footer: Column 2');
-register_nav_menu('footer-column3', 'Footer: Column 3');
 register_nav_menu('sidebar-conferences', 'Conferences Sidebar');
 
 /*
