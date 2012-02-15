@@ -583,7 +583,7 @@ li.menu-item-w3 {
 		-o-transform: rotate(-45deg) skew(-45deg);
 		transform: rotate(-45deg) skew(-45deg);
 	}
-	li.menu-item-w3c {
+	li.menu-item-w3 {
 		float: none;
 		padding-bottom: 1em;
 	}
