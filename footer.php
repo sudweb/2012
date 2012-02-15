@@ -12,19 +12,26 @@
 		<h2><?php _e('Sponsors', 'sudweb'); ?></h2>
 		
 		<?php
-		$sponsor_types = array('gold', 'silver', 'bronze');
+		// TODO restrict to sponsors valid for this edition
+		$sponsor_types = get_terms('sponsor_types', array('orderby' => 'id'));
 		foreach ($sponsor_types as $type):
 			$items = get_posts(array(
 				'numberposts' => -1,
 				'post_type' => 'sponsor',
 				'post_status' => 'publish',
-				'sponsor_type' => $type
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'sponsor_types',
+						'field' => 'slug',
+						'terms' => $type->slug
+					)
+				)
 			));
 			if (count ($items) == 0) {
 				continue;
 			}
 			?>
-			<ul class="<?php echo $type; ?>">
+			<ul class="<?php echo $type->slug; ?>">
 			<?php foreach ($items as $post): setup_postdata($post); ?>
 				<?php if ($type == 'bronze'): ?>
 				<li><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></li>
