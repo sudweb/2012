@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Canalblog Importer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-12 12:41+0100\n"
-"PO-Revision-Date: 2012-02-12 12:46+0100\n"
+"POT-Creation-Date: 2012-02-15 21:57+0100\n"
+"PO-Revision-Date: 2012-02-15 21:57+0100\n"
 "Last-Translator: Goulven Champenois <goulvench@gmail.com>\n"
 "Language-Team:  <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Keep in touch"
 msgstr "Restez informés !"
 
-#: ../footer.php:12
+#: ../footer.php:13
 msgid "Sponsors"
 msgstr "Nos partenaires"
 
@@ -145,7 +145,7 @@ msgstr "Nouvelle conférence"
 
 #: ../lib/plugin/talk.php:48
 msgid "All Talks"
-msgstr "Toutes les conférenes"
+msgstr "Toutes les conférences"
 
 #: ../lib/plugin/talk.php:49
 msgid "View Talk"
