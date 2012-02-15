@@ -2,7 +2,6 @@
 <html <?php language_attributes() ?>>
 <head>
 	<title><?php wp_title() ?></title>
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/style.css" />
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
