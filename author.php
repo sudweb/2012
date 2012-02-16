@@ -7,7 +7,7 @@
 	<?php if ($curauth->user_url): ?><div class="meta site"><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></div><?php endif; ?>
 	<?php if ($curauth->user_description): ?><div class="bio"><?php echo $curauth->user_description; ?></div><?php endif; ?>
 	
-	<?php foreach (get_posts(array('post_type' => 'talk', 'orderby' => 'post_date', 'order' => 'ASC', 'post_status' => 'publish')) as $post) : setup_postdata($post); ?>
+	<?php foreach (get_posts(array('post_type' => 'talk', 'orderby' => 'post_date', 'order' => 'ASC', 'post_status' => 'future')) as $post) : setup_postdata($post); ?>
 	<div>
 		<h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title() ?></a></h3>
 		<?php the_post_thumbnail() ?>
