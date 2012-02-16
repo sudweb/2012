@@ -240,7 +240,6 @@ td { vertical-align: top; }
 	margin: .5em 0 1em;
 	padding-bottom: 0;
 	border-bottom: 0;
-	
 }
 .block a:link {
 	color: #c40423;
@@ -494,7 +493,7 @@ li.menu-item-w3 {
 }
 
 /* Styles for smartphones */
-@media (min-width : 320px) and (max-width:479px) {
+@media (min-width:320px) and (max-width:479px) {
 	.logo {
 		margin-bottom: 20px;
 	}
@@ -586,7 +585,7 @@ li.menu-item-w3 {
 }
 
 /* Above 480 but under 960px (tablets mostly) */
-@media (min-width : 480px) and (max-width:959px) {
+@media (min-width:480px) and (max-width:959px) {
 	.social a {
 		padding: 35px 0 10px 0;
 		width: 20%;
@@ -621,7 +620,7 @@ li.menu-item-w3 {
 }
 
 /* Over 480 */
-@media (min-width : 480px) {
+@media (min-width:480px) {
 	.wrapper {
 		border-bottom: none;
 	}
@@ -715,7 +714,7 @@ li.menu-item-w3 {
 }
 
 /* Over 600 */
-@media (min-width : 600px) {
+@media (min-width:600px) {
 	body {
 		font-family: Gudea, Helvetica, Tahoma, sans-serif;
 		font-size: 16px;
@@ -743,7 +742,7 @@ li.menu-item-w3 {
 }
 
 /* 600-980 */
-@media (min-width : 600px) and (max-width : 959px) {
+@media (min-width:600px) and (max-width:959px) {
 	.block {
 		margin-left: 1%;
 		margin-right: 1%;
@@ -757,7 +756,7 @@ li.menu-item-w3 {
 }
 
 /* Over 960 */
-@media only screen and (min-width : 960px) {
+@media (min-width:960px) {
 	.header {
 		background-position: center top;
 	}
@@ -874,7 +873,7 @@ li.menu-item-w3 {
 }
 
 /* Over 1280 */
-@media (min-width : 1280px) {
+@media (min-width:1280px) {
 	.beforepitch {
 		font-size: 24px;
 		font-size: 2.4rem;
