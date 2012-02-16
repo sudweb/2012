@@ -65,6 +65,7 @@ function sudweb_register_talk()
 		'menu_position' => 5, //Below posts
 		'taxonomies' => array(
 			'talk_types',
+			'post_tag'
 		),
 		'supports' => array(
 			'title',
