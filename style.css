@@ -74,7 +74,7 @@ td { vertical-align: top; }
 }
 .cta::before {
 	font-size: smaller;
-	content: ">>";
+	content: "»";
 	padding: 0 5px .2em 0;
 }
 
@@ -259,7 +259,7 @@ td { vertical-align: top; }
 	font-size: medium;
 }
 .sidebar ul ul a::before {
-	content: ">>";
+	content: "»";
 	padding: 0 5px .2em 0;
 }
 .content {
@@ -374,7 +374,7 @@ td { vertical-align: top; }
 .programme h3::before,
 .social a::before {
 	font-size: smaller;
-	content: ">";
+	content: "›";
 	padding: 0 5px;
 	vertical-align: top;
 }
@@ -481,7 +481,7 @@ td { vertical-align: top; }
 }
 .sponsors .bronze a::before,
 .devenirpartenaire ::before {
-	content: ">";
+	content: "›";
 	padding: 0 5px;
 }
 .sponsors .silver,
@@ -539,7 +539,7 @@ td { vertical-align: top; }
 	padding-left: 5px;
 }
 .footer a::before {
-	content: ">";
+	content: "›";
 	padding: 0 .5em 0 0;
 	font-weight: normal;
 }
