@@ -27,7 +27,7 @@
 		<?php the_post_thumbnail('thumbnail', array('class' => 'illustration')) ?>
 		<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
 		<div class="meta"><?php _e('By', 'sudweb') ?> <?php the_author_posts_link() ?></div>
-		<p><?php the_excerpt() ?></p>
+		<?php the_excerpt() ?>
 	</div>
 	<?php endforeach ?>
 	<?php if (count ($talks) == 0): ?>
