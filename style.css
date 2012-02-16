@@ -9,6 +9,7 @@ Author URI: http://sudweb.fr
 html {
 	font-family: Helvetica, Tahoma, sans-serif;
 	font-size: 62.5%;
+	line-height: 1.2;
 }
 body, button, input, select, textarea {
 	font-size: 14px;
@@ -22,12 +23,12 @@ a img {
 a { color: #00e; text-decoration: none; }
 a:visited { color: #551a8b; }
 a:hover { color: #06e; }
-a:focus { outline: thin dotted; }
+a:focus { outline: thin dotted; text-decoration: underline; }
 a:hover, a:active { outline: 0; text-decoration: underline; }
 ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
 img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; max-width: 100%; }
 
-p, h1, h2, h3, h4, h5, h6 { margin: 0; padding: 0; }
+p, h1, h2, h3, h4, h5, h6 { margin: 1em 0 .2em; padding: 0; }
 
 form { margin: 0; }
 fieldset { border: 0; margin: 0; padding: 0; }
@@ -111,7 +112,7 @@ td { vertical-align: top; }
 .logo {
 	float: left;
 	text-align: right;
-	margin-bottom: 10px;
+	margin: 0 0 10px;
 }
 .logo img {
 	display: block;
@@ -182,7 +183,7 @@ td { vertical-align: top; }
 }
 .header h2 {
 	font-weight: normal;
-	margin-bottom: .2em;
+	margin-top: .2em;
 }
 .header .nav ul {
 	margin: 0 auto;
@@ -426,7 +427,7 @@ td { vertical-align: top; }
 }
 .footer ul {
 	margin: 0;
-	padding: 0;
+	padding: 0 0 1em;
 }
 .footer,
 .footer a {
@@ -457,7 +458,7 @@ td { vertical-align: top; }
 .about h2 {
 	color: #c40123;
 	font-weight: normal;
-	margin-bottom: 1em;
+	margin: 0 0 1em;
 }
 .menu-item-press a {
 	color: #c40123;
