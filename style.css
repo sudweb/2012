@@ -52,11 +52,7 @@ td { vertical-align: top; }
 	display: table;
 	clear: both;
 }
-.header,
-.block,
-.footer {
-	zoom: 1;
-}
+
 .container {
 	clear: both;
 	max-width: 960px;

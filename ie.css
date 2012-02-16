@@ -3,6 +3,11 @@ body {
 	font-size: 18px;
 	font-size: 1.8rem;
 }
+.header,
+.block,
+.footer {
+	zoom: 1;
+}
 .wrapper {
 	border-bottom: none;
 }
