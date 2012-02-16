@@ -101,6 +101,15 @@ body {
 	margin-top: 0;
 }
 
+.sidebar {
+	display: block;
+	width: 12em;
+}
+.content {
+	margin-left: 14em;
+}
+
+
 .social {
 	clear: both;
 	padding: .1em 0 .1em 10px;

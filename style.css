@@ -215,6 +215,100 @@ td { vertical-align: top; }
 	display: none;
 }
 
+.sidebar,
+.content {
+	margin: 1em 0;
+}
+.sidebar {
+	display: none;
+	float: left;
+	background: #f6f5f5 url(assets/img/sidebar_bg.png) no-repeat left top;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.sidebar ul {
+	list-style: none;
+	margin: 0;
+	padding: 1em 0;
+}
+.sidebar a {
+	display: block;
+	margin: 0 1em .5em 0;
+	padding: .5em;
+	background: #fff;
+	color: #7b1f2d;
+	font-weight: bold;
+	font-size: larger;
+}
+.sidebar .current-menu-ancestor>a:link,
+.sidebar .current-menu-ancestor>a:visited,
+.sidebar .current-menu-item>a:link,
+.sidebar .current-menu-item>a:visited,
+.sidebar a:focus,
+.sidebar a:hover {
+	background: #b82f11 url(assets/img/header.jpg) no-repeat center 40%;
+	color: #fff;
+	margin-right: -1em;
+}
+.sidebar ul ul {
+	padding: .5em 0 1em 1em;
+}
+.sidebar ul ul a {
+	background: none;
+	font-weight: normal;
+	font-size: medium;
+}
+.sidebar ul ul a::before {
+	content: ">>";
+	padding: 0 5px .2em 0;
+}
+.content {
+	padding: 1em 5px;
+}
+.content h2 {
+	padding: .2em 0;
+	margin-bottom: .5em;
+	margin-top: 0;
+}
+.content h3 {
+	color: #ca1a3d;
+}
+.content a::before {
+	content: "»";
+	padding: 0 5px .2em 0;
+}
+.content a:link {
+	color: #ca1a3d;
+}
+.content a:visited,
+.content a:focus,
+.content a:hover {
+	color: #7b1f2d;
+}
+.content .attachment-post-thumbnail {
+	display: none;
+}
+.content .speaker a,
+.content .date {
+	font-weight: bold;
+	margin: .5em 0;
+	padding: .2em 1em .2em 25px;
+	background: url(assets/img/pictos_sprite.png) no-repeat left center;
+}
+.content .speaker a {
+	background-position: left 2px;
+}
+.content .date {
+	background-position: left -82px;
+}
+.content .subnav {
+	list-style: none;
+	padding: 0;
+}
+.content .subnav li {
+	margin: .2em 0;
+}
+
 .block {
 	background-color: #eff0ed;
 	padding: 0 5px;
@@ -482,7 +576,10 @@ li.menu-item-w3 {
 /* For fun, animate responsive elements */
 .baseline,
 .pitch,
-.nav a {
+.nav a,
+.sidebar,
+.sidebar a,
+.content {
 	-webkit-transition: all 200ms;
 	-moz-transition: all 200ms;
 	-ms-transition: all 200ms;
@@ -676,6 +773,13 @@ li.menu-item-w3 {
 	.beforepitch:visited {
 		display: block;
 	}
+	.sidebar {
+		display: block;
+		width: 10em;
+	}
+	.content {
+		margin-left: 11em;
+	}
 	.sponsors .gold li,
 	.sponsors .silver li {
 		display: inline-block;
@@ -737,6 +841,12 @@ li.menu-item-w3 {
 	.header .illustration img {
 		max-width: 100%;
 	}
+	.content .attachment-post-thumbnail {
+		display: block;
+		float: right;
+		padding: 0 0 1em 1em;
+		max-width: 30%;
+	}
 	.footer {
 		padding: 0 10px 1em;
 	}
@@ -786,6 +896,14 @@ li.menu-item-w3 {
 	.programme .illustration {
 		float: none;
 	}
+	
+	.sidebar {
+		width: 12em;
+	}
+	.content {
+		margin-left: 14em;
+	}
+	
 	.social {
 		clear: both;
 		padding: .1em 0 .1em 10px;
