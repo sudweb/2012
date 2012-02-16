@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Canalblog Importer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-15 21:57+0100\n"
-"PO-Revision-Date: 2012-02-15 21:57+0100\n"
+"POT-Creation-Date: 2012-02-16 01:11+0100\n"
+"PO-Revision-Date: 2012-02-16 01:12+0100\n"
 "Last-Translator: Goulven Champenois <goulvench@gmail.com>\n"
 "Language-Team:  <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Keep in touch"
 msgstr "Restez informés !"
 
-#: ../footer.php:13
+#: ../footer.php:9
 msgid "Sponsors"
 msgstr "Nos partenaires"
 
@@ -66,6 +66,11 @@ msgstr "Nouveau type de partenaire"
 #: ../lib/plugin/sponsor.php:33
 msgid "Sponsor Type"
 msgstr "Type de partenaire"
+
+#: ../lib/plugin/sponsor.php:44
+#: ../lib/plugin/talk.php:44
+msgid "Add New"
+msgstr "Ajouter"
 
 #: ../lib/plugin/sponsor.php:45
 msgid "Add New Sponsor"

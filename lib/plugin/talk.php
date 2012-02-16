@@ -41,7 +41,7 @@ function sudweb_register_talk()
 		'labels' => array(
 			'name' => _x('Talks', 'post type general name', 'sudweb'),
 			'singular_name' => _x('Talk', 'post type singular name', 'sudweb'),
-			'add_new' => _x('Add New', 'talk'),
+			'add_new' => __('Add New', 'talk'),
 			'add_new_item' => __('Add New Talk', 'sudweb'),
 			'edit_item' => __('Edit Talk', 'sudweb'),
 			'new_item' => __('New Talk', 'sudweb'),

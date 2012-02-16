@@ -41,7 +41,7 @@ function sudweb_register_sponsor()
 		'labels' => array(
 			'name' => _x('Sponsors', 'post type general name', 'sudweb'),
 			'singular_name' => _x('Sponsor', 'post type singular name', 'sudweb'),
-			'add_new' => _x('Add New', 'sponsor'),
+			'add_new' => __('Add New', 'sponsor'),
 			'add_new_item' => __('Add New Sponsor', 'sudweb'),
 			'edit_item' => __('Edit Sponsor', 'sudweb'),
 			'new_item' => __('New Sponsor', 'sudweb'),
