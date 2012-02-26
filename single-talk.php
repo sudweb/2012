@@ -8,7 +8,7 @@
 			<header>
 				<?php the_post_thumbnail() ?>
 				<h2 class="conference-title"><?php the_title() ?></h2>
-				<span class="conference-author"><?php the_author_posts_link() ?></span>
+				<span class="conference-speaker"><a href="#">John Doe</a></span>
 			</header>
 
 			<p><span class="conference-datetime">@todo with custom field</span></p>
