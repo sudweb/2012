@@ -70,7 +70,7 @@ function sudweb_register_talk()
 		),
 		'supports' => array(
 			'title',
-			'author',
+			'editor',
 			'thumbnail',
 			'excerpt',
 			//'comments',
