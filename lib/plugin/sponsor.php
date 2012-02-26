@@ -69,10 +69,8 @@ function sudweb_register_sponsor()
 		'supports' => array(
 			'title',
 			'editor',
-			'author',
 			'thumbnail',
 			'excerpt',
-			//'comments',
 		),
 	));
 }

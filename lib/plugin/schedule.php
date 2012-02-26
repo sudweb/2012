@@ -46,6 +46,7 @@ function sudweb_register_schedule()
 		'supports' => array(
 			'title',
 			'editor',
+			'thumbnail',
 		),
 	));
 }
