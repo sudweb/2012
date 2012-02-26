@@ -4,6 +4,7 @@
 	<?php get_sidebar('conferences') ?>
 
 	<?php $speakers = p2p_type('talk_to_speaker')->get_connected(get_the_id()) ?>
+	<?php $schedule = p2p_type('talk_to_schedule')->get_connected(get_the_id())->next_post() ?>
 
 	<div class="span9">
 		<article <?php post_class() ?>>
@@ -20,8 +21,10 @@
 				<?php endif ?>
 			</header>
 
-			<p>
-				<span class="conference-datetime"><?php the_field('schedule') ?></span>
+				<span class="conference-datetime">
+					<a href="<?php echo get_post_permalink($schedule->ID) ?>"><?php echo $schedule->post_title ?></a>
+					à <?php the_field('schedule') ?>
+				</span>
 				(<?php echo get_the_terms(get_the_id(), 'talk_types')->name ?>)
 			</p>
 
