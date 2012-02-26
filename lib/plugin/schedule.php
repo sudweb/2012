@@ -7,6 +7,7 @@
  */
 
 add_action('init', 'sudweb_register_schedule');
+add_action('init', 'sudweb_register_schedule_connections');
 
 /**
  * Registers the "Schedule" Custom Post Type
@@ -46,5 +47,20 @@ function sudweb_register_schedule()
 			'title',
 			'editor',
 		),
+	));
+}
+
+function sudweb_register_schedule_connections()
+{
+	if (!function_exists('p2p_register_connection_type'))
+	{
+		return false;
+	}
+
+	p2p_register_connection_type(array(
+		'name' => 'schedule_to_place',
+		'from' => 'schedule',
+		'to' => 'place',
+		'cardinality' => 'one-to-one',
 	));
 }
