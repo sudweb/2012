@@ -779,7 +779,8 @@ li.menu-item-w3 {
 	}
 	.sidebar {
 		display: block;
-		width: 10em;
+		margin-left: 20px;  /* @gridGutterWidth */
+		width: 220px;   /* (@gridColumnWidth + @gridGutterWidth) * 3 */
 	}
 	.content {
 		margin-left: 11em;
@@ -902,7 +903,8 @@ li.menu-item-w3 {
 	}
 
 	.sidebar {
-		width: 12em;
+		margin-right: 20px;   /* to fill the container width, 20px wider than bootstrap one */
+		width: 220px;   /* (@gridColumnWidth + @gridGutterWidth) * 3 */
 	}
 	.content {
 		margin-left: 14em;
