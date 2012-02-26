@@ -20,7 +20,7 @@
 		'numberposts' => 1,
 		'orderby' => 'rand',
 		'post_type' => 'talk',
-		'post_status' => 'future',
+		'post_status' => 'publish',
 	)) ?>
 	<?php foreach($talks as $post): setup_postdata($post) ?>
 	<div>
