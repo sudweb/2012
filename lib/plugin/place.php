@@ -11,7 +11,7 @@ add_action('init', 'sudweb_register_place');
 /**
  * Registers the "Place" Custom Post Type
  */
-function sudweb_register_schedule()
+function sudweb_register_place()
 {
 	/**
 	 * Registering "Place"
