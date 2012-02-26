@@ -233,7 +233,7 @@ td { vertical-align: top; }
 }
 .sidebar a {
 	display: block;
-	margin: 0 1em .5em 0;
+	margin: 0 0 .5em 0;
 	padding: .5em;
 	background: #fff;
 	color: #7b1f2d;
@@ -248,7 +248,6 @@ td { vertical-align: top; }
 .sidebar a:hover {
 	background: #b82f11 url(assets/img/header.jpg) no-repeat center 40%;
 	color: #fff;
-	margin-right: -1em;
 }
 .sidebar ul ul {
 	padding: .5em 0 1em 1em;
