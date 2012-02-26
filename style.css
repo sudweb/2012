@@ -745,9 +745,6 @@ li.menu-item-w3 {
 	}
 	.header .nav li {
 		float: left;
-		width: 20%;
-	}
-	.home .header .nav li {
 		width: 25%;
 	}
 	.header .nav a {
