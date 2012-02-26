@@ -457,10 +457,10 @@ td { vertical-align: top; }
 .menu-item-lanyrd a:hover,
 .menu-item-lanyrd a:active { background-position: -600px -200px; }
 
-.menu-item-google a:link,
-.menu-item-google a:visited { background-position: -800px -100px; }
-.menu-item-google a:hover,
-.menu-item-google a:active { background-position: -800px -200px; }
+.menu-item-plus a:link,
+.menu-item-plus a:visited { background-position: -800px -100px; }
+.menu-item-plus a:hover,
+.menu-item-plus a:active { background-position: -800px -200px; }
 
 .sponsors ul {
 	margin: 0;
@@ -711,10 +711,10 @@ li.menu-item-w3 {
 	.menu-item-lanyrd a:hover,
 	.menu-item-lanyrd a:active { background-position: -550px -200px; }
 	
-	.menu-item-google a:link,
-	.menu-item-google a:visited { background-position: -750px -100px; }
-	.menu-item-google a:hover,
-	.menu-item-google a:active { background-position: -750px -200px; }
+	.menu-item-plus a:link,
+	.menu-item-plus a:visited { background-position: -750px -100px; }
+	.menu-item-plus a:hover,
+	.menu-item-plus a:active { background-position: -750px -200px; }
 }
 
 /* Over 480 */
@@ -963,11 +963,11 @@ li.menu-item-w3 {
 	.menu-item-lanyrd a:active { background-position: -600px -200px; }
 	.menu-item-lanyrd a:visited { background-position: -600px -300px; }
 	
-	.menu-item-google a:link { background-position: -800px 0; }
-	.menu-item-google a:hover,
-	.menu-item-google a:focus { background-position: -800px -100px; }
-	.menu-item-google a:active { background-position: -800px -200px; }
-	.menu-item-google a:visited { background-position: -800px -300px; }
+	.menu-item-plus a:link { background-position: -800px 0; }
+	.menu-item-plus a:hover,
+	.menu-item-plus a:focus { background-position: -800px -100px; }
+	.menu-item-plus a:active { background-position: -800px -200px; }
+	.menu-item-plus a:visited { background-position: -800px -300px; }
 	
 	.sponsors .gold,
 	.sponsors .silver,
