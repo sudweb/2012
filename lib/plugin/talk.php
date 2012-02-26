@@ -7,6 +7,7 @@
  */
 
 add_action('init', 'sudweb_register_talk');
+add_action('init', 'sudweb_register_talk_connections');
 
 /**
  * Registers the "Talk" Custom Post Type
@@ -75,5 +76,19 @@ function sudweb_register_talk()
 			'excerpt',
 			//'comments',
 		),
+	));
+}
+
+function sudweb_register_talk_connections()
+{
+	if (!function_exists('p2p_register_connection_type'))
+	{
+		return false;
+	}
+
+	p2p_register_connection_type(array(
+		'name' => 'talk_to_speaker',
+		'from' => 'talk',
+		'to' => 'speaker',
 	));
 }
