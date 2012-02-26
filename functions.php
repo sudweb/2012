@@ -45,10 +45,10 @@ add_action('wp', 'theme_main_action');
 add_filter('nav_menu_css_class', 'filter_navmenu_classes', 10, 3);
 add_filter('post_thumbnail_html', 'theme_filter_empty_thumbnail_html', 10, 5);
 add_filter('wp_nav_menu_container_allowedtags', 'theme_filter_enable_aside_nav');
-require dirname(__FILE__).'/lib/plugin/speaker.php';
-require dirname(__FILE__).'/lib/plugin/talk.php';
 require dirname(__FILE__).'/lib/plugin/sponsor.php';
 require dirname(__FILE__).'/lib/plugin/schedule.php';
+require dirname(__FILE__).'/lib/plugin/speaker.php';
+require dirname(__FILE__).'/lib/plugin/talk.php';
 
 function theme_main_action(){
 	wp_enqueue_style('main', get_stylesheet_directory_uri().'/style.less', array(), THEME_VERSION, 'media,screen');
