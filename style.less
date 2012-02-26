@@ -1,17 +1,8 @@
-@import url('vendor/bootstrap/less/reset.less');
 @import url('vendor/bootstrap/less/variables.less');
-@import url('assets/fonts/din-alternatebold/stylesheet.css');
 @import url('assets/css/variables.less');
 @import url('vendor/bootstrap/less/mixins.less');
-@import url('vendor/bootstrap/less/scaffolding.less');
-@import url('vendor/bootstrap/less/grid.less');      /* @todo generate only the fluid grid */
-@import url('vendor/bootstrap/less/layouts.less');
-@import url('vendor/bootstrap/less/type.less');
-/*@import url('vendor/bootstrap/lib/code.less');*/
-@import url('vendor/bootstrap/less/forms.less');
-/*@import url('vendor/bootstrap/lib/tables.less');*/
-@import url('vendor/bootstrap/less/utilities.less');
-@import url('vendor/bootstrap/less/responsive.less');
-@import url('assets/css/base.less');
-@import url('assets/css/sidebar.less');
+
+#gridSystem > .generate(@gridColumns, @gridColumnWidth, @gridGutterWidth);
+
+@import url('style.css');
 @import url('assets/css/post.less');

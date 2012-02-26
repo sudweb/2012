@@ -54,11 +54,12 @@ td { vertical-align: top; }
 	clear: both;
 }
 
-.container {
+.span12, .container {
 	clear: both;
 	max-width: 960px;
 	margin-left: auto;
 	margin-right: auto;
+	width: auto !important;   /* overrides bootstrap grid width */
 }
 
 .cta {
@@ -103,12 +104,16 @@ td { vertical-align: top; }
 	position: relative;
 	background: url(assets/img/logo_bg.png) no-repeat -240px -60px;
 }
-.header .container {
-	padding: 10px;
-}
-.header .nav .container {
-	padding: 0;
-}
+	.header .container {
+		padding: 10px;
+	}
+	.header .nav .container {
+		padding: 0;
+	}
+
+/**
+ * Logo
+ */
 .logo {
 	float: left;
 	text-align: right;
@@ -621,7 +626,7 @@ li.menu-item-w3 {
 	.nav .menu-item-home {
 		display: none;
 	}
-	
+
 	.social a {
 		width: 120px;
 	}
@@ -689,27 +694,27 @@ li.menu-item-w3 {
 		height: auto;
 		text-align: center;
 	}
-	
+
 	.social a:link,
 	.social a:visited { background-position: 45px -100px; }
 	.social a:hover,
 	.social a:active { background-position: 45px -200px; }
-	
+
 	.menu-item-twitter a:link,
 	.menu-item-twitter a:visited { background-position: -150px -100px; }
 	.menu-item-twitter a:hover,
 	.menu-item-twitter a:active { background-position: -150px -200px; }
-	
+
 	.menu-item-facebook a:link,
 	.menu-item-facebook a:visited { background-position: -350px -100px; }
 	.menu-item-facebook a:hover,
 	.menu-item-facebook a:active { background-position: -350px -200px; }
-	
+
 	.menu-item-lanyrd a:link,
 	.menu-item-lanyrd a:visited { background-position: -550px -100px; }
 	.menu-item-lanyrd a:hover,
 	.menu-item-lanyrd a:active { background-position: -550px -200px; }
-	
+
 	.menu-item-plus a:link,
 	.menu-item-plus a:visited { background-position: -750px -100px; }
 	.menu-item-plus a:hover,
@@ -895,14 +900,14 @@ li.menu-item-w3 {
 	.programme .illustration {
 		float: none;
 	}
-	
+
 	.sidebar {
 		width: 12em;
 	}
 	.content {
 		margin-left: 14em;
 	}
-	
+
 	.social {
 		clear: both;
 		padding: .1em 0 .1em 10px;
@@ -943,31 +948,31 @@ li.menu-item-w3 {
 	.social a:focus { background-position: 0 -100px; }
 	.social a:active { background-position: 0 -200px; }
 	.social a:visited { background-position: 0 -300px; }
-	
+
 	.menu-item-twitter a:link { background-position: -200px 0; }
 	.menu-item-twitter a:hover,
 	.menu-item-twitter a:focus { background-position: -200px -100px; }
 	.menu-item-twitter a:active { background-position: -200px -200px; }
 	.menu-item-twitter a:visited { background-position: -200px -300px; }
-	
+
 	.menu-item-facebook a:link { background-position: -400px 0; }
 	.menu-item-facebook a:hover,
 	.menu-item-facebook a:focus { background-position: -400px -100px; }
 	.menu-item-facebook a:active { background-position: -400px -200px; }
 	.menu-item-facebook a:visited { background-position: -400px -300px; }
-	
+
 	.menu-item-lanyrd a:link { background-position: -600px 0; }
 	.menu-item-lanyrd a:hover,
 	.menu-item-lanyrd a:focus { background-position: -600px -100px; }
 	.menu-item-lanyrd a:active { background-position: -600px -200px; }
 	.menu-item-lanyrd a:visited { background-position: -600px -300px; }
-	
+
 	.menu-item-plus a:link { background-position: -800px 0; }
 	.menu-item-plus a:hover,
 	.menu-item-plus a:focus { background-position: -800px -100px; }
 	.menu-item-plus a:active { background-position: -800px -200px; }
 	.menu-item-plus a:visited { background-position: -800px -300px; }
-	
+
 	.sponsors .gold,
 	.sponsors .silver,
 	.sponsors .bronze {

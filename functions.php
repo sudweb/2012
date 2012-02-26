@@ -50,7 +50,7 @@ require dirname(__FILE__).'/lib/plugin/talk.php';
 require dirname(__FILE__).'/lib/plugin/sponsor.php';
 
 function theme_main_action(){
-    wp_enqueue_style('main', get_stylesheet_directory_uri().'/style.css', array(), 'THEME_VERSION', 'media,screen');
+	wp_enqueue_style('main', get_stylesheet_directory_uri().'/style.less', array(), THEME_VERSION, 'media,screen');
 }
 
 /**
