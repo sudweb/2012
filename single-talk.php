@@ -20,7 +20,7 @@
 				<?php endif ?>
 			</header>
 
-			<p><span class="conference-datetime">@todo with custom field</span></p>
+			<p><span class="conference-datetime"><?php the_field('schedule') ?></span></p>
 
 			<?php the_content() ?>
 		</article>
