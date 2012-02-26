@@ -20,7 +20,10 @@
 				<?php endif ?>
 			</header>
 
-			<p><span class="conference-datetime"><?php the_field('schedule') ?></span></p>
+			<p>
+				<span class="conference-datetime"><?php the_field('schedule') ?></span>
+				(<?php echo get_the_terms(get_the_id(), 'talk_types')->name ?>)
+			</p>
 
 			<?php the_content() ?>
 		</article>

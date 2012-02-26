@@ -309,6 +309,9 @@ article .conference-speaker a{
 	background-position: left 6px;
 	font-weight: normal;
 }
+article .conference-datetime{
+	padding-right: 0;   /* inline content, so don't push away its following content */
+}
 article .conference-datetime,
 .content .date {
 	background-position: left -82px;

@@ -75,6 +75,26 @@ function sudweb_register_talk()
 			'excerpt',
 		),
 	));
+
+	/**
+	 * Filtering output
+	 */
+	add_filter('get_the_terms', 'talk_filter_types', 10, 3);
+}
+
+/**
+ * For Talk Types, we only return the first item
+ * This is because we can (now) only have one type per talk
+ * Theming is made easier as we don't rely on an array of one element but directly onto the object
+ *
+ * @param $terms array
+ * @param $id integer
+ * @param $taxonomy string
+ * @return array|strObject
+ */
+function talk_filter_types($terms, $id, $taxonomy)
+{
+	return $taxonomy !== 'talk_types' ? $terms : array_pop($terms);
 }
 
 function sudweb_register_talk_connections()
