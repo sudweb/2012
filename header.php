@@ -12,9 +12,9 @@
 		<header class="header vevent" role="header" id="header">
 			<div class="container">
 				<h1 class="logo"><a href="<?php bloginfo('url') ?>" title="<?php bloginfo('title') ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/logo.png" alt="<?php bloginfo('title') ?>" /></a></h1>
-	
+
 				<div class="baseline"><strong><time class="dtstart" datetime="2012-05-25">25</time> et <time class="dtstart" datetime="2012-05-25">26 mai 2012</time></strong> à <span class="location">Toulouse, France</span></div>
-		
+
 				<a href="#" class="cta beforepitch">Proposez un sujet !</a>
 
 				<div class="pitch">
@@ -37,6 +37,3 @@
 
 <div class="container" role="main" id="content">
 	<a href="#" class="cta afterpitch">Proposez un sujet !</a>
-	<?php if (!is_front_page()): ?>
-		<?php get_sidebar('conferences'); ?>
-	<?php endif; ?>
