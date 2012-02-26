@@ -90,4 +90,10 @@ function sudweb_register_talk_connections()
 		'from' => 'talk',
 		'to' => 'speaker',
 	));
+
+	p2p_register_connection_type(array(
+		'name' => 'talk_to_schedule',
+		'from' => 'talk',
+		'to' => 'schedule',
+	));
 }
