@@ -3,7 +3,7 @@
 <div class="row">
 	<?php get_sidebar('conferences') ?>
 
-	<div class="span9">
+	<div class="content">
 		<article <?php post_class() ?>>
 			<header>
 				<?php if (has_post_thumbnail()): the_post_thumbnail(); endif ?>

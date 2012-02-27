@@ -6,7 +6,7 @@
 	<?php $speakers = p2p_type('talk_to_speaker')->get_connected(get_the_id()) ?>
 	<?php $schedule = p2p_type('talk_to_schedule')->get_connected(get_the_id())->next_post() ?>
 
-	<div class="span9">
+	<div class="content">
 		<article <?php post_class() ?>>
 			<header>
 				<?php the_post_thumbnail() ?>
