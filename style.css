@@ -405,6 +405,7 @@ td { vertical-align: top; }
 .social {
 	background: #fffaea;
 	overflow: hidden;
+	clear: both;
 }
 .social h2 {
 	border-color: #f9b410;
