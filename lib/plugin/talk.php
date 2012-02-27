@@ -7,6 +7,7 @@
  */
 
 add_action('init', 'sudweb_register_talk');
+add_action('init', 'sudweb_register_talk_connections');
 
 /**
  * Registers the "Talk" Custom Post Type
@@ -70,10 +71,50 @@ function sudweb_register_talk()
 		'supports' => array(
 			'title',
 			'editor',
-			'author',
 			'thumbnail',
 			'excerpt',
-			//'comments',
 		),
+	));
+
+	/**
+	 * Filtering output
+	 */
+	add_filter('get_the_terms', 'talk_filter_types', 10, 3);
+}
+
+/**
+ * For Talk Types, we only return the first item
+ * This is because we can (now) only have one type per talk
+ * Theming is made easier as we don't rely on an array of one element but directly onto the object
+ *
+ * @param $terms array
+ * @param $id integer
+ * @param $taxonomy string
+ * @return array|strObject
+ */
+function talk_filter_types($terms, $id, $taxonomy)
+{
+	return $taxonomy !== 'talk_types' ? $terms : array_pop($terms);
+}
+
+function sudweb_register_talk_connections()
+{
+	if (!function_exists('p2p_register_connection_type'))
+	{
+		return false;
+	}
+
+	p2p_register_connection_type(array(
+		'name' => 'talk_to_speaker',
+		'from' => 'talk',
+		'to' => 'speaker',
+		'cardinality' => 'one-to-many',
+	));
+
+	p2p_register_connection_type(array(
+		'name' => 'talk_to_schedule',
+		'from' => 'talk',
+		'to' => 'schedule',
+		'cardinality' => 'one-to-one',
 	));
 }
