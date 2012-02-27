@@ -6,8 +6,8 @@
 	<div class="span9">
 		<article <?php post_class() ?>>
 			<header>
-				<?php the_post_thumbnail() ?>
-				<h2 class="conference-title"><?php the_title() ?></h2>
+				<?php if (has_post_thumbnail()): the_post_thumbnail(); endif ?>
+				<h2 class="post-title"><?php the_title() ?></h2>
 			</header>
 
 			<?php the_content() ?>

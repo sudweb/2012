@@ -293,8 +293,8 @@ td { vertical-align: top; }
 	display: none;
 }
 
-article .conference-speaker a,
-article .conference-datetime,
+article .post-speaker a,
+article .post-datetime,
 .content .speaker a,
 .content .date {
 	font-weight: bold;
@@ -305,14 +305,14 @@ article .conference-datetime,
 .content .speaker a {
 	background-position: left 2px;
 }
-article .conference-speaker a{
+article .post-speaker a{
 	background-position: left 6px;
 	font-weight: normal;
 }
-article .conference-datetime{
+article .post-datetime{
 	padding-right: 0;   /* inline content, so don't push away its following content */
 }
-article .conference-datetime,
+article .post-datetime,
 .content .date {
 	background-position: left -82px;
 }
