@@ -292,6 +292,9 @@ td { vertical-align: top; }
 .content .attachment-post-thumbnail {
 	display: none;
 }
+
+article .conference-speaker a,
+article .conference-datetime,
 .content .speaker a,
 .content .date {
 	font-weight: bold;
@@ -302,6 +305,14 @@ td { vertical-align: top; }
 .content .speaker a {
 	background-position: left 2px;
 }
+article .conference-speaker a{
+	background-position: left 6px;
+	font-weight: normal;
+}
+article .conference-datetime{
+	padding-right: 0;   /* inline content, so don't push away its following content */
+}
+article .conference-datetime,
 .content .date {
 	background-position: left -82px;
 }
