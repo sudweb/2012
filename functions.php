@@ -45,6 +45,7 @@ add_action('wp', 'theme_main_action');
 add_filter('nav_menu_css_class', 'filter_navmenu_classes', 10, 3);
 add_filter('post_thumbnail_html', 'theme_filter_empty_thumbnail_html', 10, 5);
 add_filter('wp_nav_menu_container_allowedtags', 'theme_filter_enable_aside_nav');
+add_filter('post_class', 'theme_filter_post_class', 10, 3);
 require dirname(__FILE__).'/lib/plugin/speaker.php';
 require dirname(__FILE__).'/lib/plugin/talk.php';
 require dirname(__FILE__).'/lib/plugin/sponsor.php';
@@ -121,4 +122,19 @@ function theme_filter_enable_aside_nav(array $tags)
 	$tags[] = 'aside';
 
 	return $tags;
+}
+
+/**
+ * Adding various CSS classes to post types
+ *
+ * @param $classes Array Already generated classes
+ * @param $class Initial classes given in `post_class` call
+ * @param $post_id Post ID
+ * @return array
+ */
+function theme_filter_post_class(array $classes, $class, $post_id)
+{
+	$classes[] = has_post_thumbnail($post_id) ? 'with-thumbnail' : 'without-thumbnail';
+
+	return $classes;
 }
