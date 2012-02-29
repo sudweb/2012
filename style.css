@@ -227,7 +227,7 @@ td { vertical-align: top; }
 .sidebar {
 	display: none;
 	float: left;
-	background: #f6f5f5 url(assets/img/sidebar_bg.png) no-repeat left top;
+	background: #eceaea url(assets/img/sidebar_bg.png) no-repeat left top;
 	border-radius: 5px;
 	overflow: hidden;
 }
@@ -415,6 +415,7 @@ article .post-datetime{
 .social {
 	background: #fffaea;
 	overflow: hidden;
+	clear: both;
 }
 .social h2 {
 	border-color: #f9b410;
@@ -932,7 +933,7 @@ li.menu-item-w3 {
 		margin: .8em 0;
 	}
 	.social li {
-		margin-right: 1%;
+		margin-right: 3%;
 	}
 	.social li,
 	.social a {
