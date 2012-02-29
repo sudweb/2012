@@ -293,27 +293,21 @@ td { vertical-align: top; }
 	display: none;
 }
 
-article .conference-speaker a,
-article .conference-datetime,
-.content .speaker a,
-.content .date {
+article .post-speaker a,
+article .post-datetime{
 	font-weight: bold;
 	margin: .5em 0;
 	padding: .2em 1em .2em 25px;
 	background: url(assets/img/pictos_sprite.png) no-repeat left center;
 }
-.content .speaker a {
-	background-position: left 2px;
-}
-article .conference-speaker a{
+article .post-speaker a{
 	background-position: left 6px;
 	font-weight: normal;
 }
-article .conference-datetime{
+article .post-datetime{
 	padding-right: 0;   /* inline content, so don't push away its following content */
 }
-article .conference-datetime,
-.content .date {
+article .post-datetime{
 	background-position: left -82px;
 }
 .content .subnav {
@@ -787,8 +781,7 @@ li.menu-item-w3 {
 	}
 	.sidebar {
 		display: block;
-		margin-left: 20px;  /* @gridGutterWidth */
-		width: 220px;   /* (@gridColumnWidth + @gridGutterWidth) * 3 */
+		width: 10em;
 	}
 	.content {
 		margin-left: 11em;
@@ -911,8 +904,7 @@ li.menu-item-w3 {
 	}
 
 	.sidebar {
-		margin-right: 20px;   /* to fill the container width, 20px wider than bootstrap one */
-		width: 220px;   /* (@gridColumnWidth + @gridGutterWidth) * 3 */
+		width: 12em;
 	}
 	.content {
 		margin-left: 14em;

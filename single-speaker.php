@@ -3,10 +3,10 @@
 <div class="row">
 	<?php get_sidebar('conferences') ?>
 
-	<div class="span9">
-		<article <?php post_class() ?>
+	<div class="content">
+		<article <?php post_class() ?>>
 			<header>
-				<h2><?php the_title() ?></h2>
+				<h2 class="post-title"><?php the_title() ?></h2>
 			</header>
 
 			<?php the_content() ?>
