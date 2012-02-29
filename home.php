@@ -23,12 +23,22 @@
 		'post_status' => 'publish',
 	)) ?>
 	<?php foreach($talks as $post): setup_postdata($post) ?>
-	<div>
+	<article>
 		<?php the_post_thumbnail('thumbnail', array('class' => 'illustration')) ?>
 		<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
-		<div class="meta"><?php _e('By', 'sudweb') ?> <?php the_author_posts_link() ?></div>
+		<div class="meta">
+			<?php if (function_exists('p2p_list_posts')): ?>
+			<?php $speakers = p2p_type('talk_to_speaker')->get_connected(get_the_id()) ?>
+			<?php p2p_list_posts($speakers, array(
+				'before_list' => '<span class="post-speaker">',
+				'after_list' => '</span>',
+				'before_item' => '',
+				'after_item' => '',
+			)) ?>
+			<?php endif ?>
+		</div>
 		<?php the_excerpt() ?>
-	</div>
+	</article>
 	<?php endforeach ?>
 	<?php if (count ($talks) == 0): ?>
 	<div>
