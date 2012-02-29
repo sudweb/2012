@@ -832,6 +832,20 @@ li.menu-item-w3 {
 		font-size: 16px;
 		font-size: 1.6rem;
 	}
+	.baseline,
+	.nav,
+	.cta,
+	h1, h2, h3, h4,
+	.footer{
+		font-family: DINAlternateBold, Gudea, Helvetica, Tahoma, sans-serif;
+	}
+	.baseline,
+	h2, h3,
+	.cta,
+	.footer a,
+	.header .nav a{
+		font-weight: normal;  /* reversing font weight because with DIN bold, it's really bold */
+	}
 	.pitch {
 		clear: left;
 		float: left;
