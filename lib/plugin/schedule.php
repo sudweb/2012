@@ -43,11 +43,11 @@ function sudweb_register_schedule()
 		'has_archive' => false,
 		'hierarchical' => false,
 		'menu_position' => 5, //Below posts
-		'page-attributes' => true,
 		'supports' => array(
 			'title',
 			'editor',
 			'thumbnail',
+			'page-attributes'
 		),
 	));
 }
