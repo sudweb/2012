@@ -96,12 +96,20 @@ function theme_filter_empty_thumbnail_html($html, $post_id, $post_thumbnail_id, 
 {
 	global $_wp_additional_image_sizes;
 
-	if ($html || !isset($_wp_additional_image_sizes[$size]))
+	if ($html || (!isset($_wp_additional_image_sizes[$size]) && !get_option($size.'_size_w')))
 	{
 		return $html;
 	}
 
-	$size_profile = $_wp_additional_image_sizes[$size];
+	if (isset($_wp_additional_image_sizes[$size]))
+	{
+		$size_profile = $_wp_additional_image_sizes[$size];
+	}
+	else
+	{
+		$size_profile = array('width' => get_option($size.'_size_w'), 'height' => get_option($size.'_size_h'));
+	}
+
 
 	return strtr('<img src="http://placehold.it/%width%x%height%" alt="" class="%class%" width="%width%" height="%height%" />',
 		array(
