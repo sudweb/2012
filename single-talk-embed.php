@@ -7,6 +7,6 @@
 	</div>
 
 	<div class="schedule-item-subtitle">
-		Animé par <a href="#">John Doe</a>
+		Animé par <?php sudweb_list_speakers(get_the_id()) ?>
 	</div>
 </div>

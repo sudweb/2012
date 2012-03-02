@@ -156,3 +156,28 @@ function theme_filter_post_class(array $classes, $class, $post_id)
 
 	return $classes;
 }
+
+/**
+ * Displays speakers for a given talk, easy way
+ *
+ * @param $post_id
+ * @param array $args
+ * @return null
+ */
+function sudweb_list_speakers($post_id, array $args = array())
+{
+	if (!function_exists('p2p_list_posts'))
+	{
+		return null;
+	}
+
+	$args = array_merge(array(
+		'before_list' => '<span class="post-speaker">',
+		'after_list' => '</span>',
+		'before_item' => '',
+		'after_item' => '',
+	), $args);
+
+	$speakers = p2p_type('talk_to_speaker')->get_connected($post_id);
+	p2p_list_posts($speakers, $args);
+}

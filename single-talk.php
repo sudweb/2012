@@ -8,15 +8,7 @@
 			<header>
 				<?php the_post_thumbnail() ?>
 				<h2 class="post-title"><?php the_title() ?></h2>
-				<?php if (function_exists('p2p_list_posts')): ?>
-				<?php $speakers = p2p_type('talk_to_speaker')->get_connected(get_the_id()) ?>
-				<?php p2p_list_posts($speakers, array(
-					'before_list' => '<span class="post-speaker">',
-					'after_list' => '</span>',
-					'before_item' => '',
-					'after_item' => '',
-				)) ?>
-				<?php endif ?>
+				<?php sudweb_list_speakers(get_the_id()) ?>
 			</header>
 
 			<?php if (function_exists('p2p_list_posts')): ?>
