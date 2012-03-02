@@ -4,6 +4,15 @@
  * @use variables.less
  */
 
+#schedule{
+    .reset-link-prefix(){
+        & a:before{
+            content: "";
+            padding: 0;
+        }
+    }
+}
+
 /**
  * Contains one or several .schedule-item elements
  */
@@ -17,6 +26,7 @@
  */
 .schedule-item{
     @paddingX: 10px;
+    @thumbnailWidth: 60px;
 
     background: @content_background_color;
     border-top: 10px solid @linkColorHover;
@@ -36,7 +46,7 @@
 
     .schedule-item-timeframe,
     .schedule-item-subtitle{
-        padding: .5em;
+        padding: @paddingX;
         position: absolute;
         top: 2px;
     }
@@ -45,16 +55,14 @@
         background: #fff;
         color: @content_color;
         left: @paddingX;
+        width: @thumbnailWidth - (@paddingX * 2);
     }
 
     .schedule-item-title{
         font-size: 1.7em;
         margin: .5em @paddingX;
 
-        a:before{
-            content: "";
-            padding: 0;
-        }
+        #schedule .reset-link-prefix();
     }
 
     .schedule-item-thumbnail, img{
@@ -68,10 +76,27 @@
 }
 
 /**
- * Scheduled day item
+ * Scheduled talk item
  *
  * @extends .schedule-item
  */
-.schedule-day{
+.schedule-talk{
+    clear: right;
+    float: left;
+    margin-left: 20px;
+    width: 48%;
 
+    &:nth-child(even){
+        margin-left: 0;
+    }
+
+    .schedule-item-title, img{
+        margin-top: 50px;
+    }
+
+    .schedule-item-subtitle{
+        left: 4.5em;
+
+        #schedule .reset-link-prefix();
+    }
 }
