@@ -1,0 +1,77 @@
+/**
+ * Anything which is related to scheduled elements (talks, days etc.)
+ *
+ * @use variables.less
+ */
+
+/**
+ * Contains one or several .schedule-item elements
+ */
+.schedule-list{
+
+}
+
+/**
+ * Base class for scheduled items
+ * It can be lately extended in specialized items (such as .schedule-day, .schedule-talk etc.)
+ */
+.schedule-item{
+    @paddingX: 10px;
+
+    background: @content_background_color;
+    border-top: 10px solid @linkColorHover;
+    font-family: @alternate_font_stack;
+    margin: 1.5em 0;
+    min-height: @thumbnailHeight;
+    padding: 0 0 .5em;
+    position: relative;
+
+    &::before{
+        background: @stay_connected_color;
+        content: "";
+        display: block;
+        height: 2px;
+    }
+
+
+    .schedule-item-timeframe,
+    .schedule-item-subtitle{
+        padding: .5em;
+        position: absolute;
+        top: 2px;
+    }
+
+    .schedule-item-timeframe{
+        background: #fff;
+        color: @content_color;
+        left: @paddingX;
+    }
+
+    .schedule-item-title{
+        font-size: 1.7em;
+        margin: .5em @paddingX;
+
+        a:before{
+            content: "";
+            padding: 0;
+        }
+    }
+
+    .schedule-item-thumbnail, img{
+        float: left;
+        margin: 0 @paddingX;
+    }
+
+    .schedule-item-content{
+        margin: .5em @paddingX;
+    }
+}
+
+/**
+ * Scheduled day item
+ *
+ * @extends .schedule-item
+ */
+.schedule-day{
+
+}
