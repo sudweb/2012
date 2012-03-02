@@ -864,9 +864,6 @@ li.menu-item-w3 {
 	}
 	.content .attachment-post-thumbnail {
 		display: block;
-		float: right;
-		padding: 0 0 1em 1em;
-		max-width: 30%;
 	}
 	.footer {
 		padding: 0 10px 1em;
