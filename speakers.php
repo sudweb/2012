@@ -15,6 +15,7 @@ Template Name: Orateurs
 				<h3 class="schedule-item-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
 
 				<div class="schedule-item-content">
+					<?php the_excerpt() ?>
 					<?php sudweb_list_speakers(get_the_id(), array('inherit')) ?>
 				</div>
 			</div>
