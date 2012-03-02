@@ -11,6 +11,17 @@
             padding: 0;
         }
     }
+
+    .stacked-item(){
+        clear: right;
+        float: left;
+        margin-left: 20px;
+        width: 48%;
+
+        &:nth-child(odd){
+            margin-left: 0;
+        }
+    }
 }
 
 /**
@@ -84,14 +95,7 @@
     @paddingX: 10px;
     @thumbnailWidth: 60px;
 
-    clear: right;
-    float: left;
-    margin-left: 20px;
-    width: 48%;
-
-    &:nth-child(even){
-        margin-left: 0;
-    }
+    #schedule .stacked-item();
 
     .schedule-item-title{
         margin-left: @thumbnailWidth + (@paddingX * 2); /* force align on left margin */
@@ -118,4 +122,14 @@
             content: "";
         }
     }
+}
+
+/**
+ *
+ */
+.schedule-speaker{
+    @paddingX: 10px;
+    @thumbnailWidth: 60px;
+
+    #schedule .stacked-item();
 }
