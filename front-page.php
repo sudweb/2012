@@ -6,8 +6,8 @@
 	<?php query_posts('posts_per_page=5&post_type=post&order=DESC'); ?>
 	<?php while(have_posts()): the_post() ?>
 	<div>
-		<?php the_post_thumbnail('thumbnail', array('class' => 'illustration')) ?>
 		<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
+		<?php the_post_thumbnail('thumbnail', array('class' => 'illustration')) ?>
 		<div class="meta"><?php echo get_the_date() ?></div>
 		<p><?php the_excerpt() ?></p>
 	</div>
