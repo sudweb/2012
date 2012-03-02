@@ -81,6 +81,9 @@
  * @extends .schedule-item
  */
 .schedule-talk{
+    @paddingX: 10px;
+    @thumbnailWidth: 60px;
+
     clear: right;
     float: left;
     margin-left: 20px;
@@ -90,6 +93,9 @@
         margin-left: 0;
     }
 
+    .schedule-item-title{
+        margin-left: @thumbnailWidth + (@paddingX * 2); /* force align on left margin */
+    }
     .schedule-item-title, img{
         margin-top: 50px;
     }
@@ -98,5 +104,18 @@
         left: 4.5em;
 
         #schedule .reset-link-prefix();
+    }
+
+    /**
+     * Speaker list
+     */
+    .post-speaker a{
+        &:before{
+            content: ", ";
+        }
+
+        &:first-child:before{
+            content: "";
+        }
     }
 }
