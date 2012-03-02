@@ -24,7 +24,7 @@
 			<p>
 				<span class="post-datetime">
 					<a href="<?php echo get_post_permalink($schedule->ID) ?>"><?php echo $schedule->post_title ?></a>
-					à <?php the_field('schedule') ?>
+					<?php if (get_field('schedule')): ?>à <?php the_field('schedule') ?><?php endif ?>
 				</span>
 
 				<?php if (function_exists('get_the_terms')): ?>
