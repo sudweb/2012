@@ -3,6 +3,7 @@
 <div class="block actualites">
 	<h2><?php _e('Latest News', 'sudweb') ?></h2>
 
+	<?php query_posts('posts_per_page=5&post_type=post&order=DESC'); ?>
 	<?php while(have_posts()): the_post() ?>
 	<div>
 		<?php the_post_thumbnail('thumbnail', array('class' => 'illustration')) ?>
