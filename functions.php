@@ -186,6 +186,44 @@ function sudweb_list_speakers($post_id, array $args = array())
 }
 
 /**
+ * Retrieves sponsors and group then by type
+ *
+ * @return array
+ */
+function sudweb_get_sponsors()
+{
+	$types = array();
+	$sponsors = get_posts(array(
+		'numberposts' => -1,
+		'post_type' => 'sponsor',
+		'post_status' => 'publish',
+	));
+
+	foreach ($sponsors as $sponsor)
+	{
+		$type = get_the_terms($sponsor->ID, 'sponsor_types');
+
+		if (!$type)
+		{
+			continue;
+		}
+
+		if (!isset($types[$type->term_id]))
+		{
+			$types[$type->term_id] = array(
+				'post' => $type,
+				'sponsors' => array(),
+			);
+		}
+
+		$types[$type->term_id]['sponsors'][] = $sponsor;
+	}
+
+
+	return $types;
+}
+
+/**
  * Retrieves a timestamp or a formated date based on a talk object
  * @param $post
  * @param null $format Date format, based on the `date_i18n` provided by WordPress

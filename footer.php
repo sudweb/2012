@@ -7,35 +7,8 @@
 	</div>
 	<div class="block sponsors">
 		<h2><?php _e('Sponsors', 'sudweb'); ?></h2>
-		
-		<?php
-		// TODO restrict to sponsors valid for this edition
-		$sponsor_types = get_terms('sponsor_types', array('orderby' => 'id'));
-		foreach ($sponsor_types as $type):
-			$items = get_posts(array(
-				'numberposts' => -1,
-				'post_type' => 'sponsor',
-				'post_status' => 'publish',
-				'tax_query' => array(
-					array(
-						'taxonomy' => 'sponsor_types',
-						'field' => 'slug',
-						'terms' => $type->slug
-					)
-				)
-			));
-			if (count ($items) == 0) {
-				continue;
-			}
-			?>
-			<ul class="<?php echo $type->slug; ?>">
-			<?php foreach ($items as $post): setup_postdata($post); ?>
-				<li><a href="<?php the_permalink() ?>" rel="bookmark">
-					<?php (has_post_thumbnail()) ? the_post_thumbnail('thumbnail', array('class' => 'illustration')) : the_title(); ?>
-				</a></li>
-			<?php endforeach ?>
-			</ul>
-		<?php endforeach ?>
+
+		<?php get_template_part('sponsors', 'loop') ?>
 		<p class="devenirpartenaire">Vous souhaitez devenir partenaire ? <a href="#">Téléchargez notre dossier de partenariat</a></p>
 	</div>
 </div>

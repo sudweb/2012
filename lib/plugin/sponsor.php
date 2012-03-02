@@ -73,4 +73,24 @@ function sudweb_register_sponsor()
 			'excerpt',
 		),
 	));
+
+	/**
+	 * Filtering output
+	 */
+	add_filter('get_the_terms', 'sponsor_filter_types', 10, 3);
+}
+
+/**
+ * For Talk Types, we only return the first item
+ * This is because we can (now) only have one type per talk
+ * Theming is made easier as we don't rely on an array of one element but directly onto the object
+ *
+ * @param $terms array
+ * @param $id integer
+ * @param $taxonomy string
+ * @return array|strObject
+ */
+function sponsor_filter_types($terms, $id, $taxonomy)
+{
+	return $taxonomy !== 'sponsor_types' ? $terms : array_pop($terms);
 }
