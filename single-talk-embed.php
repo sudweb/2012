@@ -5,7 +5,7 @@
 	<!-- Timeframe Content -->
 	<?php if (get_post_type(get_queried_object()) === 'speaker'): ?>
 	<div class="schedule-item-timeframe">
-
+		<?php echo sudweb_get_talk_datetime($post, 'j F') ?>
 	</div>
 	<?php elseif (get_field('schedule')): ?>
 	<div class="schedule-item-timeframe">

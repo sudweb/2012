@@ -181,3 +181,12 @@ function sudweb_list_speakers($post_id, array $args = array())
 	$speakers = p2p_type('talk_to_speaker')->get_connected($post_id);
 	p2p_list_posts($speakers, $args);
 }
+
+function sudweb_get_talk_datetime($post, $format = null)
+{
+	$schedule = p2p_type('talk_to_schedule')->get_connected($post->ID)->next_post();
+	$datetime = get_field('day', $schedule->ID).' '.str_replace('h', ':', get_field('schedule', $post->ID));
+	$datetime = strtotime(trim($datetime));
+
+	return $format === null ? $datetime : date_i18n($format, $datetime);
+}
