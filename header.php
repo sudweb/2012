@@ -20,9 +20,7 @@
 				<div class="pitch summary">
 					<?php dynamic_sidebar('header') ?>
 				</div>
-				<div class="illustration">
-					<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/placeholder.png" alt="" />
-				</div>
+				<div class="illustration" id="flickr" data-key="b3acf3ad86fbd88dc1def300e94f9448" data-userid="54952963@N07"></div>
 			</div>
 			<?php wp_nav_menu(array(
 				'menu' => 'Navigation principale',

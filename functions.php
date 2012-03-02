@@ -54,6 +54,7 @@ require dirname(__FILE__).'/lib/plugin/speaker.php';
 require dirname(__FILE__).'/lib/plugin/talk.php';
 
 function theme_main_action(){
+	wp_enqueue_script('main', get_stylesheet_directory_uri().'/assets/js/main.js', array('jquery'), THEME_VERSION, true);
 	wp_enqueue_style('main', get_stylesheet_directory_uri().'/style.less', array(), THEME_VERSION, 'media,screen');
 }
 
