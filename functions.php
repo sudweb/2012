@@ -171,12 +171,15 @@ function sudweb_list_speakers($post_id, array $args = array())
 		return null;
 	}
 
-	$args = array_merge(array(
-		'before_list' => '<span class="post-speaker">',
-		'after_list' => '</span>',
-		'before_item' => '',
-		'after_item' => '',
-	), $args);
+	if (array_search('inherit', $args) === false)
+	{
+		$args = array_merge(array(
+			'before_list' => '<span class="post-speaker">',
+			'after_list' => '</span>',
+			'before_item' => '',
+			'after_item' => '',
+		), $args);
+	}
 
 	$speakers = p2p_type('talk_to_speaker')->get_connected($post_id);
 	p2p_list_posts($speakers, $args);
