@@ -216,7 +216,7 @@ td { vertical-align: top; }
 	color: #fff;
 	background: #402f33;
 }
-.home .nav .menu-item-home {
+.nav .menu-item-home {
 	display: none;
 }
 
@@ -751,7 +751,10 @@ li.menu-item-w3 {
 	}
 	.header .nav li {
 		float: left;
-		width: 25%;
+		width: 19%;
+	}
+	.home .header .nav li {
+		width: 24%;
 	}
 	.header .nav a {
 		background: none;
@@ -861,6 +864,9 @@ li.menu-item-w3 {
 	}
 	.header .illustration img {
 		max-width: 100%;
+	}
+	.nav .menu-item-home {
+		display: block;
 	}
 	.content .attachment-post-thumbnail {
 		display: block;
