@@ -182,6 +182,12 @@ function sudweb_list_speakers($post_id, array $args = array())
 	p2p_list_posts($speakers, $args);
 }
 
+/**
+ * Retrieves a timestamp or a formated date based on a talk object
+ * @param $post
+ * @param null $format Date format, based on the `date_i18n` provided by WordPress
+ * @return int|string
+ */
 function sudweb_get_talk_datetime($post, $format = null)
 {
 	$schedule = p2p_type('talk_to_schedule')->get_connected($post->ID)->next_post();
