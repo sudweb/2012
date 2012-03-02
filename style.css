@@ -281,10 +281,6 @@ td { vertical-align: top; }
 .content h3 {
 	color: #ca1a3d;
 }
-.content a::before {
-	content: "»";
-	padding: 0 5px .2em 0;
-}
 .content a:link {
 	color: #ca1a3d;
 }
