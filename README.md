@@ -8,7 +8,7 @@ It has several features:
 * display attendees informations
 * adaptative display through *responsive webdesign*
 
-It relies on [wp-sudweb](https://github.com/sudweb/wp-sudweb), a plugin containing the website business logic.
+In a near future, *business logic* will be moved in [wp-sudweb plugin](https://github.com/sudweb/wp-sudweb).
 
 ## Install
 
