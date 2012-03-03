@@ -178,7 +178,7 @@ function sudweb_list_speakers($post_id, array $args = array())
 			'before_list' => '<span class="post-speaker">',
 			'after_list' => '</span>',
 			'before_item' => '',
-			'after_item' => '',
+			'after_item' => ' ',
 		), $args);
 	}
 
