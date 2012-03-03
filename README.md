@@ -22,7 +22,7 @@ git submodule init
 git submodule update
 ```
 
-Ensure you also have these installed plugin, as the theme relies on them:
+Ensure yourself to install these plugins, as the theme relies on them:
 
 * [Posts 2 Posts](wordpress.org/extend/plugins/posts-to-posts/)
 * [Advanced Custom Fields](wordpress.org/extend/plugins/advanced-custom-fields/)
