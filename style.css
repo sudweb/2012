@@ -281,9 +281,8 @@ td { vertical-align: top; }
 .content h3 {
 	color: #ca1a3d;
 }
-.content a::before {
-	content: "»";
-	padding: 0 5px .2em 0;
+.content p {
+	text-align: justify;
 }
 .content a:link {
 	color: #ca1a3d;
@@ -295,6 +294,62 @@ td { vertical-align: top; }
 }
 .content .attachment-post-thumbnail {
 	display: none;
+}
+
+.schedule-list {
+	list-style: none none;
+	padding: 0;
+	margin: 0;
+}
+.schedule-item {
+	margin: 0 0 1em;
+	padding: 5px 15px 2em 90px;
+	border-top: 10px solid #9d011b;
+	box-shadow: inset 0 2px 0 #f9b410;
+	color: #42141c;
+	background: #eceaea;
+	overflow: hidden;
+	position: relative;
+}
+.schedule-item-timeframe,
+.schedule-item .illustration {
+	position: absolute;
+	left: 15px;
+}
+.schedule-item-timeframe {
+	position: absolute;
+	left: 15px;
+	top: 0;
+	background: #fff;
+	text-align: center;
+	margin-top: 2px;
+	padding: .75em .5em .5em;
+}
+.content .schedule-item-title,
+.schedule-item-subtitle {
+	padding-bottom: .5em;
+}
+.single-speaker .schedule-item-subtitle {
+	padding-top: 1em;
+}
+.schedule-item-subtitle .post-speaker {
+	display: block;
+	font-size: larger;
+}
+.schedule-list .schedule-item img {
+	float: left;
+	margin-left: -75px;
+	padding: 0;
+}
+.schedule-item-content ul {
+	list-style: none none;
+	padding: 0;
+}
+
+.type-talk .post-title,
+.type-speaker .post-title {
+	background: #fff;
+	color: #c01432;
 }
 
 article .post-speaker a,
@@ -791,6 +846,28 @@ li.menu-item-w3 {
 	.content {
 		margin-left: 11em;
 	}
+	.type-talk.with-thumbnail,
+	.type-speaker.with-thumbnail {
+		position: relative;
+		overflow-x: hidden;
+		padding-top: 225px;
+	}
+	.type-talk.with-thumbnail header img,
+	.type-speaker.with-thumbnail header img {
+		position: absolute;
+		max-width: none;
+		top: 0;
+	}
+	.type-talk.with-thumbnail .post-title,
+	.type-speaker.with-thumbnail .post-title {
+		position: absolute;
+		top: 150px;
+		display: inline;
+		padding: 0 1em;
+		background: #fff;
+		color: #c01432;
+	}
+
 	.sponsors .gold li,
 	.sponsors .silver li {
 		display: inline-block;
@@ -872,6 +949,7 @@ li.menu-item-w3 {
 	.content .attachment-post-thumbnail {
 		display: block;
 	}
+	
 	.footer {
 		padding: 0 10px 1em;
 	}

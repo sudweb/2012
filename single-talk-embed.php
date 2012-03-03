@@ -1,7 +1,9 @@
 <div class="schedule-item schedule-talk">
-	<?php the_post_thumbnail('tiny-thumbnail') ?>
-	<h3 class="schedule-item-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
-
+	<h2 class="schedule-item-title">
+		<a href="<?php the_permalink() ?>" rel="bookmark">
+			<?php the_title() ?>
+		</a>
+	</h2>
 	<!-- Timeframe Content -->
 	<?php if (get_post_type(get_queried_object()) === 'speaker'): ?>
 	<div class="schedule-item-timeframe">
@@ -12,7 +14,7 @@
 		<?php the_field('schedule') ?>
 	</div>
 	<?php endif ?>
-
+	<?php the_post_thumbnail('tiny-thumbnail', array('class' => 'illustration')) ?>
 	<!-- Subtitle -->
 	<div class="schedule-item-subtitle">
 		<?php if (get_post_type(get_queried_object()) !== 'speaker'): ?>

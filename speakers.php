@@ -9,19 +9,19 @@ Template Name: Orateurs
 	<div class="content">
 		<?php get_template_part('page', 'article') ?>
 
-		<div class="schedule-list">
+		<ul class="schedule-list">
 		<?php foreach (get_posts('post_type=speaker&orderby=title&order=ASC&numberposts=-1') as $post): setup_postdata($post); ?>
-			<div class="schedule-item schedule-speaker">
+			<li class="schedule-item schedule-speaker">
 				<?php the_post_thumbnail('tiny-thumbnail') ?>
-				<h3 class="schedule-item-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
+				<h2 class="schedule-item-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h2>
 
 				<div class="schedule-item-content">
 					<?php the_excerpt() ?>
 					<?php sudweb_list_speakers(get_the_id(), array('inherit')) ?>
 				</div>
-			</div>
+			</li>
 		<?php endforeach ?>
-		</div>
+		</ul>
 	</div>
 </div>
 <?php get_footer() ?>
