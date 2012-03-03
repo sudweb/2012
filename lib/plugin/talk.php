@@ -118,3 +118,18 @@ function sudweb_register_talk_connections()
 		'cardinality' => 'one-to-one',
 	));
 }
+
+/**
+ * Displays the lang attribute for a given talk
+ *
+ * @param null $talk_id
+ * @return null
+ */
+function talk_lang_attribute($talk_id = null)
+{
+	echo str_replace(
+		array('Français', 'Anglais', 'English'),
+		array('fr', 'en', 'en'),
+		trim(get_field('language', $talk_id === null ? get_the_ID() : $talk_id))
+	);
+}

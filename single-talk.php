@@ -7,7 +7,7 @@
 		<article <?php post_class() ?>>
 			<header>
 				<?php the_post_thumbnail() ?>
-				<h2 class="post-title"><?php the_title() ?></h2>
+				<h2 class="post-title" lang="<?php talk_lang_attribute() ?>"><?php the_title() ?></h2>
 				<?php sudweb_list_speakers(get_the_id()) ?>
 			</header>
 
@@ -29,7 +29,7 @@
 			</p>
 			<?php endif ?>
 
-			<?php the_content() ?>
+			<div lang="<?php talk_lang_attribute() ?>"><?php the_content() ?></div>
 		</article>
 	</div>
 </div>

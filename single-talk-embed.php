@@ -1,6 +1,6 @@
 <div class="schedule-item schedule-talk">
 	<h2 class="schedule-item-title">
-		<a href="<?php the_permalink() ?>" rel="bookmark">
+		<a href="<?php the_permalink() ?>" rel="bookmark" lang="<?php talk_lang_attribute() ?>">
 			<?php the_title() ?>
 		</a>
 	</h2>
