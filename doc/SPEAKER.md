@@ -14,4 +14,6 @@ These informations are meant to help website visitors to get convinced by his/he
 
 ## Relationships
 
+These relationships are displayed as fields, but enables to connect to another existing post:
+
 * A speaker can be connected to 0, 1 or many `Talk`.
