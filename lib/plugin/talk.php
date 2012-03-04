@@ -73,6 +73,7 @@ function sudweb_register_talk()
 			'editor',
 			'thumbnail',
 			'excerpt',
+			'page-attributes'
 		),
 	));
 
