@@ -556,12 +556,12 @@ article .post-datetime{
 	content: "›";
 	padding: 0 5px;
 }
-.sponsors .silver,
+.sponsors .argent,
 .sponsors .bronze {
 	padding-top: 1em;
 }
-.sponsors .gold,
-.sponsors .silver {
+.sponsors .or,
+.sponsors .argent {
 	border-bottom: 2px dashed #938b8f;
 }
 .sponsors .bronze {
@@ -703,7 +703,7 @@ li.menu-item-w3 {
 		margin-left: 50px;
 		clear: right;
 	}
-	.sponsors .silver li {
+	.sponsors .argent li {
 		display: inline-block;
 		width: 49%;
 	}
@@ -871,15 +871,15 @@ li.menu-item-w3 {
 		color: #c01432;
 	}
 
-	.sponsors .gold li,
-	.sponsors .silver li {
+	.sponsors .or li,
+	.sponsors .argent li {
 		display: inline-block;
 		zoom: 1;
 	}
-	.sponsors .gold li {
+	.sponsors .or li {
 		width: 32%;
 	}
-	.sponsors .silver li {
+	.sponsors .argent li {
 		width: 24%;
 	}
 	.about {
@@ -1075,21 +1075,21 @@ li.menu-item-w3 {
 	.menu-item-plus a:active { background-position: -800px -200px; }
 	.menu-item-plus a:visited { background-position: -800px -300px; }
 
-	.sponsors .gold,
-	.sponsors .silver,
+	.sponsors .or,
+	.sponsors .argent,
 	.sponsors .bronze {
 		border: none;
 	}
-	.sponsors .gold {
+	.sponsors .or {
 		float: left;
 		width: 60%;
 	}
-	.sponsors .silver {
+	.sponsors .argent {
 		padding-top: 0;
 		float: right;
 		width: 39%;
 	}
-	.sponsors .silver li {
+	.sponsors .argent li {
 		width: 49%;
 	}
 	.sponsors .bronze {
