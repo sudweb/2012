@@ -531,6 +531,9 @@ article .post-datetime{
 .menu-item-plus a:hover,
 .menu-item-plus a:active { background-position: -800px -200px; }
 
+.sponsors {
+	background-color: transparent;
+}
 .sponsors ul {
 	margin: 0;
 	padding: 0 0 1em 0;
