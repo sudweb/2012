@@ -175,35 +175,35 @@ body {
 .googleplus:active { background-position: -800px -200px; }
 .googleplus:visited { background-position: -800px -300px; }
 
-.sponsors .gold,
-.sponsors .silver,
+.sponsors .or,
+.sponsors .argent,
 .sponsors .bronze {
 	border: none;
 }
-.sponsors .gold {
+.sponsors .or {
 	float: left;
 	width: 60%;
 }
-.sponsors .silver {
+.sponsors .argent {
 	padding-top: 0;
 	float: right;
 	width: 39%;
 }
-.sponsors .silver li {
+.sponsors .argent li {
 	width: 49%;
 }
 .sponsors .bronze {
 	clear: both;
 }
-.sponsors .gold li,
-.sponsors .silver li {
+.sponsors .or li,
+.sponsors .argent li {
 	display: inline;
 	zoom: 1;
 }
-.sponsors .gold li {
+.sponsors .or li {
 	width: 32%;
 }
-.sponsors .silver li {
+.sponsors .argent li {
 	width: 24%;
 }
 
