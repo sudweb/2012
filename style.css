@@ -537,10 +537,10 @@ article .post-datetime{
 .sponsors ul {
 	margin: 0;
 	padding: 0 0 1em 0;
+	text-align: center;
 }
 .sponsors li {
 	list-style: none;
-	text-align: center;
 }
 .sponsors a {
 	color: #402f33;
