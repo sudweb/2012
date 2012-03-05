@@ -17,7 +17,7 @@ Template Name: Programme
 						<?php the_title() ?>
 					</a>
 				</h3>
-				<div class="schedule-item-content"><?php the_excerpt() ?></div>
+				<div class="schedule-item-content"><?php the_content() ?></div>
 			</li>
 		<?php endforeach ?>
 		</ol>
