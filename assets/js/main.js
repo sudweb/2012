@@ -1,14 +1,20 @@
 (function($){
 	var $div = $('#flickr');
 
-	var url = 'http://api.flickr.com/services/rest/?format=json&method='
-		+ 'flickr.photos.search&api_key=' + $div.data('key')
-		+ '&user_id=' + $div.data('userid') + '&jsoncallback=?';
+	var url = 'http://api.flickr.com/services/rest/?format=json&api_key=' + $div.data('key');
+	if ($div.data('photoset')){
+		url += '&method=flickr.photosets.getPhotos&photoset_id=' + $div.attr('data-photoset');  //avoids casting
+	}
+	else if ($div.data('userid')){
+		url += '&method=flickr.photos.search&user_id=' + $div.data('userid');
+	}
 
-	$.getJSON(url, function(data) {
-		var total = data.photos.photo.length; //and not total because it's higher than the number of returned photos
-		var randomnumber=Math.floor(Math.random()*total)
-		var rPhoto = data.photos.photo[randomnumber];
+	$.getJSON(url+'&jsoncallback=?', function(data) {
+		var photos = data.photoset || data.photos,
+				photos_length = photos.photo.length;
+
+		var randomnumber=Math.floor(Math.random()*photos_length)
+		var rPhoto = photos.photo[randomnumber];
 		var basePhotoURL = 'http://farm' + rPhoto.farm + '.static.flickr.com/' + rPhoto.server + '/' + rPhoto.id + '_' + rPhoto.secret;
 
 		var thumbPhotoURL = basePhotoURL + '_s.jpg';
