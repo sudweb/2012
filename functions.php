@@ -199,6 +199,7 @@ function sudweb_get_sponsors()
 		'numberposts' => -1,
 		'post_type' => 'sponsor',
 		'post_status' => 'publish',
+		'orderby' => 'menu_order',
 	));
 
 	foreach ($sponsors as $sponsor)
