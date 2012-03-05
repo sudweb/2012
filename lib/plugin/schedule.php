@@ -78,7 +78,7 @@ function sudweb_register_schedule_connections()
  */
 function sudweb_schedule_alter_query($args, $p2p, $connected_items)
 {
-	if ($p2p->name === 'talk_to_schedule')
+	if ($p2p->name === 'talk_to_schedule' && $args['connected_direction'] === 'to')
 	{
 		$args = array_merge($args, array(
 			'meta_key' => 'schedule',
