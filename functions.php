@@ -45,7 +45,6 @@ register_nav_menu('sidebar-conferences', 'Conferences Sidebar');
  */
 add_action('wp', 'theme_main_action');
 add_filter('nav_menu_css_class', 'filter_navmenu_classes', 10, 3);
-add_filter('post_thumbnail_html', 'theme_filter_empty_thumbnail_html', 10, 5);
 add_filter('wp_nav_menu_container_allowedtags', 'theme_filter_enable_aside_nav');
 add_filter('post_class', 'theme_filter_post_class', 10, 3);
 require dirname(__FILE__).'/lib/plugin/sponsor.php';
@@ -87,6 +86,9 @@ function filter_navmenu_classes(array $classes, $item, $args)
 /**
  * Filters empty thumbnails, to always provide some default picture
  * Lolcats could be fun but you know, we are serious.
+ *
+ * Usage
+ * add_filter('post_thumbnail_html', 'theme_filter_empty_thumbnail_html', 10, 5);
  *
  * @param $html
  * @param $post_id
