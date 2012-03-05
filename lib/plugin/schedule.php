@@ -49,7 +49,8 @@ function sudweb_register_schedule()
 			'title',
 			'editor',
 			'thumbnail',
-			'page-attributes'
+			'page-attributes',
+			'excerpt',
 		),
 	));
 }
