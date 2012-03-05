@@ -8,6 +8,8 @@
 
 add_action('init', 'sudweb_register_schedule');
 add_action('init', 'sudweb_register_schedule_connections');
+add_filter('p2p_connected_args', 'sudweb_schedule_alter_query', 10, 3);
+
 
 /**
  * Registers the "Schedule" Custom Post Type
@@ -65,4 +67,26 @@ function sudweb_register_schedule_connections()
 		'to' => 'place',
 		'cardinality' => 'one-to-one',
 	));
+}
+
+/**
+ * Automatically sorts talks by schedule if queried through relationships
+ * @param $args
+ * @param $p2p
+ * @param $connected_items
+ * @return array
+ */
+function sudweb_schedule_alter_query($args, $p2p, $connected_items)
+{
+	if ($p2p->name === 'talk_to_schedule')
+	{
+		$args = array_merge($args, array(
+			'meta_key' => 'schedule',
+			'orderby' => 'meta_value',
+			'order' => 'ASC',
+			'posts_per_page' => -1
+		));
+	}
+
+	return $args;
 }
