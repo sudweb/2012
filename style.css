@@ -283,6 +283,7 @@ td { vertical-align: top; }
 }
 .content p {
 	text-align: justify;
+	line-height: 1.4;
 }
 .content a:link {
 	color: #ca1a3d;
