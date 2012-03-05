@@ -9,7 +9,7 @@
 		<h2><?php _e('Sponsors', 'sudweb'); ?></h2>
 
 		<?php get_template_part('sponsors', 'loop') ?>
-		<p class="devenirpartenaire">Vous souhaitez devenir partenaire ? <a href="#">Téléchargez notre dossier de partenariat</a></p>
+		<p class="devenirpartenaire">Vous souhaitez devenir partenaire ? <a href="http://sudweb.fr/2012/wp-content/uploads/2012/03/dossier-partenariat-2012.pdf">Téléchargez notre dossier de partenariat</a></p>
 	</div>
 </div>
 <div class="footer" role="footer">
