@@ -9,8 +9,10 @@ Template Name: Sponsors
 
 	<div class="content">
 		<?php get_template_part('page', 'article') ?>
-
-		<?php get_template_part('sponsors', 'loop') ?>
+		
+		<div class="sponsor-list">
+			<?php get_template_part('sponsors', 'loop') ?>
+		</div>
 	</div>
 </div>
 <?php get_footer() ?>
