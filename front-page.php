@@ -25,8 +25,8 @@
 	)) ?>
 	<?php foreach($talks as $post): setup_postdata($post) ?>
 	<article>
-		<?php the_post_thumbnail('thumbnail', array('class' => 'illustration')) ?>
 		<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
+		<?php the_post_thumbnail('thumbnail', array('class' => 'illustration')) ?>
 		<div class="meta"><?php sudweb_list_speakers(get_the_id()) ?></div>
 		<?php the_excerpt() ?>
 	</article>
