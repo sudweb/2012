@@ -450,15 +450,23 @@ article .post-datetime{
 }
 
 .actualites h3,
-.actualites .meta {
+.actualites .meta,
+.programme h3,
+.programme .meta {
 	float: left;
 	clear: left;
 }
+<<<<<<< HEAD
 .block .illustration {
+=======
+.actualites .illustration,
+.programme .illustration {
+>>>>>>> Floating home programme illustration like the one in "actualités"
 	float: right;
-	padding: 0 0 1em 5px;
+	padding: 0 5px 1em;
 }
-.actualites p {
+.actualites p,
+.programme p {
 	clear: left;
 }
 
@@ -1010,12 +1018,15 @@ li.menu-item-w3 {
 		margin-left: 1%;
 		margin-right: 1%;
 	}
+<<<<<<< HEAD
 	.block .illustration {
 		float: right;
 	}
 	.programme div {
 		clear: left;
 	}
+=======
+>>>>>>> Floating home programme illustration like the one in "actualités"
 }
 
 /* Over 960 */
