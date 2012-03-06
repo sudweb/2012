@@ -360,7 +360,7 @@ article .post-datetime{
 	background: url(assets/img/pictos_sprite.png) no-repeat left center;
 }
 article .post-speaker a{
-	background-position: left 6px;
+	background-position: left 2px;
 	font-weight: normal;
 }
 article .post-datetime{
