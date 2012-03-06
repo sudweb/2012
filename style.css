@@ -438,6 +438,10 @@ article .post-datetime{
 .block div {
 	clear: both;
 }
+.block .illustration {
+	float: right;
+	padding: 0 5px 1em;
+}
 /* Overloading for special blocks */
 .actualites h2::before,
 .actualites h3::before,
@@ -455,15 +459,6 @@ article .post-datetime{
 .programme .meta {
 	float: left;
 	clear: left;
-}
-<<<<<<< HEAD
-.block .illustration {
-=======
-.actualites .illustration,
-.programme .illustration {
->>>>>>> Floating home programme illustration like the one in "actualités"
-	float: right;
-	padding: 0 5px 1em;
 }
 .actualites p,
 .programme p {
@@ -1018,15 +1013,6 @@ li.menu-item-w3 {
 		margin-left: 1%;
 		margin-right: 1%;
 	}
-<<<<<<< HEAD
-	.block .illustration {
-		float: right;
-	}
-	.programme div {
-		clear: left;
-	}
-=======
->>>>>>> Floating home programme illustration like the one in "actualités"
 }
 
 /* Over 960 */
