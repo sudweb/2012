@@ -13,7 +13,7 @@ Template Name: Programme
 			<li class="schedule-item schedule-day vevent">
 				<h3 class="schedule-item-title">
 					<a href="<?php the_permalink() ?>" rel="bookmark">
-						<?php the_post_thumbnail('thumbnail') ?>
+						<?php the_post_thumbnail('thumbnail', array('alt' => '')) ?>
 						<?php the_title() ?>
 					</a>
 				</h3>
