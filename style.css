@@ -362,6 +362,7 @@ article .post-datetime{
 article .post-speaker a{
 	background-position: left 2px;
 	font-weight: normal;
+	display: block;
 }
 article .post-datetime{
 	padding-right: 0;   /* inline content, so don't push away its following content */
