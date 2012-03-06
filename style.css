@@ -447,15 +447,19 @@ article .post-datetime{
 }
 
 .actualites h3,
-.actualites .meta {
+.actualites .meta,
+.programme h3,
+.programme .meta {
 	float: left;
 	clear: left;
 }
-.actualites .illustration {
+.actualites .illustration,
+.programme .illustration {
 	float: right;
-	padding: 0 0 1em 5px;
+	padding: 0 5px 1em;
 }
-.actualites p {
+.actualites p,
+.programme p {
 	clear: left;
 }
 
@@ -464,10 +468,6 @@ article .post-datetime{
 }
 .programme h2 {
 	color: #c40423;
-}
-.programme .illustration {
-	display: block;
-	margin: 0 auto 1em;
 }
 
 .sponsor-list h2 {
@@ -1011,12 +1011,6 @@ li.menu-item-w3 {
 		margin-left: 1%;
 		margin-right: 1%;
 	}
-	.programme .illustration {
-		float: right;
-	}
-	.programme div {
-		clear: left;
-	}
 }
 
 /* Over 960 */
@@ -1045,9 +1039,6 @@ li.menu-item-w3 {
 	.actualites h2,
 	.programme h2 {
 		margin-top: 0;
-	}
-	.programme .illustration {
-		float: none;
 	}
 
 	.sidebar {
