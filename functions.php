@@ -39,6 +39,7 @@ register_nav_menu('header', 'Primary Navigation');
 register_nav_menu('footer-social', 'Social networks');
 register_nav_menu('footer-column2', 'Footer: Column 2');
 register_nav_menu('sidebar-conferences', 'Conferences Sidebar');
+register_nav_menu('sidebar-attending', 'Attending Sidebar');
 
 /*
  * Register actions
