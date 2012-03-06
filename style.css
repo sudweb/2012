@@ -401,6 +401,7 @@ article .post-datetime{
 	border-bottom: 1px solid;
 }
 .block .meta {
+	clear: left;
 	margin: .5em 0 1em;
 	padding-bottom: 0;
 	border-bottom: 0;
@@ -452,7 +453,7 @@ article .post-datetime{
 	float: left;
 	clear: left;
 }
-.actualites .illustration {
+.block .illustration {
 	float: right;
 	padding: 0 0 1em 5px;
 }
@@ -465,10 +466,6 @@ article .post-datetime{
 }
 .programme h2 {
 	color: #c40423;
-}
-.programme .illustration {
-	display: block;
-	margin: 0 auto 1em;
 }
 
 .sponsor-list h2 {
@@ -1000,7 +997,7 @@ li.menu-item-w3 {
 	.content .attachment-post-thumbnail {
 		display: block;
 	}
-	
+
 	.footer {
 		padding: 0 10px 1em;
 	}
@@ -1012,7 +1009,7 @@ li.menu-item-w3 {
 		margin-left: 1%;
 		margin-right: 1%;
 	}
-	.programme .illustration {
+	.block .illustration {
 		float: right;
 	}
 	.programme div {
@@ -1046,9 +1043,6 @@ li.menu-item-w3 {
 	.actualites h2,
 	.programme h2 {
 		margin-top: 0;
-	}
-	.programme .illustration {
-		float: none;
 	}
 
 	.sidebar {
