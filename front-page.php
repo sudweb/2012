@@ -17,21 +17,21 @@
 <div class="block programme">
 	<h2><a href="http://sudweb.fr/2012/programme/"><?php _e('Highlighted Talk', 'sudweb') ?></a></h2>
 
-	<?php $talks = get_posts(array(
-		'numberposts' => 1,
+	<?php query_posts(array(
+		'posts_per_page' => 1,
 		'orderby' => 'rand',
 		'post_type' => 'talk',
 		'post_status' => 'publish',
 	)) ?>
-	<?php foreach($talks as $post): setup_postdata($post) ?>
+	<?php while(have_posts()): the_post() ?>
 	<article>
 		<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
 		<?php the_post_thumbnail('thumbnail', array('class' => 'illustration')) ?>
 		<div class="meta"><?php sudweb_list_speakers(get_the_id()) ?></div>
-		<?php the_excerpt() ?>
+		<p><?php the_excerpt() ?></p>
 	</article>
-	<?php endforeach ?>
-	<?php if (count ($talks) == 0): ?>
+	<?php endwhile ?>
+	<?php if (!have_posts()): ?>
 	<div>
 		<p>Le programme n'est pas encore disponible, suivez-nous pour être informé dès qu'il sera annoncé !</p>
 	</div>
