@@ -14,7 +14,7 @@
 		<?php the_field('schedule') ?>
 	</div>
 	<?php endif ?>
-	<?php the_post_thumbnail('tiny-thumbnail', array('class' => 'illustration')) ?>
+	<?php the_post_thumbnail('tiny-thumbnail', array('class' => 'illustration', 'alt' => '')) ?>
 	<!-- Subtitle -->
 	<div class="schedule-item-subtitle">
 		<?php echo get_the_terms(get_the_id(), 'talk_types')->name ?>

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html <?php language_attributes() ?>>
 <head>
-	<title><?php wp_title() ?></title>
+	<title><?php bloginfo('name'); ?><?php wp_title('|', true, ''); ?></title>
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<?php wp_head() ?>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri() ?>/ie.css" />
+	<![endif]-->
 </head>
 <body <?php body_class() ?>>
 	<div class="wrapper">
-		<header class="header vevent" role="header" id="header">
+		<div class="header vevent" role="header" id="header">
 			<div class="container">
 				<h1 class="logo"><a href="<?php bloginfo('url') ?>" title="<?php bloginfo('title') ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri() ?>/assets/img/logo.png" alt="<?php bloginfo('title') ?>" /></a></h1>
 
@@ -30,7 +33,7 @@
 				'container' => 'div'
 			)) ?>
 		</div>
-	</header>
+	</div>
 </div>
 
 <div class="container" role="main" id="content">
