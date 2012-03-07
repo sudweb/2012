@@ -17,7 +17,7 @@ Template Name: Orateurs
 
 				<div class="schedule-item-content">
 					<?php the_excerpt() ?>
-					<?php sudweb_list_speakers(get_the_id(), array('inherit')) ?>
+					<?php sudweb_list_speakers(get_the_id(), array('template' => 'single-talk-inline.php', 'inherit')) ?>
 				</div>
 			</li>
 		<?php endforeach ?>
