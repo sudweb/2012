@@ -1,7 +1,7 @@
 <?php get_header(); the_post(); ?>
 
 <div class="row">
-	<?php $involvement_page = get_page_by_title('Participer') ?>
+	<?php $involvement_page = get_page_by_title('Comment venir') ?>
 	<?php if ($involvement_page && ($involvement_page->ID === get_the_ID() || in_array($involvement_page->ID, get_ancestors(get_the_ID(), 'page')))): ?>
 	<?php get_sidebar('attending') ?>
 	<?php else: ?>
