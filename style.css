@@ -270,6 +270,11 @@ td { vertical-align: top; }
 .content {
 	padding: 1em 5px;
 }
+
+.content article {
+	line-height: 1.4;
+}
+
 .content h1 {
 	margin-top: 0;
 	margin-bottom: .5em;
@@ -283,7 +288,6 @@ td { vertical-align: top; }
 }
 .content p {
 	text-align: justify;
-	line-height: 1.4;
 }
 .content a:link {
 	color: #ca1a3d;
