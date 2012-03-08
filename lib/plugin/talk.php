@@ -108,14 +108,14 @@ function sudweb_register_talk_connections()
 		'name' => 'talk_to_speaker',
 		'from' => 'talk',
 		'to' => 'speaker',
-		'cardinality' => 'one-to-many',
+		'cardinality' => 'many-to-many',
 	));
 
 	p2p_register_connection_type(array(
 		'name' => 'talk_to_schedule',
 		'from' => 'talk',
 		'to' => 'schedule',
-		'cardinality' => 'one-to-one',
+		'cardinality' => 'many-to-one',
 	));
 }
 

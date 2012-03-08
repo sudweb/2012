@@ -8,8 +8,11 @@
 
 add_action('init', 'sudweb_register_schedule');
 add_action('init', 'sudweb_register_schedule_connections');
-add_filter('p2p_connected_args', 'sudweb_schedule_alter_query', 10, 3);
 
+if (!is_admin())
+{
+	add_filter('p2p_connected_args', 'sudweb_schedule_alter_query', 10, 3);
+}
 
 /**
  * Registers the "Schedule" Custom Post Type
@@ -66,7 +69,7 @@ function sudweb_register_schedule_connections()
 		'name' => 'schedule_to_place',
 		'from' => 'schedule',
 		'to' => 'place',
-		'cardinality' => 'one-to-one',
+		'cardinality' => 'many-to-one',
 	));
 }
 
