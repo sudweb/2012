@@ -993,7 +993,7 @@ li.menu-item-w3 {
 		display: block;
 		float: left;
 		width: 45%;
-		margin-top: 15px;
+		margin-bottom: 15px;
 		text-align: center;
 	}
 	.header .illustration img {
@@ -1154,6 +1154,6 @@ li.menu-item-w3 {
 		width: 350px;
 	}
 	.header .illustration {
-		width: 600px;
+		width: 300px;
 	}
 }
