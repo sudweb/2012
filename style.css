@@ -255,6 +255,7 @@ td { vertical-align: top; }
 	background: #b82f11 url(assets/img/header.jpg) no-repeat center 40%;
 	color: #fff;
 	margin-right: -1em;
+	padding-right: 1.5em;
 }
 .sidebar ul ul {
 	padding: .5em 0 1em 1em;
