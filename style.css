@@ -181,6 +181,7 @@ td { vertical-align: top; }
 .pitch {
 	clear: both;
 	background: #402F33;
+	background: rgba(64, 47, 51, .6);
 	padding: .5em;
 }
 .header .illustration {
