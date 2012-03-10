@@ -4,7 +4,8 @@ add_theme_support('post-thumbnails');
 load_theme_textdomain('sudweb', get_template_directory().'/i18n');
 set_post_thumbnail_size(870, 220, true);
 add_image_size('tiny-thumbnail', 60, 60, true);
-add_image_size('sponsor-logo', 150, 150, false);
+add_image_size('sponsor-logo-or', 150, 150, false);
+add_image_size('sponsor-logo-argent', 100, 100, false);
 
 /*
  * Requires bundled WP-LESS for LESS stylesheet parsing features
@@ -46,7 +47,6 @@ register_nav_menu('sidebar-attending', 'Attending Sidebar');
  */
 add_action('wp', 'theme_main_action');
 add_filter('nav_menu_css_class', 'filter_navmenu_classes', 10, 3);
-add_filter('post_thumbnail_html', 'theme_filter_empty_thumbnail_html', 10, 5);
 add_filter('wp_nav_menu_container_allowedtags', 'theme_filter_enable_aside_nav');
 add_filter('post_class', 'theme_filter_post_class', 10, 3);
 require dirname(__FILE__).'/lib/plugin/sponsor.php';
@@ -87,6 +87,9 @@ function filter_navmenu_classes(array $classes, $item, $args)
 /**
  * Filters empty thumbnails, to always provide some default picture
  * Lolcats could be fun but you know, we are serious.
+ *
+ * Usage
+ * add_filter('post_thumbnail_html', 'theme_filter_empty_thumbnail_html', 10, 5);
  *
  * @param $html
  * @param $post_id
@@ -239,4 +242,18 @@ function sudweb_get_talk_datetime($post, $format = null)
 	$datetime = strtotime(trim($datetime));
 
 	return $format === null ? $datetime : date_i18n($format, $datetime);
+}
+
+/**
+ * Returns the post thumbnail for the connected speaker
+ * @uses the_post_thumbnail
+ * @param $size
+ * @param $attr
+ * @return null|string
+ */
+function sudweb_the_connected_speaker_thumbnail($size, $attr)
+{
+	$talk_id = get_the_ID();
+	$speaker_id = p2p_type('talk_to_speaker')->get_connected($talk_id)->next_post()->ID;
+	echo get_the_post_thumbnail($speaker_id, $size, $attr);
 }
