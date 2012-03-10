@@ -243,3 +243,17 @@ function sudweb_get_talk_datetime($post, $format = null)
 
 	return $format === null ? $datetime : date_i18n($format, $datetime);
 }
+
+/**
+ * Returns the post thumbnail for the connected speaker
+ * @uses the_post_thumbnail
+ * @param $size
+ * @param $attr
+ * @return null|string
+ */
+function sudweb_the_connected_speaker_thumbnail($size, $attr)
+{
+	$talk_id = get_the_ID();
+	$speaker_id = p2p_type('talk_to_speaker')->get_connected($talk_id)->next_post()->ID;
+	echo get_the_post_thumbnail($speaker_id, $size, $attr);
+}
