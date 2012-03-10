@@ -49,6 +49,7 @@ add_action('wp', 'theme_main_action');
 add_filter('nav_menu_css_class', 'filter_navmenu_classes', 10, 3);
 add_filter('wp_nav_menu_container_allowedtags', 'theme_filter_enable_aside_nav');
 add_filter('post_class', 'theme_filter_post_class', 10, 3);
+add_filter('post_thumbnail_html', 'theme_filter_talk_thumbnail', 10, 5);
 require dirname(__FILE__).'/lib/plugin/sponsor.php';
 require dirname(__FILE__).'/lib/plugin/place.php';
 require dirname(__FILE__).'/lib/plugin/schedule.php';
@@ -245,15 +246,33 @@ function sudweb_get_talk_datetime($post, $format = null)
 }
 
 /**
- * Returns the post thumbnail for the connected speaker
- * @uses the_post_thumbnail
+ * If a Talk content has not thumbnail, though we use the speaker one
+ *
+ * @see get_the_post_thumbnail()
+ * @param $html
+ * @param $post_id
+ * @param $post_thumbnail_id
  * @param $size
  * @param $attr
- * @return null|string
+ * @return string Thumbnail HTML
  */
-function sudweb_the_connected_speaker_thumbnail($size, $attr)
+function theme_filter_talk_thumbnail($html, $post_id, $post_thumbnail_id, $size, $attr)
 {
-	$talk_id = get_the_ID();
-	$speaker_id = p2p_type('talk_to_speaker')->get_connected($talk_id)->next_post()->ID;
-	echo get_the_post_thumbnail($speaker_id, $size, $attr);
+	if ($html)
+	{
+		return $html;
+	}
+
+	$post = get_post($post_id);
+
+	if ($post->post_type === 'talk')
+	{
+		return get_the_post_thumbnail(
+			p2p_type('talk_to_speaker')->get_connected($post_id)->next_post()->ID,
+			$size,
+			$attr
+		);
+	}
+
+	return $html;
 }
