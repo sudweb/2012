@@ -867,20 +867,17 @@ li.menu-item-w3 {
 	.content {
 		margin-left: 11em;
 	}
-	.type-talk.with-thumbnail,
-	.type-speaker.with-thumbnail {
+	.with-thumbnail {
 		position: relative;
 		overflow-x: hidden;
 		padding-top: 225px;
 	}
-	.type-talk.with-thumbnail header img,
-	.type-speaker.with-thumbnail header img {
+	header img {
 		position: absolute;
 		max-width: none;
 		top: 0;
 	}
-	.type-talk.with-thumbnail .post-title,
-	.type-speaker.with-thumbnail .post-title {
+	.with-thumbnail .post-title {
 		position: absolute;
 		top: 150px;
 		display: inline;
