@@ -293,6 +293,7 @@ td { vertical-align: top; }
 }
 .content a:link {
 	color: #ca1a3d;
+	font-weight: bold;
 }
 .content a:visited,
 .content a:focus,
