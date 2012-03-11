@@ -692,6 +692,23 @@ li.menu-item-w3 {
 	-webkit-transition: all 200ms, width 0;
 }
 
+/**
+ * Contact Form 7
+ */
+.wpcf7-text,
+.wpcf7-textarea,
+.wpcf7-submit{
+	border: 1px solid #7B1F2D;
+	border-radius: 3px;
+	padding: .3em;
+}
+.wpcf7-submit{
+	background: #F9B410;
+	cursor: pointer;
+	padding: .5em;
+	font-weight: bold;
+}
+
 /* Styles for smartphones */
 @media (min-width:320px) and (max-width:479px) {
 	.logo {
