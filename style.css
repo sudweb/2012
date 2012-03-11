@@ -32,7 +32,7 @@ p, h1, h2, h3, h4, h5, h6 { margin: .5em 0 1em; padding: 0; }
 
 form { margin: 0; }
 fieldset { border: 0; margin: 0; padding: 0; }
-label { cursor: pointer; }
+label { cursor: pointer; font-weight: bold; }
 legend { border: 0; *margin-left: -7px; padding: 0; }
 
 /* If these tags aren't used, just remove the following */
