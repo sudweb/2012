@@ -151,7 +151,7 @@ function theme_filter_enable_aside_nav(array $tags)
  */
 function theme_filter_post_class(array $classes, $class, $post_id)
 {
-	if (has_post_thumbnail($post_id) || array_search('type-talk', $classes) !== false)
+	if (has_post_thumbnail($post_id))
 	{
 		$classes[] = 'with-thumbnail';
 	}
