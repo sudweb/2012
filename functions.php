@@ -50,6 +50,7 @@ add_filter('nav_menu_css_class', 'filter_navmenu_classes', 10, 3);
 add_filter('wp_nav_menu_container_allowedtags', 'theme_filter_enable_aside_nav');
 add_filter('post_class', 'theme_filter_post_class', 10, 3);
 add_filter('post_thumbnail_html', 'theme_filter_talk_thumbnail', 10, 5);
+add_filter('excerpt_more', 'theme_excerpt_more');
 require dirname(__FILE__).'/lib/plugin/sponsor.php';
 require dirname(__FILE__).'/lib/plugin/place.php';
 require dirname(__FILE__).'/lib/plugin/schedule.php';
@@ -275,4 +276,16 @@ function theme_filter_talk_thumbnail($html, $post_id, $post_thumbnail_id, $size,
 	}
 
 	return $html;
+}
+
+/**
+ * Replaces default truncation with a link to the post
+ * @uses the_post_thumbnail
+ * @param $size
+ * @param $attr
+ * @return null
+ */
+function theme_excerpt_more($more) {
+       global $post;
+	return '... <a href="'. get_permalink($post->ID) . '" title="'. get_the_title($post->ID) .'" rel="bookmark">'.__('Read the rest', 'sudweb').'</a>';
 }
