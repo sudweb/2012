@@ -4,7 +4,6 @@ add_theme_support('post-thumbnails');
 load_theme_textdomain('sudweb', get_template_directory().'/i18n');
 set_post_thumbnail_size(870, 220, true);
 add_image_size('tiny-thumbnail', 60, 60, true);
-
 add_image_size('sponsor-logo-or', 150, 150, false);
 add_image_size('sponsor-logo-argent', 100, 100, false);
 
