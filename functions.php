@@ -287,5 +287,5 @@ function theme_filter_talk_thumbnail($html, $post_id, $post_thumbnail_id, $size,
  */
 function theme_excerpt_more($more) {
        global $post;
-	return '... <a href="'. get_permalink($post->ID) . '" title="'. get_the_title($post->ID) .'" rel="bookmark">'.__('Read the rest', 'sudweb').'</a>';
+	return '… <a href="'. get_permalink($post->ID) . '" title="'. get_the_title($post->ID) .'" rel="bookmark">'.__('Read More').'</a>';
 }
