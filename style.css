@@ -133,22 +133,19 @@ td { vertical-align: top; }
 	font-size: 1.2rem;
 }
 .beforepitch:link,
-.beforepitch:visited {
-	display: none;
-	background: #fff;
-	color: #9c1529;
-}
+.beforepitch:visited,
 .beforepitch:visited,
 .beforepitch:visited::after {
-	color: #9c1529;
-	background: #e9dcce;
+	display: none;
+	background: #f9b410;
+	color: #402F33;
 }
 .beforepitch:focus,
 .beforepitch:hover,
 .beforepitch:focus::after,
 .beforepitch:hover::after {
-	color: #fff;
-	background: #402f33;
+	color: #f9b410;
+	background: #402F33;
 }
 .beforepitch:active,
 .beforepitch:active::after {
@@ -829,8 +826,6 @@ li.menu-item-w3 {
 		border-bottom: none;
 	}
 	.baseline {
-		background: #f9b410;
-		color: #402F33;
 		font-weight: bold;
 	}
 	.header .nav {
@@ -955,6 +950,9 @@ li.menu-item-w3 {
 	}
 	.header .cta {
 		font-size: x-large;
+	}
+	.baseline {
+		font-size: larger;
 	}
 	.pitch {
 		clear: left;
