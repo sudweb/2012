@@ -63,8 +63,6 @@ td { vertical-align: top; }
 }
 
 .cta {
-	clear: right;
-	float: right;
 	display: block;
 	font-size: larger;
 	font-weight: bold;
@@ -109,6 +107,10 @@ td { vertical-align: top; }
 	}
 	.header .nav .container {
 		padding: 0;
+	}
+	.header .cta {
+		clear: right;
+		float: right;
 	}
 
 /**
@@ -981,6 +983,9 @@ li.menu-item-w3 {
 	.footer a,
 	.header .nav a{
 		font-weight: normal;  /* reversing font weight because with DIN bold, it's really bold */
+	}
+	.header .cta {
+		font-size: x-large;
 	}
 	.pitch {
 		clear: left;
