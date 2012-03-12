@@ -953,6 +953,9 @@ li.menu-item-w3 {
 	.header .nav a{
 		font-weight: normal;  /* reversing font weight because with DIN bold, it's really bold */
 	}
+	.header .cta {
+		font-size: x-large;
+	}
 	.pitch {
 		clear: left;
 		float: left;
