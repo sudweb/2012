@@ -134,7 +134,7 @@ td { vertical-align: top; }
 }
 .beforepitch:link,
 .beforepitch:visited,
-.beforepitch:visited,
+.beforepitch:link::after,
 .beforepitch:visited::after {
 	display: none;
 	background: #f9b410;
