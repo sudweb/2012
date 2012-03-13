@@ -18,8 +18,8 @@
 	<!-- Subtitle -->
 	<div class="schedule-item-subtitle">
 		<?php echo get_the_terms(get_the_id(), 'talk_types')->name ?>
-		<?php if (get_post_type(get_queried_object()) !== 'speaker'): ?>
-		– Animé par <?php sudweb_list_speakers(get_the_id()) ?>
-		<?php endif ?>
+		<?php if (get_post_type(get_queried_object()) !== 'speaker'): sudweb_list_speakers(get_the_id(), array(
+			'before_list' => '– Animé par <span class="post-speaker">'
+		)); endif ?>
 	</div>
 </div>
