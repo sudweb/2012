@@ -189,7 +189,11 @@ function sudweb_list_speakers($post_id, array $args = array())
 	}
 
 	$speakers = p2p_type('talk_to_speaker')->get_connected($post_id);
-	p2p_list_posts($speakers, $args);
+
+	if ($speakers->post_count)
+	{
+		p2p_list_posts($speakers, $args);
+	}
 }
 
 /**
