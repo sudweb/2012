@@ -35,6 +35,13 @@ fieldset { border: 0; margin: 0; padding: 0; }
 label { cursor: pointer; font-weight: bold; display: block; margin-bottom: 5px;}
 legend { border: 0; *margin-left: -7px; padding: 0; }
 
+blockquote {
+	background: #eceaea;
+	border-left: 2px solid #7b1f2d;
+	margin: .5em 2em;
+	padding: .5em 1em 1px;
+}
+
 /* If these tags aren't used, just remove the following */
 sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
 sup { top: -0.5em; }
@@ -292,6 +299,10 @@ td { vertical-align: top; }
 }
 .content p {
 	text-align: justify;
+}
+.content blockquote p {
+	text-align: left;
+	font-style: italic;
 }
 .content a:link {
 	color: #ca1a3d;
