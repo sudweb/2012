@@ -496,6 +496,11 @@ article .post-datetime{
 	color: #c40423;
 }
 
+.blog .post {
+	border-bottom: .2em solid #9C1529;
+	margin-bottom: 1em;
+}
+
 .social {
 	background: #fffaea;
 	overflow: hidden;
