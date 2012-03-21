@@ -49,3 +49,18 @@ function sudweb_register_speaker()
 		)
 	));
 }
+
+/**
+ * Displays the lang attribute for a given speaker
+ *
+ * @param null $speaker_id
+ * @return null
+ */
+function speaker_lang_attribute($speaker_id = null)
+{
+	echo str_replace(
+		array('Français', 'Anglais', 'English'),
+		array('fr', 'en', 'en'),
+		trim(get_field('language', $speaker_id === null ? get_the_ID() : $speaker_id))
+	);
+}
