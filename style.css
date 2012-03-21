@@ -944,6 +944,16 @@ li.menu-item-w3 {
 		background: rgba (255,255,255,.65);
 		color: #c01432;
 	}
+	.content .sponsor {
+		padding: 0;
+	}
+	.sponsor header img {
+		position: static;
+		margin: 0 auto 1em;
+	}
+	.sponsor .post-title {
+		position: static;
+	}
 
 	.sponsors .or li,
 	.sponsors .argent li {
