@@ -940,6 +940,9 @@ li.menu-item-w3 {
 		max-width: none;
 		top: 0;
 	}
+	.content .attachment-post-thumbnail {
+		display: block;
+	}
 	.with-thumbnail .post-title {
 		position: absolute;
 		top: 150px;
