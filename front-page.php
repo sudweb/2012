@@ -1,7 +1,7 @@
 <?php get_header() ?>
 
 <div class="block actualites">
-	<h2><a href="http://sudweb.fr/2012/actualites/"><?php _e('Latest News', 'sudweb') ?></a></h2>
+	<h2><a href="<?php echo site_url('/actualites/'); ?>"><?php _e('Latest News', 'sudweb') ?></a></h2>
 
 	<?php query_posts('posts_per_page=5&post_type=post&order=DESC'); ?>
 	<?php while(have_posts()): the_post() ?>
@@ -15,7 +15,7 @@
 </div>
 
 <div class="block programme">
-	<h2><a href="http://sudweb.fr/2012/programme/"><?php _e('Highlighted Talk', 'sudweb') ?></a></h2>
+	<h2><a href="<?php echo site_url('/programme/'); ?>"><?php _e('Highlighted Talk', 'sudweb') ?></a></h2>
 
 	<?php query_posts(array(
 		'posts_per_page' => 1,
