@@ -3,7 +3,7 @@
 <div class="block actualites">
 	<h2><a href="http://sudweb.fr/2012/actualites/"><?php _e('Latest News', 'sudweb') ?></a></h2>
 
-	<?php query_posts('posts_per_page=5&post_type=post&order=DESC'); ?>
+	<?php query_posts('posts_per_page=1&post_type=post&order=DESC'); ?>
 	<?php while(have_posts()): the_post() ?>
 	<div>
 		<h3><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h3>
