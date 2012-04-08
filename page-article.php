@@ -9,6 +9,7 @@
 			<?php endif; ?>
 		</h1>
 	</header>
-
+	<div lang="<?php sudweb_the_lang_attribute() ?>">
 	<?php the_content() ?>
+	</div>
 </article>
