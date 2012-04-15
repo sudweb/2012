@@ -293,3 +293,16 @@ function theme_excerpt_more($more) {
        global $post;
 	return '… <a href="'. get_permalink($post->ID) . '" title="'. get_the_title($post->ID) .'" rel="bookmark">'.__('(more...)').'</a>';
 }
+
+/**
+ * Echoes the lang attribute, whatever the post type
+ * @return null
+ */
+function sudweb_the_lang_attribute() {
+	global $post;
+	$func = $post->post_type . '_lang_attribute';
+	if (function_exists($func)){
+		$func();
+	}
+	return;
+}
