@@ -769,10 +769,10 @@ li.menu-item-w3 {
 		float: left;
 		width: 45%;
 	}
-	.header .nav li:nth-child(even) {
+	.header .nav li:nth-last-child(even) {
 		margin-right: 5%;
 	}
-	.header .nav li:nth-child(odd) {
+	.header .nav li:nth-last-child(odd) {
 		margin-left: 5%;
 	}
 	.nav .menu-item-home {
