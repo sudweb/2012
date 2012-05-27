@@ -97,11 +97,11 @@ caption {caption-side: bottom; font-style: italic;padding-top: 1em;}
 	width: 10px;
 	left: 1em;
 	bottom: -3px;
-	-webkit-transform: rotate(-45deg) skew(-45deg);
-	-moz-transform: rotate(-45deg) skew(-45deg);
-	-ms-transform: rotate(-45deg) skew(-45deg);
-	-o-transform: rotate(-45deg) skew(-45deg);
-	transform: rotate(-45deg) skew(-45deg);
+	-webkit-transform: rotate(-45deg) skewX(-45deg);
+	-moz-transform: rotate(-45deg) skewX(-45deg);
+	-ms-transform: rotate(-45deg) skewX(-45deg);
+	-o-transform: rotate(-45deg) skewX(-45deg);
+	transform: rotate(-45deg) skewX(-45deg);
 	background: #fff;
 }
 .wrapper {
@@ -453,11 +453,11 @@ article .post-datetime{
 	width: 10px;
 	border: 0 solid;
 	border-width: 0 1px 1px 0;
-	-webkit-transform: rotate(45deg) skew(45deg);
-	-moz-transform: rotate(45deg) skew(45deg);
-	-ms-transform: rotate(45deg) skew(45deg);
-	-o-transform: rotate(45deg) skew(45deg);
-	transform: rotate(45deg) skew(45deg);
+	-webkit-transform: rotate(45deg) skewX(45deg);
+	-moz-transform: rotate(45deg) skewX(45deg);
+	-ms-transform: rotate(45deg) skewX(45deg);
+	-o-transform: rotate(45deg) skewX(45deg);
+	transform: rotate(45deg) skewX(45deg);
 }
 .block div {
 	clear: both;
@@ -825,11 +825,11 @@ li.menu-item-w3 {
 		bottom: -3px;
 		height: 5px;
 		width: 10px;
-		-webkit-transform: rotate(-45deg) skew(-45deg);
-		-moz-transform: rotate(-45deg) skew(-45deg);
-		-ms-transform: rotate(-45deg) skew(-45deg);
-		-o-transform: rotate(-45deg) skew(-45deg);
-		transform: rotate(-45deg) skew(-45deg);
+		-webkit-transform: rotate(-45deg) skewX(-45deg);
+		-moz-transform: rotate(-45deg) skewX(-45deg);
+		-ms-transform: rotate(-45deg) skewX(-45deg);
+		-o-transform: rotate(-45deg) skewX(-45deg);
+		transform: rotate(-45deg) skewX(-45deg);
 	}
 	li.menu-item-w3 {
 		float: none;
