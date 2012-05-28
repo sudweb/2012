@@ -34,7 +34,7 @@ With `rsync`, it's with the `--exclude` parameter:`
 
 ```bash
 rsync … --exclude=".git" …
-``
+```
 
 ## License
 
