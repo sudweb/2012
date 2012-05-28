@@ -292,6 +292,7 @@ caption {caption-side: bottom; font-style: italic;padding-top: 1em;}
 }
 
 .content h1 {
+	font-size: 1.5em;
 	margin-top: 0;
 	margin-bottom: .5em;
 }
