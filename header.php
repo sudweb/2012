@@ -36,4 +36,4 @@
 </div>
 
 <div class="container" role="main" id="content">
-	<a href="//sudweb.fr/2012/inscription/" class="cta afterpitch">Inscrivez-vous !</a>
+	<a href="http://www.flickr.com/groups/sudweb2012/pool/with/7309145648/lightbox/" class="cta afterpitch">Voir les photos</a>
