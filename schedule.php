@@ -7,7 +7,6 @@ Template Name: Programme
 
 	<div class="content">
 		<?php get_template_part('page', 'article') ?>
-
 		<ol class="schedule-list">
 		<?php foreach (get_posts('post_type=schedule&orderby=menu_order&order=ASC') as $post): setup_postdata($post); ?>
 			<li class="schedule-item schedule-day vevent">
