@@ -1,0 +1,27 @@
+---
+layout: main
+title: La conférence web super humaine
+image: /assets/images/twittercard.jpg
+---
+
+<div class="block actualites">
+	<h2><a href="{{site.baseurl}}/actualites/">Actualités</a></h2>
+
+  {% assign newsItem = site.posts | where: "layout","post" | sort: "date" | reverse | first %}
+	<div>
+		<h3><a href="{{newsItem.permalink}}" rel="bookmark">{{newsItem.title}}</a></h3>
+		<div class="meta">{{newsItem.date | date_to_long_string}}</div>
+		<div>{{newsItem.excerpt | strip_html}}</div>
+	</div>
+</div>
+
+<div class="block programme">
+	<h2><a href="{{site.baseurl}}/programme/">Au programme</a></h2>
+
+  {% assign talk = site.posts | where: "layout","talk" | first %}
+	<article>
+		<h3><a href="{{talk.permalink}}" rel="bookmark">{{talk.title}}</a></h3>
+		<div class="meta">{{talk.speakers | join:','}}</div>
+		<div>{{talk.excerpt | strip_html | truncatewords: 30}}</div>
+	</article>
+</div>

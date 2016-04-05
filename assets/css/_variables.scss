@@ -1,0 +1,40 @@
+// Rouge de base : #C01432
+// Rouge Sombre : #9C1529
+// Rouge clair : #E85070
+// Rouge pâle : #E8B7C1
+// Marron : #402F33
+// Jaune : #F9B410
+// $see https://sudweb.basecamphq.com/projects/7337593-sud-web-2012/todo_items/114608003/comments#comment_154573956
+
+$black:                                 #000;
+$background_color:                      #fff;
+$content_color:                         $black;
+$content_background_color:              #f0efef;    //pale brown
+$content_background_border:             #402f33;    //brown
+$alternate_content_background_color:    #e8B7c1;    //pale red
+$linkColor:                             #c01432;    //red
+$linkColorHover:                        #9c1529;    //dark red
+$stay_connected_color:                  #F9b410;    //yellow
+$default_font_stack:                    Tahoma, sans-serif;
+$alternate_font_stack:                  DINAlternateBold, Tahoma, sans-serif;
+$thumbnailHeight:                       150px;      //assume it to be squared
+$baseLineHeight:                        1.3;
+
+/*
+ * Required by bootstrap
+ */
+$grayDark:          lighten($black, 25%);
+$gray:              $grayDark;
+$grayLight:         #eff0ed;
+
+/*
+ * Baloons
+ */
+$baloonOffsetX: 2em;
+$baloonOffsetY: -10px;
+
+
+@mixin alternate-font-stack () {
+    font-family: $alternate_font_stack;
+    font-weight: normal;
+}

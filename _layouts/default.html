@@ -1,0 +1,39 @@
+{% include head.html %}
+
+<body itemscope itemtype="http://schema.org/WebPage">
+<div class="wrapper">
+  <div class="header vevent" role="header" id="header">
+    <div class="container">
+      <h1 class="logo"><a href="{{site.baseurl}}/" title="{{site.title}}" rel="home"><img src="{{site.baseurl}}/assets/img/logo.png" alt="{{site.title}}" /></a></h1>
+
+      <div class="baseline"><strong><time class="dtstart" datetime="2012-05-25">25</time> et <time class="dtstart" datetime="2012-05-26">26 mai 2012</time></strong> à <span class="location">Toulouse, France</span></div>
+
+      <a href="http://www.flickr.com/groups/sudweb2012/pool/" class="cta beforepitch">Voir les photos</a>
+
+      <div class="pitch summary">
+        <div id="text-2" class="widget widget_text"><h2 class="widgettitle">Savoir-faire et faire-savoir</h2>
+			    <div class="textwidget">
+            <p>Deux jours d'échanges autour des technologies du web d'aujourd'hui et de demain.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <ul id="menu-navigation-principale" class="container">
+        <li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49 menu-item-sudweb"><a href="{{site.baseurl}}/actualites/">Actualités</a></li>
+        <li id="menu-item-47" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-47 menu-item-sudweb"><a href="{{site.baseurl}}/programme/">Programme</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container" role="main" id="content">
+  <a href="http://www.flickr.com/groups/sudweb2012/pool/" class="cta afterpitch">Voir les photos</a>
+
+  <div class="row">
+  	<div class="content">{{ content }}</div>
+  </div>
+
+{% include footer.html %}
