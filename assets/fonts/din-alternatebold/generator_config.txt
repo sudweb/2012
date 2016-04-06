@@ -1,5 +1,0 @@
-# Font Squirrel Font-face Generator Configuration File
-# Upload this file to the generator to recreate the settings
-# you used to create these fonts.
-
-{"mode":"expert","formats":["ttf","woff","eot","svg"],"options_hinting":"Y","options_vertical_metrics":"Y","add_space_glyphs":"Y","add_hyphen_glyphs":"Y","fallback":"trebuchet","options_protect":"Y","options_subset":"advanced","subset_range":["lowercase","uppercase","numbers","punctuation","currency","accentedlower","accentedupper","french"],"subset_custom":"","subset_custom_range":"","css_format":"fontspring","options_base64":"Y","filename_suffix":"din-alternate-bold","emsquare":"2048","spacing_adjustment":"0","gasp_setting":"xy"}
